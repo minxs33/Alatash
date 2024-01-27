@@ -18,7 +18,7 @@ class DatabaseSeeder extends Seeder
             UserSeeder::class,
             CategoriesSeeder::class,
             // ProductSeeder::class
-            ProductWithSameNameSeeder::class,
+            CarWithSameNameSeeder::class,
         ]);
     }
 }

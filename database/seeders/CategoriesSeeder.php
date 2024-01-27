@@ -15,7 +15,7 @@ class CategoriesSeeder extends Seeder
      */
     public function run()
     {
-        $categories = ['jacket', 't-shirt', 'hoodie', 'mask'];
+        $categories = ['sedan', 'SUV', 'off-road', 'hatchback'];
 
         foreach ($categories as $category) {
             Categories::create([

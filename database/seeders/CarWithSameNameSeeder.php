@@ -3,12 +3,12 @@
 namespace Database\Seeders;
 
 use App\Models\Categories;
-use App\Models\Products;
+use App\Models\Cars;
 use App\Models\Users;
 use Faker\Factory as FakerFactory;
 use Illuminate\Database\Seeder;
 
-class ProductSeeder extends Seeder
+class CarWithSameNameSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -18,26 +18,27 @@ class ProductSeeder extends Seeder
     public function run()
     {
         $faker = FakerFactory::create();
-        $category = Categories::all()->pluck('id')->toArray();
+        $categories = Categories::all(['id', 'name'])->toArray();
         $user = Users::all()->pluck('id')->toArray();
 
         for ($i = 0; $i < 120; ++$i) {
-            $category_id = $faker->randomElement($category);
+            $category = $faker->randomElement($categories);
+            $category_id = $category['id'];
             $created_by = $faker->randomElement($user);
+            $name = $category['name'].' '.$faker->word;
             $price = $faker->randomNumber(5, 6);
             $discount = $faker->randomFloat(2, 0, 25);
             $total_price = $price - (($price / 100) * $discount);
 
-            Products::create([
+            Cars::create([
                 'category_id' => $category_id,
                 'created_by' => $created_by,
-                'name' => $faker->word,
+                'name' => $name,
                 'description' => $faker->sentence,
                 'discount' => $discount,
                 'price' => $price,
                 'total_price' => intval(preg_replace('/[^\d.]/', '', $total_price)),
-                'status' => $faker->randomElement(['active', 'non-active', 'waiting']),
-                'stock' => $faker->randomNumber(2),
+                'status' => $faker->randomElement(['active', 'non-active', 'waiting'])
             ]);
         }
     }
