@@ -5,22 +5,22 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Categories extends Model
+class Car_images extends Model
 {
     use HasFactory;
 
-    protected $table = "categories";
+    protected $table = "Car_images";
 
     protected $fillable = [
-        'name',
+        "cars_id",
+        "image_url",
         'created_at',
         'updated_at'
-        
     ];
 
     protected $primaryKey = "id";
 
     function cars(){
-        return $this->hasMany('App\Models\Cars');
+        return $this->belongsTo('App\Models\Cars');
     }
 }

@@ -13,15 +13,15 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('product_images', function (Blueprint $table) {
+        Schema::create('car_images', function (Blueprint $table) {
             $table->increments("id");
-            $table->integer("products_id")->unsigned();
+            $table->integer("cars_id")->unsigned();
             $table->string("image_url", 100);
             $table->boolean("is_active");
             $table->timestamp('created_at')->useCurrent();
             $table->timestamp('updated_at')->nullable()->useCurrentOnUpdate();
 
-            $table->foreign("products_id")->references("id")->on("products")->onUpdate("cascade")->onDelete("restrict");
+            $table->foreign("cars_id")->references("id")->on("cars")->onUpdate("cascade")->onDelete("restrict");
         });
     }
 
@@ -32,6 +32,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('product_images');
+        Schema::dropIfExists('car_images');
     }
 };

@@ -32,7 +32,7 @@ class Users extends Authenticatable
 		return $this->belongsTo('App\Models\Roles');
 	}
 
-    function products(){
-        return $this->hasMany('App\Models\Products');
+    function cars(){
+        return $this->hasMany('App\Models\Cars');
     }
 }
