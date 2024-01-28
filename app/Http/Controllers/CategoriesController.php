@@ -46,9 +46,9 @@ class CategoriesController extends Controller
         $categories->name = $request->name;
 
         if($categories->save()){
-            return redirect(url("admin/categories"))->with('success', 'The category has been succesfully added!');
+            return redirect(url("admin/categories"))->with('success', 'Kategori telah berhasil ditambahkan!');
         }else{
-            return redirect(url("admin/categories"))->with('error', 'Something went wrong, the category failed to insert!');
+            return redirect(url("admin/categories"))->with('error', 'Ada yang tidak beres, kategori gagal dimasukkan!');
         }
     }
 
@@ -93,9 +93,9 @@ class CategoriesController extends Controller
         $categories = Categories::find($id);
 
         if($categories->update(["name" => $request->name])){
-            return redirect(url("admin/categories"))->with('success', 'The category has been succesfully updated!');
+            return redirect(url("admin/categories"))->with('success', 'Kategori telah berhasil diperbarui!');
         }else{
-            return redirect(url("admin/categories"))->with('error', 'Something went wrong, the category failed to update!');
+            return redirect(url("admin/categories"))->with('error', 'Ada yang tidak beres, kategori gagal diperbarui!');
         }
     }
 
@@ -110,9 +110,9 @@ class CategoriesController extends Controller
         $categories = Categories::find($id);
 
         if($categories->delete()){
-            return redirect(url("admin/categories"))->with('success', 'The category has been succesfully deleted!');
+            return redirect(url("admin/categories"))->with('success', 'Kategori telah berhasil dihapus!');
         }else{
-            return redirect(url("admin/categories"))->with('error', 'Something went wrong, the category failed to deleted!');
+            return redirect(url("admin/categories"))->with('error', 'Ada yang tidak beres, kategori gagal dihapus!');
         }
     }
 }

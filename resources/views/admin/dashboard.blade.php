@@ -1,13 +1,13 @@
 @extends('templates/admin-app')
 
-@section('title','NAM - Dashboard')
+@section('title','Altash - Dashboard')
 
 @section('content')
 <!-- Begin Page Content -->
 <div class="container-md d-flex flex-column gap-4">
 
     <div class="row border border-2 py-4 rounded">
-        <h5 class="text-success fw-bold mb-3"><i class="fas fa-boxes"></i> Products</h5>
+        <h5 class="text-success fw-bold mb-3"><i class="fas fa-boxes"></i> Mobil</h5>
 
         <div class="col-xl-3 col-md-6 mb-4 mb-lg-0">
             <div class="card border-left-primary shadow h-100 py-2">
@@ -15,34 +15,13 @@
                     <div class="row no-gutters align-items-center">
                         <div class="col mr-2">
                             <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
-                                Total products</div>
-                            <div class="h5 mb-0 font-weight-bold text-gray-800">{{$total_products}}</div>
+                                Total Mobil</div>
+                            <div class="h5 mb-0 font-weight-bold text-gray-800">{{$total_mobil}}</div>
                         </div>
                         <div class="col-auto">
-                            <a href="{{url('admin/products')}}">
+                            <a href="{{url('admin/cars')}}">
                                 <i class="fa-solid fa-up-right-from-square text-primary"></i>
                             </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-xl-3 col-md-6 mb-4 mb-lg-0">
-            <div class="card border-left-info shadow h-100 py-2">
-                <div class="card-body">
-                    <div class="row no-gutters align-items-center">
-                        <div class="col mr-2">
-                            <div class="text-xs font-weight-bold text-info text-uppercase mb-1">
-                                Need approval</div>
-                            <div class="h5 mb-0 font-weight-bold text-gray-800">{{$need_approval}}</div>
-                        </div>
-                        <div class="col-auto">
-                            @if(Auth::user()->role == 1)
-                            <a href="{{url('admin/product-confirmation')}}">
-                                <i class="fa-solid fa-up-right-from-square text-info"></i>
-                            </a>
-                            @endif
                         </div>
                     </div>
                 </div>
@@ -55,8 +34,8 @@
                     <div class="row no-gutters align-items-center">
                         <div class="col mr-2">
                             <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
-                                Active products</div>
-                            <div class="h5 mb-0 font-weight-bold text-gray-800">{{$active_product}}</div>
+                                Mobil Aktif</div>
+                            <div class="h5 mb-0 font-weight-bold text-gray-800">{{$active_car}}</div>
                         </div>
                         <div class="col-auto">
                         </div>
@@ -71,7 +50,7 @@
                     <div class="row no-gutters align-items-center">
                         <div class="col mr-2">
                             <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">
-                                Images</div>
+                                Foto</div>
                             <div class="h5 mb-0 font-weight-bold text-gray-800">{{$images}}</div>
                         </div>
                         <div class="col-auto">
@@ -108,7 +87,7 @@
                     <div class="row no-gutters align-items-center">
                         <div class="col mr-2">
                             <div class="text-xs font-weight-bold text-dark text-uppercase mb-1">
-                                <i class="fas fa-book"></i> Categories</div>
+                                <i class="fas fa-book"></i> Kategori</div>
                             <div class="h5 mb-0 font-weight-bold text-gray-800">{{$total_categories}}</div>
                         </div>
                         <div class="col-auto">
@@ -131,7 +110,7 @@
                             <div class="h5 mb-0 font-weight-bold text-gray-800">{{$total_roles}}</div>
                         </div>
                         <div class="col-auto">
-                            <a href="{{url('admin/categories')}}">
+                            <a href="{{url('admin/roles')}}">
                                 <i class="fa-solid fa-up-right-from-square text-primary"></i>
                             </a>
                         </div>

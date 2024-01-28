@@ -1,17 +1,17 @@
 @extends('templates/admin-app')
 
-@section('title','NAM - Add Product')
+@section('title','Altash - Tambah mobil')
 
 @section('content')
 
 <div class="container shadow bg-white py-3 mb-4">
 <span>
-    <a class="text-success" href="{{url('admin/products')}}"><i class="fas fa-chevron-left"></i> Back</a>
+    <a class="text-success" href="{{url('admin/cars')}}"><i class="fas fa-chevron-left"></i> Kembali</a>
 </span>
-<form class="border border-light px-4 py-3 row" action="{{ url('admin/products') }}" method="POST" enctype="multipart/form-data">
+<form class="border border-light px-4 py-3 row" action="{{ url('admin/cars') }}" method="POST" enctype="multipart/form-data">
     @csrf
     <div class="d-sm-flex align-items-center justify-content-between mb-2">
-        <h3 class="h3 mb-0 text-base fw-bold">Add Product</h3>
+        <h3 class="h3 mb-0 text-base fw-bold">Tambah Mobil</h3>
     </div>
     <hr>
     @if (Session::get('error'))
@@ -22,12 +22,12 @@
     @endif
     <div class="mb-3">
         <div class="mb-4">
-            <label class="form-label" for="textAreaExample">Category<span class="text-danger">*</span></label>
+            <label class="form-label" for="textAreaExample">Kategori<span class="text-danger">*</span></label>
             @if($errors->has('category_id'))
                 <div class="text-danger">{{ $errors->first('category_id') }}</div>
             @endif
             <select name="category_id" class="form-select">
-                    <option disabled selected>Choose a category</option>
+                    <option disabled selected>Pilih kategori</option>
                 @foreach($categories as $row)
                     <option value="{{$row['id']}}">{{$row['name']}}</option>
                 @endforeach
@@ -35,7 +35,7 @@
         </div>    
 
         <div class="mb-4">
-            <label class="form-label" for="textAreaExample">Name<span class="text-danger">*</span>
+            <label class="form-label" for="textAreaExample">Nama Mobil<span class="text-danger">*</span>
             </label>
             @if($errors->has('name'))
                 <div class="text-danger">{{ $errors->first('name') }}</div>
@@ -44,7 +44,7 @@
         </div>
 
         <div class="mb-4">
-            <label class="form-label" for="textAreaExample">Description<span class="text-danger">*</span></label>
+            <label class="form-label" for="textAreaExample">Deskripsi<span class="text-danger">*</span></label>
             @if($errors->has('description'))
                 <div class="text-danger">{{ $errors->first('description') }}</div>
             @endif
@@ -52,7 +52,7 @@
         </div>
 
         <div class="mb-4">
-            <label class="form-label" for="textAreaExample">Price (Rp)<span class="text-danger">*</span></label>
+            <label class="form-label" for="textAreaExample">Harga Sewa (Rp)<span class="text-danger">*</span></label>
             @if($errors->has('price'))
                 <div class="text-danger">{{ $errors->first('price') }}</div>
             @endif
@@ -60,25 +60,17 @@
         </div>
 
         <div class="mb-4">
-            <label class="form-label" for="textAreaExample">Discount (%)</label>
+            <label class="form-label" for="textAreaExample">Diskon (%)</label>
             @if($errors->has('discount'))
                 <div class="text-danger">{{ $errors->first('discount') }}</div>
             @endif
             <input type="text" id="defaultSubscriptionFormPassword" class="form-control" name="discount">
         </div>
 
-        <div class="mb-4">
-            <label class="form-label" for="textAreaExample">Stock<span class="text-danger">*</span></label>
-            @if($errors->has('stock'))
-                <div class="text-danger">{{ $errors->first('stock') }}</div>
-            @endif
-            <input type="text" id="defaultSubscriptionFormPassword" class="form-control" name="stock">
-        </div>
-
         @if(Auth::user()->role == 1)
         <div class="mb-4">
-            <label class="form-label mb-0" for="textAreaExample">Product Status</label><br>
-            <div class="badge badge-info mb-3" for="textAreaExample">Determines wether or not the product is displayed</div>
+            <label class="form-label mb-0" for="textAreaExample">Status Mobil</label><br>
+            <div class="badge badge-info mb-3" for="textAreaExample">Menentukan apakah mobil akan ditampilkan atau tidak</div>
             <div class="form-check form-switch">
                 <input class="form-check-input" type="checkbox" name="status[]" value="1" id="flexSwitchCheckChecked">
             </div>
@@ -86,26 +78,26 @@
         @endif
 
         <div class="mb-4">
-            <label class="form-label mb-0" for="textAreaExample">Product Images</label><br>
-            <div class="badge badge-info mb-4">Turn on the <i class="fas fa-toggle-on"></i> if you want the image to be show on the product. You can organize the product images in the product table in the image column with <i class="fas fa-image small"></i> icon as an indicator.</div>
+            <label class="form-label mb-0" for="textAreaExample">Foto Mobil</label><br>
+            <div class="badge badge-info mb-4">Nyalakan <i class="fas fa-toggle-on"></i> jika Anda ingin gambar ditampilkan pada produk. Anda dapat mengatur gambar produk di tabel produk di kolom gambar dengan <i class="fas fa-image small"></i> ikon sebagai indikator.</div>
             <select class="form-select photoCount" name="image_count">
-                    <option selected value="1">1 Image</option>
-                    <option value="2">2 Images</option>
-                    <option value="3">3 Images</option>
-                    <option value="4">4 Images</option>
-                    <option value="5">5 Images</option>
-                    <option value="6">6 Images</option>
-                    <option value="7">7 Images</option>
-                    <option value="8">8 Images</option>
-                    <option value="9">9 Images</option>
-                    <option value="10">10 Images</option>
+                    <option selected value="1">1 Foto</option>
+                    <option value="2">2 Foto</option>
+                    <option value="3">3 Foto</option>
+                    <option value="4">4 Foto</option>
+                    <option value="5">5 Foto</option>
+                    <option value="6">6 Foto</option>
+                    <option value="7">7 Foto</option>
+                    <option value="8">8 Foto</option>
+                    <option value="9">9 Foto</option>
+                    <option value="10">10 Foto</option>
 
             </select>
         </div>
 
         <div class="mb-4 photos">
             <div class="d-flex gap-2">
-                <label for="formFile" class="form-label">Image 1</label>
+                <label for="formFile" class="form-label">Foto 1</label>
                 <div class="form-check form-switch">
                     <input class="form-check-input" type="checkbox" name="image_status_1" value="1" id="flexSwitchCheckChecked">
                 </div>
@@ -139,7 +131,7 @@
             {
                 photos.append(`
                 <div class="d-flex gap-2">
-                    <label for="formFile" class="form-label">Image ${i}</label>
+                    <label for="formFile" class="form-label">Foto ${i}</label>
                     <div class="form-check form-switch">
                         <input class="form-check-input" type="checkbox" name="image_status_${i}" value="1" id="flexSwitchCheckChecked">
                     </div>

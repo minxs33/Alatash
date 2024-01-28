@@ -1,6 +1,6 @@
 @extends('templates/admin-app')
 
-@section('title','NAM - Carousel Lists')
+@section('title','Altash - List Carousel')
 
 @section('content')
 
@@ -11,7 +11,7 @@
 }
 </style>
 <div class="container-fluid card bg-white shadow-sm p-4">
-    <h4 class="fw-semibold"><i class="fas fa-panorama"></i> Manage Carousels</h4>
+    <h4 class="fw-semibold"><i class="fas fa-panorama"></i> Manajemen Carousel</h4>
     <hr class="border-success">
 
         @if (Session::get('error'))
@@ -27,7 +27,7 @@
         @endif
     <div class="row">
         <div class="col-3 mb-4">
-            <a class="btn btn-outline-success" href="{{ url('/admin/carousels/create') }}" class="text-white text-decoration-none"><i class="fas fa-plus"></i> Add new carousel</a>
+            <a class="btn btn-outline-success" href="{{ url('/admin/carousels/create') }}" class="text-white text-decoration-none"><i class="fas fa-plus"></i> Tambah Carousel Baru</a>
         </div>
         
         <div class="col-12">
@@ -36,14 +36,13 @@
                     <thead>
                         <tr>
                             <th>No</th>
-                            <th>Name</th>
-                            <th>Description</th>
-                            <th>Url</th>
-                            <th>Image</th>
-                            <th>Active Status</th>
-                            <th>Created At</th>
-                            <th>Last Updated</th>
-                            <th>Action</th>
+                            <th>Nama Carousel</th>
+                            <th>Deskripsi</th>
+                            <th>Foto</th>
+                            <th>Status Keaktifan</th>
+                            <th>Dibuat Pada</th>
+                            <th>Terakhir Diupdate</th>
+                            <th>Aksi</th>
                         </tr>
                     </thead>
                     <tbody class="table-body">
@@ -52,7 +51,6 @@
                             <td>{{$loop->index+1}}</td>
                             <td>{{$row['name']}}</td>
                             <td>{{substr($row['description'],0,50)}}</td>
-                            <td>{{$row['url']}}</td>
                             <td><img class="img-thumbnail object-fit-scale image-btn" src="{{ asset('storage/images/carousels/')}}/{{$row['image_url'] }}" alt="{{$row['image_url']}}" style="width:100px; height:auto;" data-mdb-toggle="modal" data-mdb-target="#image-Modal"></td>
                             <td>{!!$row['is_active'] == 1 ? 'Active' : 'Non-active'!!}</td>
                             <td>
@@ -83,7 +81,7 @@
   <div class="modal-dialog modal-lg">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title text-success fw-bold" id="image-ModalLabel"><i class="fas fa-image"></i> Carousel Image</h5>
+        <h5 class="modal-title text-success fw-bold" id="image-ModalLabel"><i class="fas fa-image"></i> Foto Carousel</h5>
         <button type="button" class="btn-close" data-mdb-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">

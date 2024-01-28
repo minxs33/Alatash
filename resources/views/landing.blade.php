@@ -1,6 +1,6 @@
 @extends("templates.app")
 
-@section("title", "Naufal Alwan Merch")
+@section("title", "Altash - Rent Car")
 
 @section("content")
 
@@ -11,101 +11,10 @@
         @endforeach
     </div>
 
-    <section class="mb-4" id="kategori">
-        <div class="d-flex flex-column gap-2">
-            <div class="d-flex justify-content-start align-items-center gap-3 bg-white px-3 py-2 rounded-top shadow-sm">
-                <label class="fw-semibold fs-5">New in T-Shirt</label>
-                <!-- <a href="#" class="text-decoration-none fw-bold link-anchor fs-6 mt-1">See more</a> -->
-            </div>
-            
-            <div class="owl-carousel category-carousel owl-theme">
-
-            @foreach($tshirt as $row)
-                <a href="{{url('/products/')}}/{{$row['id']}}" class="text-decoration-none">
-                    <div class="shadow-sm card border-0" style=" height:25rem">
-                    @if($row['product_images_count'] != 0)
-                        @foreach($row['product_images'] as $images)
-                            @if($images['is_active'] == 1)
-                                <img src="{{asset('storage/images/product-images')}}/{{$images['image_url']}}" class="card-img-top object-fit-cover" alt="Product Photo" style="width:100%; height: 240px;">
-                            @break
-                            @else
-                                <img src="{{asset('storage/images/product-images/default.png')}}" class="card-img-top object-fit-cover" alt="Product Photo" style="width:100%; height: 240px;">
-                            @break
-                            @endif
-                        @endforeach
-                    @else
-                        <img src="{{asset('storage/images/product-images/default.png')}}" class="card-img-top object-fit-cover" alt="Product Photo" style="width:100%; height: 240px;">
-                    @endif
-                        <div class="card-body p-2">
-                            <small class="card-title fw-medium text-muted">{{substr($row['name'],0,40)}}</small>
-                            <div class="d-flex flex-column mt-1">
-                                <label class="fw-semibold">Rp{{$row['total_price']}}
-                                </label>
-                                @if($row['discount'] == 0)
-                                @else
-                                <div class="span d-flex gap-2">
-                                    <div class="badge badge-sm text-bg-danger">{{$row['discount']}}%</div>
-                                    <div class="small text-decoration-line-through">Rp{{$row['price']}}</div>
-                                </div>
-                                @endif
-                            </div>
-                        </div>
-                    </div>
-                </a>
-            @endforeach
-            
-        </div>
-                
-
-        <div class="d-flex flex-column gap-2 mt-4">
-            <div class="d-flex justify-content-start align-items-center gap-3 bg-white px-3 py-2 rounded-top shadow-sm">
-                <label class="fw-semibold fs-5">New in Hoodie</label>
-                <!-- <a href="#" class="text-decoration-none fw-bold link-anchor fs-6 mt-1">See more</a> -->
-            </div>
-            
-            <div class="owl-carousel category-carousel owl-theme">
-
-            @foreach($hoodie as $row)
-                <a href="{{url('/products/')}}/{{$row['id']}}" class="text-decoration-none">
-                    <div class="shadow-sm card border-0" style=" height:25rem">
-                    @if($row['product_images_count'] != 0)
-                        @foreach($row['product_images'] as $images)
-                            @if($images['is_active'] == 1)
-                                <img src="{{asset('storage/images/product-images')}}/{{$images['image_url']}}" class="card-img-top object-fit-cover" alt="Product Photo" style="width:100%; height: 240px;">
-                            @break
-                            @else
-                                <img src="{{asset('storage/images/product-images/default.png')}}" class="card-img-top object-fit-cover" alt="Product Photo" style="width:100%; height: 240px;">
-                            @break
-                            @endif
-                        @endforeach
-                    @else
-                        <img src="{{asset('storage/images/product-images/default.png')}}" class="card-img-top object-fit-cover" alt="Product Photo" style="width:100%; height: 240px;">
-                    @endif
-                        <div class="card-body p-2">
-                            <small class="card-title fw-medium text-muted">{{substr($row['name'],0,40)}}</small>
-                            <div class="d-flex flex-column mt-1">
-                                <label class="fw-semibold">Rp{{$row['total_price']}}
-                                </label>
-                                @if($row['discount'] == 0)
-                                @else
-                                <div class="span d-flex gap-2">
-                                    <div class="badge badge-sm text-bg-danger">{{$row['discount']}}%</div>
-                                    <div class="small text-decoration-line-through">Rp{{$row['price']}}</div>
-                                </div>
-                                @endif
-                            </div>
-                        </div>
-                    </div>
-                </a>
-            @endforeach
-            </div>
-        </div>
-    </section>
-
     <section class="mb-4">
         <div class="d-flex flex-column gap-2">
             <div class="d-flex justify-content-between align-items-center gap-3 bg-white px-3 py-2 rounded-top shadow-sm">
-                <label class="fw-semibold fs-5">All Products</label>
+                <label class="fw-semibold fs-5">All Cars</label>
                 <div class="d-flex align-items-center gap-2">
                     <label class="text-secondary">Filter</label>
                     <select class="form-select rounded-pill category" aria-label="Default select example">
@@ -116,8 +25,8 @@
                     </select>
                 </div>
             </div>
-            <div class="products">
-                @include('templates/includes/product-card')
+            <div class="cars">
+                @include('templates/includes/car-card')
             </div>
         </div>
     </section>
@@ -162,10 +71,10 @@
                 type: "GET",
                 dataType: "html"
             }).done(function (data) {
-                $('.products').html(data);  
+                $('.cars').html(data);  
             }).fail(function () {
-                $('.products').html(`
-                    <div class="alert alert-danger"> Product failed to load, click <a href="#here" onclick="location.reload()">here<a> to refresh the page </div>
+                $('.cars').html(`
+                    <div class="alert alert-danger"> Mobil gagal memuat, <a href="#here" onclick="location.reload()">tekan ini<a> untuk muat ulang </div>
                 `);  
             });
             })
@@ -182,7 +91,7 @@
             $('.products').html(data);  
         }).fail(function () {
             $('.products').html(`
-                <div class="alert alert-danger"> Product failed to load, click <a href="#here" onclick="location.reload()">here<a> to refresh the page </div>
+                <div class="alert alert-danger"> Mobil gagal memuat, <a href="#here" onclick="location.reload()">tekan ini<a> muat ulang </div>
             `);  
         });
     }

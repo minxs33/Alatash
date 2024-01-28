@@ -1,17 +1,17 @@
 @extends('templates/admin-app')
 
-@section('title','NAM - Add Carousel')
+@section('title','Altash - Tambah Carousel')
 
 @section('content')
 
 <div class="container shadow bg-white py-3 mb-4">
 <span>
-    <a class="text-success" href="{{url('admin/carousels')}}"><i class="fas fa-chevron-left"></i> Back</a>
+    <a class="text-success" href="{{url('admin/carousels')}}"><i class="fas fa-chevron-left"></i> Kembali</a>
 </span>
 <form class="border border-light px-4 py-3 row" action="{{ url('admin/carousels') }}" method="POST" enctype="multipart/form-data">
     @csrf
     <div class="d-sm-flex align-items-center justify-content-between mb-2">
-        <h3 class="h3 mb-0 text-base fw-bold">Add Carousel</h3>
+        <h3 class="h3 mb-0 text-base fw-bold">Tambah Carousel</h3>
     </div>
     <hr>
     @if (Session::get('error'))
@@ -22,7 +22,7 @@
     @endif
     <div class="mb-4">
         <div class="d-flex gap-2 align-text-center">
-            <label class="form-label" for="textAreaExample">Name<span class="text-danger">*</span>
+            <label class="form-label" for="textAreaExample">Nama Carousel<span class="text-danger">*</span>
             </label>
             @if($errors->has('name'))
                 <div class="text-danger">{{ $errors->first('name') }}</div>
@@ -34,7 +34,7 @@
     <div class="mb-4">
         
         <div class="d-flex gap-2 align-text-center">
-            <label class="form-label" for="textAreaExample">Description<span class="text-danger">*</span></label>
+            <label class="form-label" for="textAreaExample">Deskripsi<span class="text-danger">*</span></label>
             @if($errors->has('description'))
                 <div class="text-danger">{{ $errors->first('description') }}</div>
             @endif
@@ -44,18 +44,7 @@
 
     <div class="mb-4">
         <div class="d-flex gap-2 align-text-center">
-            <label class="form-label" for="textAreaExample">Url<span class="text-danger">*</span>
-            </label>
-            @if($errors->has('url'))
-                <div class="text-danger">{{ $errors->first('url') }}</div>
-            @endif
-        </div>
-        <input type="text" id="defaultSubscriptionFormPassword" class="form-control" name="url">
-    </div>
-
-    <div class="mb-4">
-        <div class="d-flex gap-2 align-text-center">
-            <label for="formFile" class="form-label">Carousel image<span class="text-danger">*</span></label>
+            <label for="formFile" class="form-label">Foto Carousel<span class="text-danger">*</span></label>
             @if($errors->has('image_url'))
                 <div class="text-danger">{{ $errors->first('image_url') }}</div>
             @endif
@@ -64,7 +53,7 @@
     </div>
 
     <div class="d-flex justify-content-end gap-2 mb-4">
-        <label class="form-label" for="textAreaExample">Carousel Active Status
+        <label class="form-label" for="textAreaExample">Status Aktif Carousel
         </label>
         <div class="form-check form-switch">
             <input class="form-check-input" type="checkbox" name="carousel_status" value="1" id="flexSwitchCheckChecked">

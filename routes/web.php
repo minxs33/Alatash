@@ -25,7 +25,7 @@ Route::resources([
 Route::post('login/authenticate', ['uses' => 'LoginController@authenticate']);
 Route::post('logout', ['uses' => 'LoginController@logout']);
 
-Route::get('/products/{id}', ['uses' => 'ProductController@show']);
+Route::get('/cars/{id}', ['uses' => 'CarController@show']);
 Route::get('/search', ['uses' => 'HomeController@search']);
 
 Route::group(['prefix' => 'admin', 'middleware' => ['auth']], function () {
@@ -38,31 +38,31 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth']], function () {
             'users' => UserController::class,
         ]);
 
-        Route::get('product-confirmation', ['uses' => 'ProductController@productConfirmation']);
+        Route::get('car-confirmation', ['uses' => 'CarController@carConfirmation']);
 
         Route::group(['prefix' => '/ajaxReq'], function () {
-            Route::post('/change-product-status', ['uses' => 'ProductController@getStatus']);
-            Route::post('/change-carousel-status/{id}', ['uses' => 'ProductController@getStatus']);
-            Route::post('/change-images-status', ['uses' => 'Product_imageController@updateIsActive']);
+            Route::post('/change-car-status', ['uses' => 'CarController@getStatus']);
+            Route::post('/change-carousel-status/{id}', ['uses' => 'CarController@getStatus']);
+            Route::post('/change-images-status', ['uses' => 'Car_imageController@updateIsActive']);
         });
     });
 
     Route::middleware('role:1|2')->group(function () {
         Route::resources([
-            'products' => ProductController::class,
+            'cars' => CarController::class,
             'carousels' => CarouselController::class,
-            'product_images' => Product_imageController::class,
+            'car_images' => Car_imageController::class,
         ]);
-        Route::get('/product_images/create/{id}', ['uses' => 'Product_imageController@create']);
+        Route::get('/car_images/create/{id}', ['uses' => 'Car_imageController@create']);
     });
 
     Route::middleware('role:1|2|3')->group(function () {
-        Route::get('/products', ['uses' => 'ProductController@index']);
+        Route::get('/cars', ['uses' => 'CarController@index']);
     });
 
     Route::middleware('role:1|2')->group(function () {
         Route::group(['prefix' => '/ajaxReq'], function () {
-            Route::post('/product-image-list', ['uses' => 'Product_imageController@getProductImage']);
+            Route::post('/car-image-list', ['uses' => 'Car_imageController@getCarImage']);
         });
     });
 });

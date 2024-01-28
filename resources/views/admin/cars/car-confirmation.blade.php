@@ -1,11 +1,11 @@
 @extends('templates/admin-app')
 
-@section('title','NAM - Carousel ')
+@section('title','Altash - Carousel ')
 
 @section('content')
 <div class="container-fluid card bg-white shadow-sm p-4 products d-flex flex-column gap-2">
     <span>
-        <a class="text-success" href="{{url('admin/products')}}"><i class="fas fa-chevron-left"></i> Back</a>
+        <a class="text-success" href="{{url('admin/cars')}}"><i class="fas fa-chevron-left"></i> Kembali</a>
     </span>
     <h3 class="h3 mb-0 text-base fw-bold">Product Approval</h3>
     <hr>

@@ -68,9 +68,9 @@ class CarouselController extends Controller
         }
         
         if($carousels->save()){
-            return redirect(url("admin/carousels"))->with('success', 'The carousels has been succesfully added!');
+            return redirect(url("admin/carousels"))->with('success', 'Carousel telah berhasil ditambahkan!');
         }else{
-            return redirect(url("admin/carousels"))->with('error', 'Something went wrong, the carousels failed to insert!');
+            return redirect(url("admin/carousels"))->with('error', 'Ada yang tidak beres, carousel gagal dimasukkan!');
         }
 
     }
@@ -138,9 +138,9 @@ class CarouselController extends Controller
             $carousels->image_url = $name;
         }
         if($carousels->update()){
-            return redirect(url("admin/carousels"))->with('success', $carousels->name.' has been succesfully updated!');
+            return redirect(url("admin/carousels"))->with('success', $carousels->name.' telah berhasil diperbarui!');
         }else{
-            return redirect(url("admin/carousels"))->with('error', 'Something went wrong, the carousels failed to update!');
+            return redirect(url("admin/carousels"))->with('error', 'Ada yang tidak beres, carousel gagal diperbarui!');
         }
     }
 
@@ -157,9 +157,9 @@ class CarouselController extends Controller
 
         if($delete){
             $carousels->delete();
-            return redirect(url("admin/carousels"))->with('success', 'The carousels has been succesfully deleted!');
+            return redirect(url("admin/carousels"))->with('success', 'Carousel telah berhasil dihapus!');
         }else{
-            return redirect()->back()->with('error', 'Something went wrong, the carousels failed to delete!');
+            return redirect()->back()->with('error', 'Ada yang tidak beres, carousel gagal dihapus!');
         }
         
 
@@ -175,7 +175,7 @@ class CarouselController extends Controller
             $carousels->update(["is_active" => $newStatus]);
             return response()->json(["message" => "success"]);
         } else {
-            return response()->json(["message" => "Carousels not found"], 404);
+            return response()->json(["message" => "Carousels tidak ditemukan"], 404);
         }
     }
 }

@@ -4,8 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Models\Carousels;
 use App\Models\Categories;
-use App\Models\Product_images;
-use App\Models\Products;
+use App\Models\Car_images;
+use App\Models\Cars;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -14,28 +14,28 @@ class HomeController extends Controller
     {
         $carousels = Carousels::where('is_active', 1)->limit(4)->get();
 
-        $product_tshirt = Products::with('product_images')->where('category_id', 2)->where('status', 'active')->withCount([
-            'product_images',
-            'product_images as product_images_count' => function ($query) {
-                $query->where('is_active', '=', 1);
-            }])->orderBy('products.id', 'DESC')->limit(12)->get(['products.*', 'products.id as prod_id', 'products.name as prod_name']);
+        // $product_tshirt = Cars::with('car_images')->where('category_id', 2)->where('status', 'active')->withCount([
+        //     'car_images',
+        //     'car_images as car_images_count' => function ($query) {
+        //         $query->where('is_active', '=', 1);
+        //     }])->orderBy('cars.id', 'DESC')->limit(12)->get(['cars.*', 'cars.id as car_id', 'cars.name as car_name']);
 
-        $product_hoodie = Products::with('product_images')->where('category_id', 3)->where('status', 'active')->withCount([
-            'product_images',
-            'product_images as product_images_count' => function ($query) {
-                $query->where('is_active', '=', 1);
-            }])->orderBy('products.id', 'DESC')->limit(12)->get(['products.*', 'products.id as prod_id', 'products.name as prod_name']);
+        // $product_hoodie = Cars::with('car_images')->where('category_id', 3)->where('status', 'active')->withCount([
+        //     'car_images',
+        //     'car_images as car_images_count' => function ($query) {
+        //         $query->where('is_active', '=', 1);
+        //     }])->orderBy('cars.id', 'DESC')->limit(12)->get(['cars.*', 'cars.id as car_id', 'cars.name as car_name']);
 
         $categories = Categories::all();
 
-        // $products = Products::with("product_images")->where("status","active")->withCount([
-        // "product_images",
-        // "product_images as product_images_count" => function ($query) {
+        // $cars = Cars::with("car_images")->where("status","active")->withCount([
+        // "car_images",
+        // "car_images as car_images_count" => function ($query) {
             //     $query->where("is_active", "=", 1);
-        // }])->orderBy("products.id","DESC")->select(["products.*", "products.id as prod_id","products.name as prod_name"])->paginate(30);
+        // }])->orderBy("cars.id","DESC")->select(["cars.*", "cars.id as car_id","cars.name as car_name"])->paginate(30);
 
-        // dd($products->toArray());
-        $query = Products::with('product_images')->where('status', 'active')->orderBy('products.id', 'DESC')->select(['products.*', 'products.id as prod_id', 'products.name as prod_name']);
+        // dd($cars->toArray());
+        $query = Cars::with('car_images')->where('status', 'active')->orderBy('cars.id', 'DESC')->select(['cars.*', 'cars.id as car_id', 'cars.name as car_name']);
 
         if ($request->ajax()) {
             if ($request->category == 'all') {
@@ -50,26 +50,24 @@ class HomeController extends Controller
                         ->where('price', '<=', $request->max);
                 }
             }
-            $products = $query->paginate(30);
+            $cars = $query->paginate(30);
 
-            return view('templates/includes/product-card', [
-                'product' => $products,
+            return view('templates/includes/car-card', [
+                'car' => $cars,
             ]);
         }
-        $products = $query->paginate(30);
+        $cars = $query->paginate(30);
 
         return view('landing', [
             'carousels' => $carousels,
-            'tshirt' => $product_tshirt,
-            'hoodie' => $product_hoodie,
-            'product' => $products,
+            'car' => $cars,
             'categories' => $categories,
         ]);
     }
 
     public function search(Request $request)
     {
-        $query = Products::with('product_images')->where('status', 'active')->where('name', 'LIKE', '%'.$request->keyword.'%')->orderBy('products.id', 'DESC')->select(['products.*', 'products.id as prod_id', 'products.name as prod_name']);
+        $query = Cars::with('car_images')->where('status', 'active')->where('name', 'LIKE', '%'.$request->keyword.'%')->orderBy('cars.id', 'DESC')->select(['cars.*', 'cars.id as car_id', 'cars.name as car_name']);
 
         if ($request->ajax()) {
             if ($request->category == 'all') {
@@ -84,18 +82,18 @@ class HomeController extends Controller
                         ->where('total_price', '<=', $request->max);
                 }
             }
-            $products = $query->paginate(28);
+            $cars = $query->paginate(28);
 
             return view('templates/includes/product-card-search', [
-                'product' => $products,
+                'car' => $cars,
             ]);
         }
-        $products = $query->paginate(28);
+        $cars = $query->paginate(28);
 
         $categories = Categories::all();
 
-        return view('product-search', [
-            'product' => $products,
+        return view('car-search', [
+            'car' => $cars,
             'title' => $request->keyword,
             'categories' => $categories,
             'keyword' => $request->keyword,

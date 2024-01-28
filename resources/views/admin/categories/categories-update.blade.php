@@ -1,18 +1,18 @@
 @extends('templates/admin-app')
 
-@section('title','NAM - Edit Category')
+@section('title','Altash - Edit Kategori')
 
 @section('content')
 
 <div class="container shadow bg-white py-3 mb-4">
 <span>
-    <a class="text-success" href="{{url('admin/categories')}}"><i class="fas fa-chevron-left"></i> Back</a>
+    <a class="text-success" href="{{url('admin/categories')}}"><i class="fas fa-chevron-left"></i> Kembali</a>
 </span>
 <form class="border border-light px-4 py-3 row" action="{{ url('admin/categories/'.$categories['id']) }}" method="POST">
     @csrf
     @method("PUT")
     <div class="d-sm-flex align-items-center justify-content-between mb-2">
-        <h3 class="h3 mb-0 text-base fw-bold">Update Category</h3>
+        <h3 class="h3 mb-0 text-base fw-bold">Edit Kategori</h3>
     </div>
     <hr>
     @if (Session::get('error'))
@@ -23,7 +23,7 @@
     @endif
     <div class="mb-4">
         <div class="d-flex gap-2 align-text-center">
-            <label class="form-label" for="textAreaExample">Name<span class="text-danger">*</span>
+            <label class="form-label" for="textAreaExample">Nama Kategori<span class="text-danger">*</span>
             </label>
             @if($errors->has('name'))
                 <div class="text-danger">{{ $errors->first('name') }}</div>

@@ -1,11 +1,11 @@
 @extends('templates/admin-app')
 
-@section('title','NAM - Product Lists')
+@section('title','Altash - Product Lists')
 
 @section('content')
 
 <div class="container-fluid card bg-white shadow-sm p-4">
-    <h4 class="fw-semibold"><i class="fas fa-boxes-stacked"></i> Manage Products</h4>
+    <h4 class="fw-semibold"><i class="fas fa-boxes-stacked"></i> Manajemen Mobil</h4>
     <hr class="border-success">
     @if (Session::get('error'))
         <div class="alert alert-danger alert-dismissible fade show" role="alert">
@@ -20,43 +20,28 @@
     @endif
     <div class="row align-items-center">
         <div class="col-4 mb-4">
-            <a class="btn btn-outline-success btn-sm" href="{{ url('/admin/products/create') }}" class="text-white text-decoration-none"><i class="fas fa-plus"></i> Add product</a>
+            <a class="btn btn-outline-success btn-sm" href="{{ url('/admin/cars/create') }}" class="text-white text-decoration-none"><i class="fas fa-plus"></i> Tambah Mobil</a>
         </div>
-        @if(Auth::user()->role == 1)
-        <div class="col-8 mb-4 d-flex gap-2 align-items-center">
-            <div>
-                <a href="{{url('admin/product-confirmation')}}" class="btn btn-sm btn-warning image-modal position-relative text-black fw-bold">
-                    {{$products_waiting}}
-                    <span class="position-absolute top-0 start-100 translate-middle">
-                        <i class="fas fa-circle-exclamation text-danger"></i>
-                    <span class="small visually-hidden">Product waiting for approval</span>
-                    </span>
-                </a>
-            </div>
-            <small>Products waiting for approval</small>
-        </div>
-        @endif
         <div class="col-12">
             <div class="table-responsive">
-                <table class="table table-hover text-center" id="products-table">
+                <table class="table table-hover text-center" id="cars-table">
                     <thead>
                         <tr>
                             <th>No</th>
-                            <th>Category</th>
-                            <th>Images</th>
-                            <th>Name</th>
-                            <th>Description</th>
-                            <th>Price</th>
-                            <th>Stock</th>
-                            <th>Active Status</th>
-                            <th>Created At</th>
-                            <th>Last Updated</th>
-                            <th>Created By</th>
-                            <th>Action</th>
+                            <th>Kategori</th>
+                            <th>Foto</th>
+                            <th>Nama Mobil</th>
+                            <th>Deskripsi</th>
+                            <th>Harga</th>
+                            <th>Status keaktifan</th>
+                            <th>Dibuat pada</th>
+                            <th>Terakhir diupdate</th>
+                            <th>Dibuat oleh</th>
+                            <th>Aksi</th>
                         </tr>
                     </thead>
                     <tbody class="table-body">
-                        @foreach($products as $row)
+                        @foreach($cars as $row)
                             <tr>
                                 <td>
                                     {{$loop->index+1}}
@@ -65,17 +50,17 @@
                                     {{$row['cat_name']}}
                                 </td>
                                 <td>
-                                    <button class="btn btn-sm btn-success image-modal position-relative" type="button" value="{{$row['prod_id']}}" data-mdb-toggle="modal" data-mdb-target="#image-Modal"><i class="fas fa-image"></i>
-                                    @if($row['product_images_count'] != 0)
+                                    <button class="btn btn-sm btn-success image-modal position-relative" type="button" value="{{$row['car_id']}}" data-mdb-toggle="modal" data-mdb-target="#image-Modal"><i class="fas fa-image"></i>
+                                    @if($row['car_images_count'] != 0)
                                         <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
-                                            {{$row['product_images_count']}}
-                                        <span class="visually-hidden">Product Images</span>
+                                            {{$row['car_images_count']}}
+                                        <span class="visually-hidden">Foto-foto mobil</span>
                                         </span>
                                     @endif
                                     </button>
                                 </td>
                                 <td style="max-width: 250px;">
-                                    {{$row['prod_name']}}
+                                    {{$row['car_name']}}
                                 </td>
                                 <td>
                                     {{substr($row['description'],0,50)}}
@@ -91,10 +76,7 @@
                                     
                                 </td>
                                 <td>
-                                    {{$row['stock']}}
-                                </td>
-                                <td>
-                                    {!!$row['status'] == 'active' ? '<div class="form-switch"><input class="form-check-input status" type="checkbox" value="'.$row['prod_id'].'" id="flexCheckChecked" checked></div>' : '<div class="form-switch"><input class="form-check-input status" type="checkbox" value="'.$row['prod_id'].'" id="flexCheckChecked"></div>'!!}
+                                    {!!$row['status'] == 'active' ? '<div class="form-switch"><input class="form-check-input status" type="checkbox" value="'.$row['car_id'].'" id="flexCheckChecked" checked></div>' : '<div class="form-switch"><input class="form-check-input status" type="checkbox" value="'.$row['car_id'].'" id="flexCheckChecked"></div>'!!}
                                 </td>
                                 <td>
                                     {{$row['created_at']->format('j F, Y. H:i')}}
@@ -106,11 +88,11 @@
                                     {{$row['users_name']}}
                                 </td>
                                 <td>
-                                    <form method="POST" action="{{ url('admin/products/'.$row['prod_id']) }}">
-                                        <a class="btn btn-warning btn-sm" href="{{ url('admin/products/'.$row['prod_id'].'/edit') }}"><i class="fas fa-edit fa-sm"></i></a>
+                                    <form method="POST" action="{{ url('admin/cars/'.$row['car_id']) }}">
+                                        <a class="btn btn-warning btn-sm" href="{{ url('admin/cars/'.$row['car_id'].'/edit') }}"><i class="fas fa-edit fa-sm"></i></a>
                                         @csrf
                                         @method('DELETE')
-                                        <button class="btn btn-danger btn-sm" onclick="return confirm('Are you sure?')" type="submit"><i class="fas fa-trash fa-sm"></i></button>
+                                        <button class="btn btn-danger btn-sm" onclick="return confirm('Apa Anda yakin?')" type="submit"><i class="fas fa-trash fa-sm"></i></button>
                                     </form>
                                 </td>
                             </tr>
@@ -127,12 +109,12 @@
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title text-success fw-bold" id="image-ModalLabel"><i class="fas fa-image"></i> Manage Product Images</h5>
+        <h5 class="modal-title text-success fw-bold" id="image-ModalLabel"><i class="fas fa-image"></i> Manajemen foto mobil</h5>
         <button type="button" class="btn-close" data-mdb-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
         <div class="alert alert-info p-2">
-            The first active image is the image displayed on the product thumbnail
+            Gambar aktif pertama adalah gambar yang ditampilkan pada thumbnail produk
         </div>
         <div class="link-container">
             
@@ -142,7 +124,7 @@
         </div>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-warning" data-mdb-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-warning" data-mdb-dismiss="modal">Tutup</button>
       </div>
     </div>
   </div>
@@ -151,13 +133,13 @@
 
 <script>
     jQuery(() => {
-        $('#products-table').DataTable();
+        $('#cars-table').DataTable();
 
         $(document).on("change", ".status",function(){
    
             // alert($((this)).val());
             $.ajax({
-                url : "{{url('admin/ajaxReq/change-product-status')}}",
+                url : "{{url('admin/ajaxReq/change-car-status')}}",
                 type: "POST",
                 data : {id:$((this)).val()},
                 headers: {
@@ -174,7 +156,7 @@
         function reloadImage($id){
             imageContainer.html("");
             $.ajax({
-                url: "{{url('admin/ajaxReq/product-image-list')}}",
+                url: "{{url('admin/ajaxReq/car-image-list')}}",
                 data : {id : $id},
                 type: "POST",
                 headers: {
@@ -182,20 +164,20 @@
                 },
                 success : (data) => {
                     // console.log(data);
-                    linkContainer.html(`<a class="btn btn-outline-success" href="{{ url('/admin/product_images/create/${$id}') }}" class="text-white text-decoration-none"><i class="fas fa-plus"></i> Add new product image</a>`);
+                    linkContainer.html(`<a class="btn btn-outline-success" href="{{ url('/admin/car_images/create/${$id}') }}" class="text-white text-decoration-none"><i class="fas fa-plus"></i> Tambahkan foto mobil baru</a>`);
                     $.each(data, (i,v) => {
                         
                         imageContainer.append(`
                             <hr>
                             <div class="d-flex flex-column mb-3">
                                 <div class="d-flex justify-content-between mb-2">
-                                    <h5 class="text-muted">Image ${i+1}</h5>
+                                    <h5 class="text-muted">Foto ke-${i+1}</h5>
                                     <div class="d-flex align-items-center gap-2">
                                         ${v['is_active'] == 1 ? `<div class="form-switch"><input class="form-check-input image-status" type="checkbox" value="${v['id']}" id="flexCheckChecked" checked></div>` : `<div class="form-switch"><input class="form-check-input image-status" type="checkbox" value="${v['id']}" id="flexCheckChecked"></div>`}
-                                        <button class="btn btn-danger btn-sm delete-image" type="button" value="${v['id']}" data-prod-id="${v['products_id']}"><i class="fas fa-trash fa-sm"></i></button>
+                                        <button class="btn btn-danger btn-sm delete-image" type="button" value="${v['id']}" data-prod-id="${v['cars_id']}"><i class="fas fa-trash fa-sm"></i></button>
                                     </div>
                                 </div>
-                                <img class="object-fit-scale" src="{{asset('storage/images/product-images')}}/${v['image_url']}" alt="{{asset('storage/images/product-images')}}/${v['image_url']}" style="width:100%; height:auto;">
+                                <img class="object-fit-scale" src="{{asset('storage/images/car-images')}}/${v['image_url']}" alt="{{asset('storage/images/car-images')}}/${v['image_url']}" style="width:100%; height:auto;">
                             </div>
                             
                         `);
@@ -223,10 +205,10 @@
 
         $(document).on("click", ".delete-image",function(){
             // console.log($((this)).val())
-            if(confirm("Are you sure?") == true)
+            if(confirm("Apa Anda yakin?") == true)
             {
                 $.ajax({
-                    url : "{{url('admin/product_images')}}/"+$((this)).val(),
+                    url : "{{url('admin/car_images')}}/"+$((this)).val(),
                     type: "DELETE",
                     headers: {
                         'X-CSRF-Token': '{{ csrf_token() }}',
@@ -234,7 +216,7 @@
                     success : (data) => {
                         // console.log(data);
                         // alert($(this).attr("data-prod-id"));
-                        reloadImage($(this).attr("data-prod-id"));
+                        reloadImage($(this).attr("data-car-id"));
                     }
                 })
             }

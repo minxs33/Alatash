@@ -1,16 +1,16 @@
 @extends('templates/admin-app')
 
-@section('title','NAM - Add Product Image')
+@section('title','Altash - Tambah Foto Mobil')
 
 @section('content')
 <div class="container shadow bg-white py-3 mb-4">
     <span>
-        <a class="text-success" href="{{url('admin/products')}}"><i class="fas fa-chevron-left"></i> Back</a>
+        <a class="text-success" href="{{url('admin/products')}}"><i class="fas fa-chevron-left"></i> Kembali</a>
     </span>
 
     <div class="px-4">
         <div class="d-sm-flex align-items-center justify-content-between mt-3">
-            <h3 class="h3 mb-0 text-base fw-bold">Add Product Images</h3>
+            <h3 class="h3 mb-0 text-base fw-bold">Tambah Foto Mobil</h3>
         </div>
         <hr>
         @if (Session::get('error'))
@@ -24,66 +24,60 @@
                 <div class="row gy-3">
                     <div class="col-lg-6">
                         <div class="d-flex flex-wrap flex-column">
-                            <small class="fw-bold text-muted mb-0">Product Name</small>
-                            <small>{{$products['prod_name']}}</small>
+                            <small class="fw-bold text-muted mb-0">Nama Mobil</small>
+                            <small>{{$cars['car_name']}}</small>
                         </div>
                     </div>
 
                     <div class="col-lg-6">
                         <div class="d-flex flex-wrap flex-column">
-                            <small class="fw-bold text-muted mb-0">Category</small>
-                            <small>{{$products['cat_name']}}</small>
+                            <small class="fw-bold text-muted mb-0">Kategori</small>
+                            <small>{{$cars['cat_name']}}</small>
                         </div>
                     </div>
 
                     <div class="col-lg-6">
                         <div class="d-flex flex-wrap flex-column">
-                            <small class="fw-bold text-muted mb-0">Price</small>
-                            <small>Rp{{$products['total_price']}}</small>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-6">
-                        <div class="d-flex flex-wrap flex-column">
-                            <small class="fw-bold text-muted mb-0">Stock</small>
-                            <small>{{$products['stock']}}</small>
+                            <small class="fw-bold text-muted mb-0">Harga Sewa</small>
+                            <small>Rp{{$cars['total_price']}}</small>
                         </div>
                     </div>
                     
                     <div class="col-lg-12">
-                    <div class="d-flex flex-wrap flex-column">
-                            <small class="fw-bold text-muted mb-0">Description</small>
-                            <small>{{$products['description']}}</small>
+                        <div class="d-flex flex-wrap flex-column">
+                                <small class="fw-bold text-muted mb-0">Deskripsi</small>
+                                <small>{{$cars['description']}}</small>
+                            </div>
                         </div>
-                    </div>
                 </div>
+
             </div>
         </div>
     
-        <form class="py-3 row" action="{{ url('admin/product_images') }}" method="POST" enctype="multipart/form-data">
+        <form class="py-3 row" action="{{ url('admin/car_images') }}" method="POST" enctype="multipart/form-data">
             @csrf
-            <input type="hidden" name="products_id" value="{{$products['prod_id']}}">
+            <input type="hidden" name="cars_id" value="{{$cars['car_id']}}">
             <div class="mb-3">
 
                 <div class="mb-4">
-                    <label class="form-label" for="textAreaExample">Product Images</label>
+                    <label class="form-label" for="textAreaExample">Car Images</label>
                     <select class="form-select photoCount" name="image_count">
-                            <option selected value="1">1 Image</option>
-                            <option value="2">2 Images</option>
-                            <option value="3">3 Images</option>
-                            <option value="4">4 Images</option>
-                            <option value="5">5 Images</option>
-                            <option value="6">6 Images</option>
-                            <option value="7">7 Images</option>
-                            <option value="8">8 Images</option>
-                            <option value="9">9 Images</option>
-                            <option value="10">10 Images</option>
+                            <option selected value="1">1 Foto</option>
+                            <option value="2">2 Foto</option>
+                            <option value="3">3 Foto</option>
+                            <option value="4">4 Foto</option>
+                            <option value="5">5 Foto</option>
+                            <option value="6">6 Foto</option>
+                            <option value="7">7 Foto</option>
+                            <option value="8">8 Foto</option>
+                            <option value="9">9 Foto</option>
+                            <option value="10">10 Foto</option>
 
                     </select>
                 </div>
 
                 <div class="mb-4 photos">
-                    <label for="formFile" class="form-label">Image 1</label>
+                    <label for="formFile" class="form-label">Foto 1</label>
                     <input class="form-control" name="image_1" type="file" id="formFile">
                 </div>
 
@@ -111,7 +105,7 @@
             for(var i = 1; i <= $((this)).val(); i++)
             {
                 photos.append(`
-                <label for="formFile" class="form-label">Image `+i+` </label>
+                <label for="formFile" class="form-label">Foto `+i+` </label>
                 <input class="form-control mb-2" name="image_`+i+`" type="file" id="formFile">
                 `)
             }

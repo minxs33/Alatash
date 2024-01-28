@@ -26,13 +26,13 @@
         <hr class="sidebar-divider d-none d-md-block">
         @endif
         <div class="sidebar-heading">
-            Product
+            Car
         </div>
 
         <li class="nav-item">
-            <a class="nav-link collapsed text-muted" href="{{ url('admin/products') }}">
-                <i class="fas fa-boxes-stacked"></i>
-                <span>Product Lists</span>
+            <a class="nav-link collapsed text-muted" href="{{ url('admin/cars') }}">
+                <i class="fas fa-car"></i>
+                <span>Car Lists</span>
             </a>
         </li>
 

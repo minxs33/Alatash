@@ -1,9 +1,9 @@
 @extends('templates/admin-app')
 
-@section('title','NAM - Products Catalogue')
+@section('title','Altash - Katalog Mobil')
 
 @section('content')
 <div class="container-fluid card bg-white shadow-sm p-4">
-    @include("templates/includes/product-admin-card")
+    @include("templates/includes/car-admin-card")
 </div>
 @endsection
