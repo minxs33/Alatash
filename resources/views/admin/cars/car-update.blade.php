@@ -27,7 +27,7 @@
             <label class="form-label" for="textAreaExample">Kategori<span class="text-danger">*</span></label>
             <select name="category_id" class="form-select">
                     <option selected value="{{$car['cat_id']}}">{{$car['cat_name']}}</option>
-                @foreach($cars as $row)
+                @foreach($categories as $row)
                 @if($row["id"] == $car["cat_id"])
                     @continue
                 @endif
@@ -50,7 +50,7 @@
             @if($errors->has('description'))
                 <div class="text-danger">{{ $errors->first('description') }}</div>
             @endif
-            <textarea id="defaultSubscriptionFormPassword" class="form-control" name="description">{{$car['description']}}</textarea>
+            <textarea id="tinyMCE" class="form-control" name="description">{{$car['description']}}</textarea>
         </div>
 
         <div class="mb-4">
@@ -93,4 +93,12 @@
 </form>
 
 </div>
+
+<script>
+    tinymce.init({
+        selector: 'textarea#tinyMCE',
+        plugins: 'powerpaste advcode table lists checklist',
+        toolbar: 'undo redo | blocks| bold italic | bullist numlist checklist | code | table'
+    });
+</script>
 @endsection

@@ -88,9 +88,9 @@
             type: "GET",
             dataType : "html"
         }).done(function (data) {
-            $('.products').html(data);  
+            $('.cars').html(data);  
         }).fail(function () {
-            $('.products').html(`
+            $('.cars').html(`
                 <div class="alert alert-danger"> Mobil gagal memuat, <a href="#here" onclick="location.reload()">tekan ini<a> muat ulang </div>
             `);  
         });

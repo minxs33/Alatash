@@ -63,7 +63,7 @@
                                     {{$row['car_name']}}
                                 </td>
                                 <td>
-                                    {{substr($row['description'],0,50)}}
+                                    {!! substr(strip_tags($row['description']), 0, 50) !!}
                                 </td>
                                 <td>
                                     @if($row['discount'] != 0)
@@ -174,7 +174,7 @@
                                     <h5 class="text-muted">Foto ke-${i+1}</h5>
                                     <div class="d-flex align-items-center gap-2">
                                         ${v['is_active'] == 1 ? `<div class="form-switch"><input class="form-check-input image-status" type="checkbox" value="${v['id']}" id="flexCheckChecked" checked></div>` : `<div class="form-switch"><input class="form-check-input image-status" type="checkbox" value="${v['id']}" id="flexCheckChecked"></div>`}
-                                        <button class="btn btn-danger btn-sm delete-image" type="button" value="${v['id']}" data-prod-id="${v['cars_id']}"><i class="fas fa-trash fa-sm"></i></button>
+                                        <button class="btn btn-danger btn-sm delete-image" type="button" value="${v['id']}" data-car-id="${v['cars_id']}"><i class="fas fa-trash fa-sm"></i></button>
                                     </div>
                                 </div>
                                 <img class="object-fit-scale" src="{{asset('storage/images/car-images')}}/${v['image_url']}" alt="{{asset('storage/images/car-images')}}/${v['image_url']}" style="width:100%; height:auto;">

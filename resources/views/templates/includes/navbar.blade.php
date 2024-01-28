@@ -5,8 +5,7 @@
         <div class="col-lg-3 d-lg-flex d-flex justify-content-lg-center justify-content-between mt-2 mt-lg-0 align-items-center">
             
         <a class="navbar-brand logo-title text-success-emphasis d-flex align-items-center gap-1" href="{{ url('/') }}">
-            <img src="{{ asset('images/logo-merch-light.png') }}" alt="A Logo" style="width: 65px; height:auto;"> 
-            Naufal<span class="text-success">Alwan</span> <span class="text-dark">Merch</span></a>
+            <img src="{{ asset('images/logo_alatash_3_warnaa-01.png') }}" alt="A Logo" style="width: 150px; height:auto;"></a>
 
             <div class="d-flex justify-content-center align-items-center g-1 d-block d-lg-none">
                     <a href="#" class="p-2 rounded-circle text-success"><i class="fas fa-cart-shopping fs-6"></i></a>
@@ -30,11 +29,14 @@
             </div>
         </div>
             <div class="col-lg-6 py-2">
-                <div class="d-flex flex-column">
-                    <form action="{{url('search')}}" class="col-12 mb-3 mb-lg-0">
+                <!-- soon -->
+            </div>
+            <div class="col-lg-3 py-3 d-lg-flex justify-content-center align-items-center d-none">
+                <div class="d-flex justify-content-center align-items-center gap-2">
+                <form action="{{url('search')}}" class="col-12 mb-3 mb-lg-0">
                         @csrf
                         <div class="input-group">
-                            <input name="keyword" class="form-control border-end-0 rounded-pill" type="search" placeholder="T-Shirt, Jacket, Hoodie, and more..">
+                            <input name="keyword" class="form-control border-end-0 rounded-pill" type="search" placeholder="Cari mobil..">
                             <span class="input-group-append">
                                 <button class="btn btn-outline-success border-bottom-0 border rounded-pill search-button" type="submit">
                                     <i class="fa fa-search"></i>
@@ -42,22 +44,6 @@
                             </span>
                         </div>
                     </form>
-                    <nav class="d-flex">
-                        <!-- <ul class="nav">
-                            <li class="nav-item"><a href="{{ url('/') }}" class="nav-link px-2 text-success fw-medium small">Home</a></li>
-                        </ul> -->
-                        @if(Auth::check() && Auth::user()->role == 1)
-                        <ul class="nav">
-                            <li class="nav-item"><a href="{{ url('admin/dashboard') }}" class="nav-link px-2 text-success fw-medium small">Dashboard</a></li>
-                        </ul>
-                        @endif
-                    </nav>
-                </div>
-            </div>
-            <div class="col-lg-3 py-3 d-lg-flex justify-content-center align-items-center d-none">
-                <div class="d-flex justify-content-center align-items-center gap-2">
-                    <a href="#" class="text-success"><i class="fas fa-cart-shopping fs-6"></i></a>
-                    <span class="text-success">|</span>
                     @if(Auth::check())
                     <div class="dropdown dropdown-user">
                         <a class="dropdown d-flex align-items-center hidden-arrow text-black text-decoration-none" href="#" role="button">
@@ -71,11 +57,6 @@
                                 </form>
                             </li>
                         </ul>
-                    </div>
-                    @else
-                    <div>
-                        <a href="{{url('login')}}" class="btn py-1 btn-sm btn-success text-decoration-none">Login</a>
-                        <a href="{{url('register')}}" class="btn py-1 btn-sm btn-outline-success text-decoration-none">Sign Up</a>
                     </div>
                     @endif
                 </div>

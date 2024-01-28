@@ -42,7 +42,6 @@ class CarouselController extends Controller
         $this->validate($request,[
             "name" => "required|min:3|max:100",
             "description" => "required|min:5",
-            "url" => "required|max:100",
             "image_url" => "image|required|mimes:png,jpg,jpeg|max:4096",
         ]);
 
@@ -50,7 +49,6 @@ class CarouselController extends Controller
         $carousels = new Carousels();
         $carousels->name = $request->name;
         $carousels->description = $request->description;
-        $carousels->url = $request->url;
         $carousels->is_active = $request->carousel_status == "1" ? 1 : 0;
         
         if ($request->file("image_url")) {
@@ -112,7 +110,6 @@ class CarouselController extends Controller
         $this->validate($request,[
             "name" => "required|min:3|max:100",
             "description" => "required|min:5",
-            "url" => "required|max:100",
             "image_url" => "image|mimes:png,jpg,jpeg|max:4096",
         ]);
 

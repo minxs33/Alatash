@@ -8,7 +8,7 @@
                 @if($row['car_images']->count() != 0)
                         @foreach($row['car_images'] as $images)
                             @if($images['is_active'] == 1)
-                                <img src="{{asset('storage/images/product-images')}}/{{$images['image_url']}}" class="card-img-top object-fit-cover" alt="Product Photo" style="width:100%; height: 240px;">
+                                <img src="{{asset('storage/images/car-images')}}/{{$images['image_url']}}" class="card-img-top object-fit-cover" alt="Product Photo" style="width:100%; height: 240px;">
                             @break
                             @endif
                         @endforeach

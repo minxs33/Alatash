@@ -48,7 +48,7 @@
             @if($errors->has('description'))
                 <div class="text-danger">{{ $errors->first('description') }}</div>
             @endif
-            <textarea id="defaultSubscriptionFormPassword" class="form-control" name="description"></textarea>
+            <textarea id="tinyMCE" class="form-control" name="description"></textarea>
         </div>
 
         <div class="mb-4">
@@ -119,6 +119,11 @@
 </div>
 
 <script type="text/javascript">
+    tinymce.init({
+        selector: 'textarea#tinyMCE',
+        plugins: 'powerpaste advcode table lists checklist',
+        toolbar: 'undo redo | blocks| bold italic | bullist numlist checklist | code | table'
+    })
     jQuery(() => {
         
         let photoCount = $(".photoCount");

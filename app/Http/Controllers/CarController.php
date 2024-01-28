@@ -70,11 +70,12 @@ class CarController extends Controller
         $cars->price = $request->price;
         $cars->discount = $request->discount;
         $cars->total_price = $request->price - (($request->price / 100) * $request->discount);
-        if (Auth::user()->role == 1) {
-            $cars->status = $request->status == '1' ? 'active' : 'non-active';
-        } elseif (Auth::user()->role == 2) {
-            $cars->status = 'waiting';
-        }
+        $cars->status = $request->status == '1' ? 'active' : 'non-active';
+        // if (Auth::user()->role == 1) {
+        //     $cars->status = $request->status == '1' ? 'active' : 'non-active';
+        // } elseif (Auth::user()->role == 2) {
+        //     $cars->status = 'waiting';
+        // }
         $cars->save();
 
         $imageFields = [];

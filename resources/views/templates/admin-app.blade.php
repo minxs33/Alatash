@@ -19,6 +19,8 @@
     <link rel="stylesheet" href="{{ asset('css/datatables.min.css') }}">
 
     <script type="text/javascript" src="//code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.tiny.cloud/1/1qo8x2rujc73h218p041mex56cvpjnjk4rmhc809zmon6bj4/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
+
 </head>
 
 <body id="page-top">

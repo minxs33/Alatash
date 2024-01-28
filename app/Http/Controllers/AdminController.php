@@ -20,7 +20,7 @@ class AdminController extends Controller
 
         $total_cars = Cars::all()->count();
         $need_approval = Cars::where('status', '=', 'waiting')->count();
-        $active_product = Cars::where('status', '=', 'active')->count();
+        $active_car = Cars::where('status', '=', 'active')->count();
         $images = Car_images::all()->count();
         $total_carousels = Carousels::all()->count();
         $total_categories = Categories::all()->count();
@@ -30,7 +30,7 @@ class AdminController extends Controller
         return view('admin/dashboard', [
             'total_cars' => $total_cars,
             'need_approval' => $need_approval,
-            'active_product' => $active_product,
+            'active_car' => $active_car,
             'images' => $images,
             'total_carousels' => $total_carousels,
             'total_categories' => $total_categories,
