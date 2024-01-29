@@ -15,18 +15,21 @@ use Illuminate\Support\Facades\Route;
 
 Route::controller(HomeController::class)->group(function () {
     Route::get('/', 'index');
+    
+    Route::get('/search', 'search');
 });
 
-Route::resources([
-    'login' => LoginController::class,
-    'register' => RegisterController::class,
-]);
+// Route::resources([
+//     'login' => LoginController::class,
+//     'register' => RegisterController::class,
+// ]);
+
+Route::get('/altash-admin', ["uses" => "LoginController@index"]);
 
 Route::post('login/authenticate', ['uses' => 'LoginController@authenticate']);
 Route::post('logout', ['uses' => 'LoginController@logout']);
 
 Route::get('/cars/{id}', ['uses' => 'CarController@show']);
-Route::get('/search', ['uses' => 'HomeController@search']);
 
 Route::group(['prefix' => 'admin', 'middleware' => ['auth']], function () {
     Route::get('/dashboard', ['uses' => 'AdminController@index']);

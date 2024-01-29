@@ -2,10 +2,51 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@500&family=Poppins:wght@400;500;600&display=swap');
 
+:root{
+    ---header-height: 3rem;
+
+    --hue-color: 181;
+    --primary-color: hsl(var(--hue-color), 69%, 29%);
+    --primary-color-ascent: hsl(var(--hue-color), 69%, 29%);
+    --primary-color-alt: hsl(var(--hue-color), 57%, 53%);
+    --primary-color-light: hsl(var(--hue-color), 92%, 85%);
+    --title-color: hsl(var(--hue-color), 8%, 15%);
+    --text-color: hsl(var(--hue-color), 8%, 45%);
+    --text-color-light: hsl(var(--hue-color), 8%, 65%);
+    --input-color: hsl(var(--hue-color), 70%, 96%);
+    --body-color: hsl(var(--hue-color), 60%, 99%);
+
+    --container-color: #FFF;
+}
+
 *{
     box-sizing: border-box;
     padding: 0;
     margin: 0;
+}
+
+.primary-color{
+    background-color: var(--primary-color) !important;
+}
+
+.primary-color-ascent{
+    background-color: var(--primary-color-ascent) !important;
+}
+
+.primary-color-alt{
+    background-color: var(--primary-color-alt) !important;
+}
+
+.primary-color-light{
+    background-color: var(--primary-color-light) !important;
+}
+
+.text-color{
+    color: var(--primary-color) !important;
+}
+
+.text-color-light{
+    color: var(--text-color-light) !important;
 }
 
 body{
@@ -24,11 +65,11 @@ body{
 }
 
 .link-anchor {
-    color: #2aba79 !important;
+    color: var(--primary-color) !important;
 }
 
 .link-anchor:hover {
-    color: #198754 !important;
+    color: var(--primary-color-alt) !important;
 }
 
 /* navbar dropdown */
@@ -72,7 +113,7 @@ body{
     color: white !important;
 }
 .owl-prev:hover, .owl-next:hover {
-    color: #0A3622 !important;
+    color: var(--primary-color) !important;
     background-color: transparent !important;
     transition: 0.2s;
     transform: scale(150%);
@@ -86,7 +127,7 @@ body{
 
 .owl-dots button.owl-dot.active span
 {
-  background-color: #0A3622 !important;
+  background-color: var(--primary-color) !important;
   /* border-radius: 50% !important; */
 }
 
@@ -168,4 +209,23 @@ input::-webkit-inner-spin-button {
 }
 .form-switch .form-check-input:checked[type=checkbox]:after{
     background-color: #0A3622; 
+}
+@media screen and (max-width: 1200px){
+    .link-anchor{
+        font-size: 0.9rem !important;
+    }    
+}
+
+@media screen and (max-width: 992px){
+    .link-anchor{
+        font-size: 0.8rem !important;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    
+}
+
+@media screen and (max-width: 576px) {
+    
 }
