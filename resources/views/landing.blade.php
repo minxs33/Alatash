@@ -7,7 +7,7 @@
 <div class="container-md mt-4">
     <div class="owl-carousel carousel owl-theme mb-5 shadow-sm">
         @foreach($carousels as $row)
-            <img src="{{asset('storage/images/carousels')}}/{{$row['image_url']}}" alt="{{$row['image_url']}}" class="object-fit-cover carousel-items" style="max-height:430px;">
+            <img src="{{asset('storage/images/carousels')}}/{{$row['image_url']}}" alt="{{$row['image_url']}}" class="object-fit-cover carousel-items">
         @endforeach
     </div>
 
