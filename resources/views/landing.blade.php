@@ -16,33 +16,33 @@
 
 <section id="sell-out" class="reveal-section">
     <div class="container-md">
-        <div class="d-flex justify-content-center align-items-center p-3 gap-3">
+        <div class="d-flex justify-content-center align-items-center p-5 py-lg-3 gap-1 gap-lg-3">
             <div class="col-md-4 reveal-delay">
-                <div class="row align-items-center g-2 justify-content-center justify-content-lg-start">
-                    <div class="col-lg-3 col-5">
+                <div class="row align-items-center g-1 g-lg-2 justify-content-center justify-content-lg-start">
+                    <div class="col-lg-3 col-6">
                         <img class="rounded-circle sellout-img" style="width:100%" src="https://www.kurin.com/wp-content/uploads/placeholder-square.jpg" alt="">
                     </div>
-                    <div class="col-lg-9 col-md-12">
+                    <div class="col-lg-9 col-12">
                         <h5 class="fw-bold text-color text-responsive text-center text-lg-start">Pengalaman Wisata Yang Terbaik</h5>
                     </div>
                 </div>
             </div>
             <div class="col-md-4 reveal-delay">
-                <div class="row align-items-center g-2 justify-content-center justify-content-lg-start">
-                    <div class="col-lg-3 col-5">
+                <div class="row align-items-center g-1 g-lg-2 justify-content-center justify-content-lg-start">
+                    <div class="col-lg-3 col-6">
                         <img class="rounded-circle sellout-img" style="width:100%" src="https://www.kurin.com/wp-content/uploads/placeholder-square.jpg" alt="">
                     </div>
-                    <div class="col-lg-9 col-md-12">
+                    <div class="col-lg-9 col-12">
                         <h5 class="fw-bold text-color text-responsive text-center text-lg-start">Pengalaman Wisata Yang Terbaik</h5>
                     </div>
                 </div>
             </div>
             <div class="col-md-4 reveal-delay">
-                <div class="row align-items-center g-2 justify-content-center justify-content-lg-start">
-                    <div class="col-lg-3 col-5">
+                <div class="row align-items-center g-1 g-lg-2 justify-content-center justify-content-lg-start">
+                    <div class="col-lg-3 col-6">
                         <img class="rounded-circle sellout-img" style="width:100%" src="https://www.kurin.com/wp-content/uploads/placeholder-square.jpg" alt="">
                     </div>
-                    <div class="col-lg-9 col-md-12">
+                    <div class="col-lg-9 col-12">
                         <h5 class="fw-bold text-color text-responsive text-center text-lg-start">Pengalaman Wisata Yang Terbaik</h5>
                     </div>
                 </div>
@@ -52,7 +52,7 @@
     </div>
 </section>
 
-<section id="sewa-mobil" class="pt-5 reveal-section">
+<section id="sewa-mobil" class="reveal-section">
     <div class="container-md">
         <div class="d-flex flex-column gy-2">
 
@@ -69,7 +69,7 @@
                 </div>
             </div> -->
             <h3 class="fw-bold text-color text-center h3-responsive reveal-delay">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</h3>
-            <h5 class="fw-bold text-color-light text-center h4-responsive reveal-delay">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sed vel veritatis a.</h5>
+            <h5 class="fw-bold text-color-light text-center h5-responsive reveal-delay">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sed vel veritatis a.</h5>
         </div>
     </div>
     <div class="shadow-md border-top border-bottom my-3 border-2">

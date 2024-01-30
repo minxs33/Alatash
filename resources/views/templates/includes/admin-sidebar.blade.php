@@ -39,8 +39,8 @@
         @if(Auth::user()->role == 1)
         <li class="nav-item">
             <a class="nav-link collapsed text-muted" href="{{ url('admin/categories') }}">
-                <i class="fas fa-book"></i>
-                <span>Product Categories</span>
+                <i class="fas fa-truck-pickup"></i>
+                <span>Car Categories</span>
             </a>
         </li>
 
@@ -66,7 +66,7 @@
         @endif
 
         <div class="text-center d-none d-md-inline">
-            <button class="rounded-circle border-0 shadow-sm bg-success text-white" id="sidebarToggle"></button>
+            <button class="rounded-circle border-0 shadow-sm bg-info text-white" id="sidebarToggle"></button>
         </div>
 
     </ul>

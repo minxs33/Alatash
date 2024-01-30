@@ -7,7 +7,7 @@
 <div class="container-md d-flex flex-column gap-4">
 
     <div class="row border border-2 py-4 rounded">
-        <h5 class="text-success fw-bold mb-3"><i class="fas fa-boxes"></i> Mobil</h5>
+        <h5 class="text-info fw-bold mb-3"><i class="fas fa-boxes"></i> Mobil</h5>
 
         <div class="col-xl-3 col-md-6 mb-4 mb-lg-0">
             <div class="card border-left-primary shadow h-100 py-2">
