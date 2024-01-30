@@ -1,19 +1,19 @@
 
 <div id="load" class="mb-2" style="min-height: 400px;">
-    <div class="row g-2 mb-2">
+    <div class="row g-3 mb-2 justify-content-center">
         @foreach($car as $row)
-            <a href="{{url('/cars/')}}/{{$row['id']}}" class="text-decoration-none col-xl-2 col-lg-3 col-md-4 col-6">
-                <div class="shadow-sm card border-0" style="height:25rem">
+            <a href="{{url('/cars/')}}/{{$row['id']}}" class="text-decoration-none col-xl-3 col-lg-4 col-md-5 col-6">
+                <div class="shadow-sm card border-0 reveal-car-delay" style="height:25rem">
                 
                 @if($row['car_images']->count() != 0)
                         @foreach($row['car_images'] as $images)
                             @if($images['is_active'] == 1)
-                                <img src="{{asset('storage/images/car-images')}}/{{$images['image_url']}}" class="card-img-top object-fit-cover" alt="Product Photo" style="width:100%; height: 240px;">
+                                <img src="{{asset('storage/images/car-images')}}/{{$images['image_url']}}" class="card-img-top " alt="Product Photo" style="width:100%; height: 240px;">
                             @break
                             @endif
                         @endforeach
                     @else
-                        <img src="{{asset('storage/images/car-images/default.png')}}" class="card-img-top object-fit-cover" alt="Car Photo" style="width:100%; height: 240px;">
+                        <img src="{{asset('storage/images/car-images/default.png')}}" class="card-img-top " alt="Car Photo" style="width:100%; height: 240px;">
                     @endif
                     <div class="card-body p-2">
                         <small class="card-title fw-medium text-muted">{{substr($row['name'],0,40)}}</small>
@@ -39,3 +39,18 @@
     </div>
     @endif
 </div>
+
+<script>
+    jQuery(function(){
+        $(".reveal-car-delay").each(function (index, element) {
+            ScrollReveal().reveal(element, {
+                duration: 300,
+                origin: 'bottom',
+                // reset: true,
+                delay: 100 + index * 200,
+                distance: '50px',
+                easing: 'ease-in',
+            });
+        });
+    })
+</script>

@@ -50,13 +50,13 @@ class HomeController extends Controller
                         ->where('price', '<=', $request->max);
                 }
             }
-            $cars = $query->paginate(30);
+            $cars = $query->paginate(8);
 
             return view('templates/includes/car-card', [
                 'car' => $cars,
             ]);
         }
-        $cars = $query->paginate(30);
+        $cars = $query->paginate(8);
 
         return view('landing', [
             'carousels' => $carousels,

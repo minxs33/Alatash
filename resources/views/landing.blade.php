@@ -4,38 +4,101 @@
 
 @section("content")
 
-<div class="container-md mt-4">
-    <div class="owl-carousel carousel owl-theme mb-5 shadow-sm">
-        @foreach($carousels as $row)
-            <img src="{{asset('storage/images/carousels')}}/{{$row['image_url']}}" alt="{{$row['image_url']}}" class="object-fit-cover carousel-items">
-        @endforeach
+<section id="home" class="m-0 p-0">
+    <div class="container-md content-container">
+        <div class="owl-carousel carousel owl-theme shadow-sm reveal">
+            @foreach($carousels as $row)
+                <img src="{{asset('storage/images/carousels')}}/{{$row['image_url']}}" alt="{{$row['image_url']}}" class="object-fit-cover carousel-items">
+            @endforeach
+        </div>
     </div>
+</section>
 
-    <section class="mb-4">
-        <div class="d-flex flex-column gap-2">
-            <div class="d-flex justify-content-between align-items-center gap-3 bg-white px-3 py-2 rounded-top shadow-sm">
-                <label class="fw-semibold fs-5">All Cars</label>
-                <div class="d-flex align-items-center gap-2">
-                    <label class="text-secondary">Filter</label>
-                    <select class="form-select rounded-pill category" aria-label="Default select example">
+<section id="sell-out" class="reveal-delay">
+    <div class="container-md">
+        <div class="d-flex justify-content-center align-items-center p-3 gap-3">
+            <div class="col-md-4 reveal-delay">
+                <div class="row align-items-center g-2 justify-content-center justify-content-lg-start">
+                    <div class="col-lg-3 col-5">
+                        <img class="rounded-circle sellout-img" style="width:100%" src="https://www.kurin.com/wp-content/uploads/placeholder-square.jpg" alt="">
+                    </div>
+                    <div class="col-lg-9 col-md-12">
+                        <h5 class="fw-bold text-color text-responsive text-center text-lg-start">Pengalaman Wisata Yang Terbaik</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 reveal-delay">
+                <div class="row align-items-center g-2 justify-content-center justify-content-lg-start">
+                    <div class="col-lg-3 col-5">
+                        <img class="rounded-circle sellout-img" style="width:100%" src="https://www.kurin.com/wp-content/uploads/placeholder-square.jpg" alt="">
+                    </div>
+                    <div class="col-lg-9 col-md-12">
+                        <h5 class="fw-bold text-color text-responsive text-center text-lg-start">Pengalaman Wisata Yang Terbaik</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 reveal-delay">
+                <div class="row align-items-center g-2 justify-content-center justify-content-lg-start">
+                    <div class="col-lg-3 col-5">
+                        <img class="rounded-circle sellout-img" style="width:100%" src="https://www.kurin.com/wp-content/uploads/placeholder-square.jpg" alt="">
+                    </div>
+                    <div class="col-lg-9 col-md-12">
+                        <h5 class="fw-bold text-color text-responsive text-center text-lg-start">Pengalaman Wisata Yang Terbaik</h5>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</section>
+
+<section id="sewa-mobil">
+    <div class="container-md">
+        <div class="d-flex flex-column gy-2">
+        <!-- <div class="d-flex justify-content-between align-items-center gap-3 bg-white px-3 py-2 rounded-top shadow-sm">
+            <label class="fw-semibold fs-5">All Cars</label>
+            <div class="d-flex align-items-center gap-2">
+                <label class="text-secondary">Filter</label>
+                <select class="form-select rounded-pill category" aria-label="Default select example">
                         <option selected value="all">All</option>
                         @foreach($categories as $row)
                             <option value="{{$row['id']}}">{{ucfirst($row['name'])}}</option>
                         @endforeach
                     </select>
                 </div>
-            </div>
+            </div> -->
+            <h3 class="fw-bold text-color text-center h3-responsive reveal-delay">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</h3>
+            <h5 class="fw-bold text-color-light text-center h4-responsive reveal-delay">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sed vel veritatis a.</h5>
             <div class="cars">
                 @include('templates/includes/car-card')
             </div>
         </div>
-    </section>
+    </div>
+</section>
     
 </div>
 
 <script>
 
     jQuery(function(){
+        ScrollReveal().reveal(".reveal", {
+            duration: 1000,
+            origin: 'bottom',
+            distance: '50px',
+            // reset: true,
+        });
+
+        $(".reveal-delay").each(function (index, element) {
+            ScrollReveal().reveal(element, {
+                duration: 1000,
+                origin: 'bottom',
+                // reset: true,
+                delay: 500 + index * 200,
+                distance: '0px',
+                opacity: 0,
+            });
+        });
+
         $(document).on('click', '.pagination a', function(e) {
             e.preventDefault();
 

@@ -1,6 +1,6 @@
 <!-- Navbar -->
 
-<nav class="navbar navbar-expand-lg bg-body-tertiary">
+<nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top" id="navbar">
   <div class="container">
     <div class="row col-12 my-1">
         <div class="col-lg-2 d-lg-flex d-flex justify-content-lg-center justify-content-between mt-2 mt-lg-0 align-items-center col-sm-12 justify-content-sm-between">
@@ -15,24 +15,24 @@
                         <hr class="text-color my-1">
                     </li>
                     <li class="nav-item me-3">
-                        <a class="nav-link link-anchor" href="#">Sewa Mobil</a>
+                        <a class="nav-link link-anchor text-responsive" href="#">Sewa Mobil</a>
                     </li>
                     <li class="nav-item me-3">
-                        <a class="nav-link link-anchor" href="#">Destinasi Wisata</a>
+                        <a class="nav-link link-anchor text-responsive" href="#">Destinasi Wisata</a>
                     </li>
                     <li class="nav-item me-3">
-                        <a class="nav-link link-anchor" href="#">Syarat dan Ketentuan</a>
+                        <a class="nav-link link-anchor text-responsive" href="#">Syarat dan Ketentuan</a>
                     </li>
                     <li class="nav-item me-3">
-                        <a class="nav-link link-anchor" href="#">Kontak Kami</a>
+                        <a class="nav-link link-anchor text-responsive" href="#">Kontak Kami</a>
                     </li>
                     <li class="d-block d-md-block d-lg-none d-xl-none">
                         <hr class="text-color my-1">
                     </li>
                     <li class="d-block d-md-block d-lg-none d-xl-none">
                         <div class="d-flex gap-2 justify-content-end">
-                            <a class="link-anchor" href="tel:081339439431"><i class="fas fa-phone"></i></a>
-                            <a class="link-anchor" href="https://wa.me/?text=Permisi%20kak,%20saya%20butuh%20bantuan%20memesan%20mobil"><i class="fab fa-square-whatsapp fa-lg"></i></a>
+                            <a class="link-anchor text-responsive" href="tel:081339439431" target="_blank"><i class="fas fa-phone"></i></a>
+                            <a class="link-anchor text-responsive" href="https://wa.me/?text=Permisi%20kak,%20saya%20butuh%20bantuan%20memesan%20mobil" target="_blank"><i class="fab fa-square-whatsapp fa-lg"></i></a>
                         </div>
                     </li>
                 </ul>
@@ -72,6 +72,20 @@
 </nav>
 
 <script>
-    
+    jQuery(function () {
+    var navbar = $('#navbar');
+
+    ScrollReveal().reveal("#navbar", {
+        duration: 1000,
+        origin: 'top',
+        distance: '50px',
+        reset: true,
+        beforeReveal: function (el) {
+        },
+    });
+});
+
+
+
 </script>
 <!-- End of navbar -->

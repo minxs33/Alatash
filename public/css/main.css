@@ -80,7 +80,23 @@ body{
     margin-top: 0; /* remove the gap so it doesn't close */
 }
 
+/* Section */
+section{
+    margin: 2rem 0;
+}
 
+section#sell-out{
+    background-color: var(--primary-color-alt);
+}
+
+section#sewa-mobil{
+    margin: 6rem 0 0;
+}
+
+/* content */
+.content-container{
+    margin-top: 8rem !important;
+}
 
 /* carousels  */
 .owl-stage-outer{
@@ -132,7 +148,7 @@ body{
 }
 
 .owl-dots button.owl-dot:hover span {
-    background-color: #198754 !important;
+    background-color: var(--primary-color-alt) !important;
 }
 .owl-dots button.owl-dot{
     margin-bottom: 2rem;
@@ -140,7 +156,7 @@ body{
 
 .category-carousel .owl-prev, .category-carousel .owl-next {
     position: absolute !important;
-    color: #198754 !important;
+    color: var(--primary-color-alt) !important;
     background-color: white !important;
     opacity: 0.8;
     font-size: 40px !important;
@@ -148,7 +164,7 @@ body{
     height:auto;
     transition: 0.2s;
     display: block !important;
-    /* border: 2px solid #0A3622 !important; */
+    /* border: 2px solid var(--primary-color) !important; */
 }
 
 .category-carousel .owl-prev:hover, .category-carousel .owl-next:hover {
@@ -173,11 +189,11 @@ body{
 
 .pagination > li > .page-link {
     background-color: white;
-    color: #198754;
+    color: var(--primary-color-alt);
 }
 
 .pagination > li.active > .page-link{
-    background-color: #198754;
+    background-color: var(--primary-color-alt);
     color: white;
 }
 
@@ -192,8 +208,8 @@ body{
 
 /* radio button search */
 .form-check-input:checked {
-    background-color: #198754;
-    border-color: #198754;
+    background-color: var(--primary-color-alt);
+    border-color: var(--primary-color-alt);
 }
 
 /* remove input number arrows */
@@ -205,27 +221,55 @@ input::-webkit-inner-spin-button {
 
 /* admin product list */
 .form-check-input[type=checkbox]:checked {
-    background-color: #198754;
+    background-color: var(--primary-color-alt);
 }
 .form-switch .form-check-input:checked[type=checkbox]:after{
-    background-color: #0A3622; 
+    background-color: var(--primary-color); 
 }
 @media screen and (max-width: 1200px){
-    .link-anchor{
+    .text-responsive{
         font-size: 0.9rem !important;
-    }    
+    }
+    .h3-responsive{
+        font-size: 1.5rem !important;
+    }
+    .h4-responsive{
+        font-size: 1.2rem !important;
+    }
 }
 
 @media screen and (max-width: 992px){
-    .link-anchor{
+    .text-responsive{
         font-size: 0.8rem !important;
+    }
+    .h3-responsive{
+        font-size: 1.3rem !important;
+    }
+    .h4-responsive{
+        font-size: 1.1rem !important;
     }
 }
 
 @media screen and (max-width: 768px) {
-    
+    .text-responsive{
+        font-size: 0.7rem !important;
+    }
+    .h3-responsive{
+        font-size: 1.1rem !important;
+    }
+    .h4-responsive{
+        font-size: 1rem !important;
+    }
 }
 
 @media screen and (max-width: 576px) {
-    
+    .text-responsive{
+        font-size: 0.6rem !important;
+    }
+    .h3-responsive{
+        font-size: 1rem !important;
+    }
+    .h4-responsive{
+        font-size: 0.9rem !important;
+    }
 }

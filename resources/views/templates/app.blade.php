@@ -38,5 +38,11 @@
     <script src="{{asset('js/banner-carousel.js')}}"></script>
     <script src="{{asset('js/product-detail-carousel.js')}}"></script>
 
+    <!-- ScrollReveal -->
+    <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
+    <script>
+        // ScrollReveal({ reset: true });
+    </script>
+
 </body>
 </html>
