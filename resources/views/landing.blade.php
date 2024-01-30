@@ -4,7 +4,7 @@
 
 @section("content")
 
-<section id="home" class="m-0 p-0">
+<section id="home" class="mb-4 p-0">
     <div class="container-md content-container">
         <div class="owl-carousel carousel owl-theme shadow-sm reveal">
             @foreach($carousels as $row)
@@ -14,7 +14,7 @@
     </div>
 </section>
 
-<section id="sell-out" class="reveal-delay">
+<section id="sell-out" class="reveal-section">
     <div class="container-md">
         <div class="d-flex justify-content-center align-items-center p-3 gap-3">
             <div class="col-md-4 reveal-delay">
@@ -52,9 +52,10 @@
     </div>
 </section>
 
-<section id="sewa-mobil">
+<section id="sewa-mobil" class="pt-5 reveal-section">
     <div class="container-md">
         <div class="d-flex flex-column gy-2">
+
         <!-- <div class="d-flex justify-content-between align-items-center gap-3 bg-white px-3 py-2 rounded-top shadow-sm">
             <label class="fw-semibold fs-5">All Cars</label>
             <div class="d-flex align-items-center gap-2">
@@ -69,11 +70,23 @@
             </div> -->
             <h3 class="fw-bold text-color text-center h3-responsive reveal-delay">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</h3>
             <h5 class="fw-bold text-color-light text-center h4-responsive reveal-delay">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sed vel veritatis a.</h5>
-            <div class="cars">
-                @include('templates/includes/car-card')
+        </div>
+    </div>
+    <div class="shadow-md border-top border-bottom my-3 border-2">
+        <div class="container-md">
+            <div class="d-flex flex-wrap justify-content-center py-2 gap-2">
+                <button class="btn btn-outline-info rounded-pill category active" data-id="all">Semua</button>
+                @foreach($categories as $row)
+                    <button class="btn btn-outline-info rounded-pill category" data-id="{{$row['id']}}">{{$row['name']}}</button>
+                @endforeach
             </div>
         </div>
     </div>
+    <div class="container-md">
+        <div class="cars">
+            @include('templates/includes/car-card')
+        </div>
+    </div>  
 </section>
     
 </div>
@@ -99,6 +112,17 @@
             });
         });
 
+        $(".reveal-section").each(function (index, element) {
+            ScrollReveal().reveal(element, {
+                duration: 500,
+                origin: 'left',
+                // reset: true,
+                delay: 350 + index * 200,
+                distance: '50px',
+                opacity: 0,
+            });
+        });
+
         $(document).on('click', '.pagination a', function(e) {
             e.preventDefault();
 
@@ -106,7 +130,7 @@
 
             $('#load').html(`
             <div class="d-flex align-items-center justify-content-center mb-2" style="height:200px;">
-                <div class="spinner-border text-success" role="status">
+                <div class="spinner-border text-info" role="status">
                     <span class="visually-hidden">Loading...</span>
                 </div>
             </div>`);
@@ -116,21 +140,24 @@
             getData(url);
         });
 
-        $(document).on('change', '.category', function(e){
+        $(document).on('click', '.category', function(e){
             e.preventDefault();
+            
+            $('.category').removeClass('active');
+            $(this).addClass('active')
 
             $('#load .page-link').css('color', '#0A3622');
 
             $('#load').html(`
             <div class="d-flex align-items-center justify-content-center mb-2" style="height:200px;">
-                <div class="spinner-border text-success" role="status">
+                <div class="spinner-border text-info" role="status">
                     <span class="visually-hidden">Loading...</span>
                 </div>
             </div>`);
 
             $.ajax({
                 url: "{{url('/')}}",
-                data: {category:$(this).val()},
+                data: {category:$(this).data("id")},
                 type: "GET",
                 dataType: "html"
             }).done(function (data) {
@@ -144,7 +171,7 @@
     });
 
     function getData(url) {
-        var category = $(".category").val();
+        var category = $(".category").data("id");
         $.ajax({
             url : url,
             data: {category: category},
