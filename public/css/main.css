@@ -51,7 +51,7 @@
 }
 
 body{
-    background-color: rgb(238, 238, 238);
+    background-color: var(--body-background-color);
     /* margin: 0 0 82px 0; */
     font-family: 'Poppins', sans-serif;
     height:100%;
@@ -86,18 +86,25 @@ section{
     margin: 0;
 }
 
+section#home{
+    margin-top: 7.5rem;
+}
+
 section#sell-out{
     background-color: var(--primary-color-alt);
 }
 
 section#sewa-mobil{
-    padding-top: 5rem;
-    background-color: var(--body-background-color);
+    padding: 5rem 0 5rem;
 }
 
-/* content */
-.content-container{
-    margin-top: 8rem !important;
+section#destinasi-wisata{
+    padding: 5rem 0 5rem;
+    background-color: var(--primary-color);
+}
+
+section#mengapa-harus-kami{
+    padding: 5rem 0 5rem;
 }
 
 /* carousels  */
@@ -156,35 +163,96 @@ section#sewa-mobil{
     margin-bottom: 2rem;
 }
 
-.category-carousel .owl-prev, .category-carousel .owl-next {
-    position: absolute !important;
+/* car-card */
+.car-image{
+    transition: 0.2s;
+}
+.car-image:hover{
+    transform: scale(105%);
+    transition: 0.2s;
+}
+
+.btn-primary-color{
+    background-color: var(--primary-color-alt) !important;
+    border-color: var(--primary-color-alt) !important;
+    transition: 0.2s;
+}
+
+.btn-primary-color:hover{
+    background-color: var(--primary-color-ascent) !important;
+    color: white !important;
+    transform: scale(105%);
+    transition: 0.2s;
+}
+
+.btn-outline-primary-color{
+    color: var(--primary-color) !important;
+    border-color: var(--primary-color) !important;
+}
+
+.btn-outline-primary-color:hover{
+    background-color: var(--primary-color) !important;
+    color: white !important;
+    border-color: var(--primary-color) !important;
+}
+
+.btn-outline-primary-color-alt{
     color: var(--primary-color-alt) !important;
-    background-color: white !important;
-    opacity: 0.8;
-    font-size: 40px !important;
-    width:20px;
-    height:auto;
-    transition: 0.2s;
-    display: block !important;
-    /* border: 2px solid var(--primary-color) !important; */
+    border-color: var(--primary-color-alt) !important;
 }
 
-.category-carousel .owl-prev:hover, .category-carousel .owl-next:hover {
-    opacity: 1;
-    transition: 0.2s;
-    transform: scale(110%);
+.btn-outline-primary-color-alt:hover, .btn-outline-primary-color-alt.active{
+    background-color: var(--primary-color-alt) !important;
+    color: white !important;
+    border-color: var(--primary-color-alt) !important;
 }
 
-.category-carousel .owl-prev {
-    top: 40% !important;
-    transition: 0.2s;
-    left: 0px !important;
+
+/* destinasi wisata carousel */
+
+.destinasi-carousel .owl-stage-outer{
+    border-radius: 0 !important;
 }
 
-.category-carousel .owl-next {
-    top: 40% !important;
+.destinasi-carousel .owl-prev {
+    top: 35% !important;
+    font-size: 60px !important;
+    left: -2.5rem !important;
+}
+
+.destinasi-carousel .owl-prev:hover{
+    color: var(--primary-color-alt) !important;
+}
+
+.destinasi-carousel .owl-next {
+    top: 35% !important;
+    font-size: 60px !important;
+    right: -2.5rem !important;
+}
+
+.destinasi-carousel .owl-next:hover{
+    color: var(--primary-color-alt) !important;
+}
+
+.destinasi-carousel > .owl-dots{
+    bottom: -3.5rem !important;
+}
+
+.destinasi-carousel > .owl-dots > button.owl-dot.active > span{
+    background-color: var(--primary-color-alt) !important;
+}
+
+.destinasi-carousel > .owl-dots > button.owl-dot > span:hover{
+    background-color: var(--primary-color-light) !important;
+}
+
+.destinasi-item{
     transition: 0.2s;
-    right: 0 !important;
+}
+
+.destinasi-item:hover{
+    transform: scale(105%);
+    transition: 0.2s;
 }
 
 /* all car pagination */
@@ -199,11 +267,19 @@ section#sewa-mobil{
     color: white;
 }
 
-/* car card */
-.button-sewa:hover{
-    background-color: var(--primary-color-alt) !important;
-    color: white !important;
-    transform: scale(105%);
+/* mengapa harus kami */
+.hr{
+    border: 1px solid var(--primary-color);
+    width: 350px;
+    margin: 0 auto;
+}
+
+.mengapa-img{
+    transition: 0.2s;
+}
+
+.mengapa-img:hover{
+    transform: scale(110%);
     transition: 0.2s;
 }
 
@@ -249,6 +325,16 @@ input::-webkit-inner-spin-button {
     .h5-responsive{
         font-size: 1rem !important;
     }
+
+    .car-description *{
+        font-size: 0.9rem;
+    }
+
+    .hr{
+        border: 1px solid var(--primary-color);
+        width: 350px;
+        margin: 0 auto;
+    }
 }
 
 @media screen and (max-width: 992px){
@@ -263,6 +349,15 @@ input::-webkit-inner-spin-button {
     }
     .h5-responsive{
         font-size: 0.9rem !important;
+    }
+
+    .car-description *{
+        font-size: 0.8rem;
+    }
+    .hr{
+        border: 1px solid var(--primary-color);
+        width: 250px;
+        margin: 0 auto;
     }
 }
 
@@ -279,6 +374,28 @@ input::-webkit-inner-spin-button {
     .h5-responsive{
         font-size: 0.8rem !important;
     }
+
+    section#sewa-mobil{
+        padding: 2rem 0 2rem !important;
+    }
+
+    section#destinasi-wisata{
+        padding: 2rem 0 2rem !important;
+    }
+
+    section#mengapa-harus-kami{
+        padding: 2rem 0 2rem !important;
+    }
+
+    .car-description *{
+        font-size: 0.8rem;
+    }
+
+    .hr{
+        border: 1px solid var(--primary-color);
+        width: 200px;
+        margin: 0 auto;
+    }
 }
 
 @media screen and (max-width: 576px) {
@@ -293,5 +410,31 @@ input::-webkit-inner-spin-button {
     }
     .h5-responsive{
         font-size: 0.7rem !important;
+    }
+
+    section#home{
+        margin-top: 6.3rem;
+    }
+    
+    section#sewa-mobil{
+        padding: 2rem 0 2rem !important;
+    }
+
+    section#destinasi-wisata{
+        padding: 2rem 0 2rem !important;
+    }
+
+    secton#mengapa-harus-kami{
+        padding: 2rem 0 2rem !important;
+    }
+
+
+    .car-description *{
+        font-size: 0.8rem;
+    }
+    .hr{
+        border: 1px solid var(--primary-color);
+        width: 150px;
+        margin: 0 auto;
     }
 }

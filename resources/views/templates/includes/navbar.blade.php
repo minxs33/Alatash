@@ -1,6 +1,6 @@
 <!-- Navbar -->
 
-<nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top" id="navbar">
+<nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top shadow-sm" id="navbar">
   <div class="container">
     <div class="row col-12 my-1">
         <div class="col-lg-2 d-lg-flex d-flex justify-content-lg-center justify-content-between mt-2 mt-lg-0 align-items-center col-sm-12 justify-content-sm-between">
@@ -60,7 +60,7 @@
                     <small class="text-color">Perlu bantuan?</small>
                     <div class="d-flex justify-content-center gap-2">
                         <a class="link-anchor" href="tel:081339439431"><i class="fas fa-phone"></i></a>
-                        <a class="link-anchor" href="https://wa.me/?text=Permisi%20kak,%20saya%20butuh%20bantuan%20memesan%20mobil"><i class="fab fa-square-whatsapp fa-lg"></i></a>
+                        <a class="link-anchor" href="https://wa.me/?text=Permisi%20Altash,%20saya%20butuh%20bantuan%menyewa%20mobil"><i class="fab fa-square-whatsapp fa-lg"></i></a>
                     </div>
                 </div>
                 @endif

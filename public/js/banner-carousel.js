@@ -20,49 +20,44 @@ jQuery(() => {
         loop: true,
     })
 
-    $(".category-carousel").owlCarousel({
+    $(".destinasi-carousel").owlCarousel({
         margin:10,
         lazyLoad:true,
         stagePadding: false,
         responsive: {
             0: {
-                items: 2,
+                items: 1,
                 stagePadding: 15,
                 nav: false,
-                dots: false,
-                autoplayHoverPause: false,
+                dots: true,
             },
             576: {
                 items: 2,
                 stagePadding: 15,
                 nav: false,
-                dots: false,
-                autoplayHoverPause: false,
+                dots: true,
             },
             768 : {
                 items: 3,
                 stagePadding: 15,
                 nav: false,
-                dots: false,
-                autoplayHoverPause: false,
+                dots: true,
             },
             992 : {
                 items: 4,
                 nav:true,
                 slideBy: 2,
                 dots:false,
-                autoplayHoverPause:true,
             },
             1200 : {
-                items: 6,
+                items: 4,
                 nav:true,
-                slideBy: 3,
+                slideBy: 2,
                 dots:false,
-                autoplayHoverPause:true,
             }
         },
-        // autoplay:true,
+        autoplay:false,
         // autoplayTimeout:3000,
-        loop: false,
+        loop: true,
     })
 })

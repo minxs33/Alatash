@@ -4,8 +4,8 @@
 
 @section("content")
 
-<section id="home" class="mb-4 p-0">
-    <div class="container-md content-container">
+<section id="home" class="mb-1 mb-md-4 p-0">
+    <div class="container-md">
         <div class="owl-carousel carousel owl-theme shadow-sm reveal">
             @foreach($carousels as $row)
                 <img src="{{asset('storage/images/carousels')}}/{{$row['image_url']}}" alt="{{$row['image_url']}}" class="object-fit-cover carousel-items">
@@ -16,7 +16,7 @@
 
 <section id="sell-out" class="reveal-section">
     <div class="container-md">
-        <div class="d-flex justify-content-center align-items-center p-5 py-lg-3 gap-1 gap-lg-3">
+        <div class="d-flex justify-content-center align-items-center p-1 p-md-3 gap-3">
             <div class="col-md-4 reveal-delay">
                 <div class="row align-items-center g-1 g-lg-2 justify-content-center justify-content-lg-start">
                     <div class="col-lg-3 col-6">
@@ -55,19 +55,6 @@
 <section id="sewa-mobil" class="reveal-section">
     <div class="container-md">
         <div class="d-flex flex-column gy-2">
-
-        <!-- <div class="d-flex justify-content-between align-items-center gap-3 bg-white px-3 py-2 rounded-top shadow-sm">
-            <label class="fw-semibold fs-5">All Cars</label>
-            <div class="d-flex align-items-center gap-2">
-                <label class="text-secondary">Filter</label>
-                <select class="form-select rounded-pill category" aria-label="Default select example">
-                        <option selected value="all">All</option>
-                        @foreach($categories as $row)
-                            <option value="{{$row['id']}}">{{ucfirst($row['name'])}}</option>
-                        @endforeach
-                    </select>
-                </div>
-            </div> -->
             <h3 class="fw-bold text-color text-center h3-responsive reveal-delay">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</h3>
             <h5 class="fw-bold text-color-light text-center h5-responsive reveal-delay">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sed vel veritatis a.</h5>
         </div>
@@ -75,9 +62,9 @@
     <div class="shadow-md border-top border-bottom my-3 border-2">
         <div class="container-md">
             <div class="d-flex flex-wrap justify-content-center py-2 gap-2">
-                <button class="btn btn-outline-info rounded-pill category active" data-id="all">Semua</button>
+                <button class="btn btn-outline-primary-color-alt rounded-pill category text-responsive active" data-id="all">Semua</button>
                 @foreach($categories as $row)
-                    <button class="btn btn-outline-info rounded-pill category" data-id="{{$row['id']}}">{{$row['name']}}</button>
+                    <button class="btn btn-outline-primary-color-alt rounded-pill category text-responsive" data-id="{{$row['id']}}">{{$row['name']}}</button>
                 @endforeach
             </div>
         </div>
@@ -88,8 +75,134 @@
         </div>
     </div>  
 </section>
-    
-</div>
+
+<section id="destinasi-wisata" class="reveal">
+    <div class="container">
+        <div class="d-flex flex-column gy-2">
+            <h3 class="fw-bold text-white text-center h3-responsive reveal">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</h3>
+            <h5 class="fw-bold text-color-light text-center h5-responsive reveal">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sed vel veritatis a.</h5>
+            <div class="owl-carousel destinasi-carousel owl-theme my-3 reveal">
+                <div class="d-flex flex-column gap-2 destinasi-item">
+                    <img src="https://www.kurin.com/wp-content/uploads/placeholder-square.jpg" alt="" class="object-fit-cover">
+                    <div class="destination-caption text-center">
+                        <h5 class="fw-bold text-white text-responsive">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.</h5>
+                    </div>
+                </div>
+                <div class="d-flex flex-column gap-2 destinasi-item">
+                    <img src="https://www.kurin.com/wp-content/uploads/placeholder-square.jpg" alt="" class="object-fit-cover">
+                    <div class="destination-caption text-center">
+                        <h5 class="fw-bold text-white text-responsive">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.</h5>
+                    </div>
+                </div>
+                <div class="d-flex flex-column gap-2 destinasi-item">
+                    <img src="https://www.kurin.com/wp-content/uploads/placeholder-square.jpg" alt="" class="object-fit-cover">
+                    <div class="destination-caption text-center">
+                        <h5 class="fw-bold text-white text-responsive">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.</h5>
+                    </div>
+                </div>
+                <div class="d-flex flex-column gap-2 destinasi-item">
+                    <img src="https://www.kurin.com/wp-content/uploads/placeholder-square.jpg" alt="" class="object-fit-cover">
+                    <div class="destination-caption text-center">
+                        <h5 class="fw-bold text-white text-responsive">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.</h5>
+                    </div>
+                </div>
+                <div class="d-flex flex-column gap-2 destinasi-item">
+                    <img src="https://www.kurin.com/wp-content/uploads/placeholder-square.jpg" alt="" class="object-fit-cover">
+                    <div class="destination-caption text-center">
+                        <h5 class="fw-bold text-white text-responsive">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.</h5>
+                    </div>
+                </div>
+                <div class="d-flex flex-column gap-2 destinasi-item">
+                    <img src="https://www.kurin.com/wp-content/uploads/placeholder-square.jpg" alt="" class="object-fit-cover">
+                    <div class="destination-caption text-center">
+                        <h5 class="fw-bold text-white text-responsive">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.</h5>
+                    </div>
+                </div>
+                <div class="d-flex flex-column gap-2 destinasi-item">
+                    <img src="https://www.kurin.com/wp-content/uploads/placeholder-square.jpg" alt="" class="object-fit-cover">
+                    <div class="destination-caption text-center">
+                        <h5 class="fw-bold text-white text-responsive">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="mengapa-harus-kami">
+    <div class="container">
+        <div class="d-flex flex-column gy-3 justify-content-center">
+            <h3 class="fw-bold text-color text-center h3-responsive reveal">Mengapa harus kami?</h3>
+            <div class="hr reveal text-responsive mb-4 mb-lg-5"></div>
+            <div class="row gy-5 gy-md-3">
+                <div class="col-md-3 col-6">
+                    <div class="d-flex flex-column justify-content-center align-items-center reveal">
+                        <img src="https://www.kurin.com/wp-content/uploads/placeholder-square.jpg" alt="" class="object-fit-cover rounded-circle mb-2 mengapa-img" style="width:100px;">
+                        <h4 class="fw-bold text-color text-center h4-responsive">Lorem ipsum</h4>
+                        <label class="fw-medium text-center text-responsive">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.</label>
+
+                    </div>
+                </div>
+                <div class="col-md-3 col-6">
+                    <div class="d-flex flex-column justify-content-center align-items-center reveal">
+                        <img src="https://www.kurin.com/wp-content/uploads/placeholder-square.jpg" alt="" class="object-fit-cover rounded-circle mb-2 mengapa-img" style="width:100px;">
+                        <h4 class="fw-bold text-color text-center h4-responsive">Lorem ipsum</h4>
+                        <label class="fw-medium text-center text-responsive">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.</label>
+
+                    </div>
+                </div>
+                <div class="col-md-3 col-6">
+                    <div class="d-flex flex-column justify-content-center align-items-center reveal">
+                        <img src="https://www.kurin.com/wp-content/uploads/placeholder-square.jpg" alt="" class="object-fit-cover rounded-circle mb-2 mengapa-img" style="width:100px;">
+                        <h4 class="fw-bold text-color text-center h4-responsive m-0">Lorem ipsum</h4>
+                        <label class="fw-medium text-center text-responsive">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.</label>
+
+                    </div>
+                </div>
+                <div class="col-md-3 col-6">
+                    <div class="d-flex flex-column justify-content-center align-items-center reveal">
+                        <img src="https://www.kurin.com/wp-content/uploads/placeholder-square.jpg" alt="" class="object-fit-cover rounded-circle mb-2 mengapa-img" style="width:100px;">
+                        <h4 class="fw-bold text-color text-center h4-responsive">Lorem ipsum</h4>
+                        <label class="fw-medium text-center text-responsive">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.</label>
+
+                    </div>
+                </div>
+                <div class="col-md-3 col-6">
+                    <div class="d-flex flex-column justify-content-center align-items-center reveal">
+                        <img src="https://www.kurin.com/wp-content/uploads/placeholder-square.jpg" alt="" class="object-fit-cover rounded-circle mb-2 mengapa-img" style="width:100px;">
+                        <h4 class="fw-bold text-color text-center h4-responsive">Lorem ipsum</h4>
+                        <label class="fw-medium text-center text-responsive">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.</label>
+
+                    </div>
+                </div>
+                <div class="col-md-3 col-6">
+                    <div class="d-flex flex-column justify-content-center align-items-center reveal">
+                        <img src="https://www.kurin.com/wp-content/uploads/placeholder-square.jpg" alt="" class="object-fit-cover rounded-circle mb-2 mengapa-img" style="width:100px;">
+                        <h4 class="fw-bold text-color text-center h4-responsive">Lorem ipsum</h4>
+                        <label class="fw-medium text-center text-responsive">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.</label>
+
+                    </div>
+                </div>
+                <div class="col-md-3 col-6">
+                    <div class="d-flex flex-column justify-content-center align-items-center reveal">
+                        <img src="https://www.kurin.com/wp-content/uploads/placeholder-square.jpg" alt="" class="object-fit-cover rounded-circle mb-2 mengapa-img" style="width:100px;">
+                        <h4 class="fw-bold text-color text-center h4-responsive">Lorem ipsum</h4>
+                        <label class="fw-medium text-center text-responsive">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.</label>
+
+                    </div>
+                </div>
+                <div class="col-md-3 col-6">
+                    <div class="d-flex flex-column justify-content-center align-items-center reveal">
+                        <img src="https://www.kurin.com/wp-content/uploads/placeholder-square.jpg" alt="" class="object-fit-cover rounded-circle mb-2 mengapa-img" style="width:100px;">
+                        <h4 class="fw-bold text-color text-center h4-responsive">Lorem ipsum</h4>
+                        <label class="fw-medium text-center text-responsive">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.</label>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
 <script>
 
