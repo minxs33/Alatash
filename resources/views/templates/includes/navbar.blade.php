@@ -15,16 +15,16 @@
                         <hr class="text-color my-1">
                     </li>
                     <li class="nav-item me-3">
-                        <a class="nav-link link-anchor text-responsive" href="#">Sewa Mobil</a>
+                        <a class="nav-link link-anchor text-responsive" href="#sewa-mobil">Sewa Mobil</a>
                     </li>
                     <li class="nav-item me-3">
-                        <a class="nav-link link-anchor text-responsive" href="#">Destinasi Wisata</a>
+                        <a class="nav-link link-anchor text-responsive" href="#destinasi-wisata">Destinasi Wisata</a>
                     </li>
                     <li class="nav-item me-3">
-                        <a class="nav-link link-anchor text-responsive" href="#">Syarat dan Ketentuan</a>
+                        <a class="nav-link link-anchor text-responsive" href="#syarat-dan-ketentuan">Syarat dan Ketentuan</a>
                     </li>
                     <li class="nav-item me-3">
-                        <a class="nav-link link-anchor text-responsive" href="#">Kontak Kami</a>
+                        <a class="nav-link link-anchor text-responsive" href="#kontak-kami">Kontak Kami</a>
                     </li>
                     <li class="d-block d-md-block d-lg-none d-xl-none">
                         <hr class="text-color my-1">

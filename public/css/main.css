@@ -26,6 +26,12 @@
     margin: 0;
 }
 
+html{
+    margin-top: 7.5rem;
+    scroll-margin-top: 7.5rem;
+    scroll-behavior: smooth;
+}
+
 .primary-color{
     background-color: var(--primary-color) !important;
 }
@@ -50,11 +56,16 @@
     color: var(--text-color-light) !important;
 }
 
+.text-color-ascent{
+    color: var(--primary-color-ascent) !important;
+}
+
 body{
     background-color: var(--body-background-color);
-    /* margin: 0 0 82px 0; */
+    /* margin: 7.3rem 0 0; */
     font-family: 'Poppins', sans-serif;
     height:100%;
+    /* scroll-margin-top: 7.5rem 0; */
 }
 
 .logo-title {
@@ -86,10 +97,6 @@ section{
     margin: 0;
 }
 
-section#home{
-    margin-top: 7.5rem;
-}
-
 section#sell-out{
     background-color: var(--primary-color-alt);
 }
@@ -100,16 +107,15 @@ section#sewa-mobil{
 
 section#destinasi-wisata{
     padding: 5rem 0 5rem;
-    background-color: var(--primary-color);
+    background-color: var(--primary-color-alt);
 }
 
 section#mengapa-harus-kami{
-    padding: 5rem 0 5rem;
+    padding: 3rem 0 6rem;
 }
 
 section#syarat-dan-ketentuan{
-    padding: 5rem 0 5rem;
-    background-image: url('../images/term-of-service-background.png') no-repeat center center fixed;
+    height: 450px;
 }
 
 /* carousels  */
@@ -226,7 +232,7 @@ section#syarat-dan-ketentuan{
 }
 
 .destinasi-carousel .owl-prev:hover{
-    color: var(--primary-color-alt) !important;
+    color: var(--primary-color-ascent) !important;
 }
 
 .destinasi-carousel .owl-next {
@@ -236,7 +242,7 @@ section#syarat-dan-ketentuan{
 }
 
 .destinasi-carousel .owl-next:hover{
-    color: var(--primary-color-alt) !important;
+    color: var(--primary-color-ascent) !important;
 }
 
 .destinasi-carousel > .owl-dots{
@@ -244,11 +250,11 @@ section#syarat-dan-ketentuan{
 }
 
 .destinasi-carousel > .owl-dots > button.owl-dot.active > span{
-    background-color: var(--primary-color-alt) !important;
+    background-color: var(--primary-color) !important;
 }
 
 .destinasi-carousel > .owl-dots > button.owl-dot > span:hover{
-    background-color: var(--primary-color-light) !important;
+    background-color: var(--primary-color-ascent) !important;
 }
 
 .destinasi-item{
@@ -340,6 +346,10 @@ input::-webkit-inner-spin-button {
         width: 350px;
         margin: 0 auto;
     }
+
+    section#syarat-dan-ketentuan{
+        height: 450px;
+    }
 }
 
 @media screen and (max-width: 992px){
@@ -354,6 +364,10 @@ input::-webkit-inner-spin-button {
     }
     .h5-responsive{
         font-size: 0.9rem !important;
+    }
+
+    section#syarat-dan-ketentuan{
+        height: 400px;
     }
 
     .car-description *{
@@ -389,7 +403,12 @@ input::-webkit-inner-spin-button {
     }
 
     section#mengapa-harus-kami{
-        padding: 2rem 0 2rem !important;
+        padding: 2rem 0 3rem !important;
+    }
+
+    section#syarat-dan-ketentuan{
+        padding: 3rem 0 3rem !important;
+        height: 350px;
     }
 
     .car-description *{
@@ -429,8 +448,12 @@ input::-webkit-inner-spin-button {
         padding: 2rem 0 2rem !important;
     }
 
-    secton#mengapa-harus-kami{
-        padding: 2rem 0 2rem !important;
+    section#mengapa-harus-kami{
+        padding: 2rem 0 3rem !important;
+    }
+
+    section#syarat-dan-ketentuan{
+        height: 300px;
     }
 
 

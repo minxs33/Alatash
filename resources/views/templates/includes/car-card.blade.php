@@ -2,7 +2,7 @@
 <div id="load" style="min-height: 400px;">
     <div class="row g-4 justify-content-center">
         @foreach($car as $row)
-            <div class="col-xl-3 col-lg-4 col-md-5 col-sm-6 col-12">
+            <div class="col-xl-3 col-lg-4 col-md-5 col-sm-6 col-10">
                 <div class="shadow-sm card border-0 reveal">
                 
                 @if($row['car_images']->count() != 0)
@@ -26,8 +26,8 @@
                             </div>
                             @else
                                 <div class="d-flex justify-content-center gap-1">
-                                    <label class="badge badge-sm text-bg-danger">{{$row['discount']}}%</label>
-                                    <label class="small text-decoration-line-through">Rp. {{number_format($row['price'], 2, '.', ',');}}</label>
+                                    <label class="badge badge-sm text-bg-danger text-responsive">{{$row['discount']}}%</label>
+                                    <label class="small text-decoration-line-through text-responsive">Rp. {{number_format($row['price'], 2, '.', ',');}}</label>
                                 </div>
                             </div>
                             @endif

@@ -26,7 +26,7 @@ jQuery(() => {
         stagePadding: false,
         responsive: {
             0: {
-                items: 1,
+                items: 2,
                 stagePadding: 15,
                 nav: false,
                 dots: true,

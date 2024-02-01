@@ -1,6 +1,6 @@
 @extends("templates.app")
 
-@section("title", "Altash - Rent Car")
+@section("title", "Altash - Rent a Car in Bali")
 
 @section("content")
 
@@ -23,7 +23,7 @@
                         <img class="rounded-circle sellout-img" style="width:100%" src="https://www.kurin.com/wp-content/uploads/placeholder-square.jpg" alt="">
                     </div>
                     <div class="col-lg-9 col-12">
-                        <h5 class="fw-bold text-color text-responsive text-center text-lg-start">Pengalaman Wisata Yang Terbaik</h5>
+                        <h5 class="fw-bold text-muted text-responsive text-center text-lg-start">Pengalaman Wisata Yang Terbaik</h5>
                     </div>
                 </div>
             </div>
@@ -33,7 +33,7 @@
                         <img class="rounded-circle sellout-img" style="width:100%" src="https://www.kurin.com/wp-content/uploads/placeholder-square.jpg" alt="">
                     </div>
                     <div class="col-lg-9 col-12">
-                        <h5 class="fw-bold text-color text-responsive text-center text-lg-start">Pengalaman Wisata Yang Terbaik</h5>
+                        <h5 class="fw-bold text-muted text-responsive text-center text-lg-start">Pengalaman Wisata Yang Terbaik</h5>
                     </div>
                 </div>
             </div>
@@ -43,7 +43,7 @@
                         <img class="rounded-circle sellout-img" style="width:100%" src="https://www.kurin.com/wp-content/uploads/placeholder-square.jpg" alt="">
                     </div>
                     <div class="col-lg-9 col-12">
-                        <h5 class="fw-bold text-color text-responsive text-center text-lg-start">Pengalaman Wisata Yang Terbaik</h5>
+                        <h5 class="fw-bold text-muted text-responsive text-center text-lg-start">Pengalaman Wisata Yang Terbaik</h5>
                     </div>
                 </div>
             </div>
@@ -76,54 +76,72 @@
     </div>  
 </section>
 
-<section id="destinasi-wisata" class="reveal">
+<section id="destinasi-wisata" class="reveal-section">
     <div class="container">
         <div class="d-flex flex-column gy-2">
-            <h3 class="fw-bold text-white text-center h3-responsive reveal">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</h3>
-            <h5 class="fw-bold text-color-light text-center h5-responsive reveal">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sed vel veritatis a.</h5>
+            <h3 class="fw-bold text-muted text-center h3-responsive reveal">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</h3>
+            <h5 class="fw-bold text-color text-center h5-responsive reveal">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sed vel veritatis a.</h5>
             <div class="owl-carousel destinasi-carousel owl-theme my-3 reveal">
-                <div class="d-flex flex-column gap-2 destinasi-item">
+                <div class="d-flex flex-column gap-2 destinasi-item position-relative">
+                    <div class="position-absolute start-0 end-0 pt-1 mx-2 my-1 rounded-pill bg-dark">
+                        <h5 class="fw-medium text-white text-responsive text-center"><i class="fas fa-location-dot text-danger"></i> Lorem Ipsum</h5>
+                    </div>
                     <img src="https://www.kurin.com/wp-content/uploads/placeholder-square.jpg" alt="" class="object-fit-cover">
                     <div class="destination-caption text-center">
-                        <h5 class="fw-bold text-white text-responsive">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.</h5>
+                        <h5 class="fw-medium text-muted text-responsive">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.</h5>
                     </div>
                 </div>
-                <div class="d-flex flex-column gap-2 destinasi-item">
+                
+                <div class="d-flex flex-column gap-2 destinasi-item position-relative">
+                    <div class="position-absolute start-0 end-0 pt-1 mx-2 my-1 rounded-pill bg-dark">
+                        <h5 class="fw-medium text-white text-responsive text-center"><i class="fas fa-location-dot text-danger"></i> Lorem Ipsum</h5>
+                    </div>
                     <img src="https://www.kurin.com/wp-content/uploads/placeholder-square.jpg" alt="" class="object-fit-cover">
                     <div class="destination-caption text-center">
-                        <h5 class="fw-bold text-white text-responsive">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.</h5>
+                        <h5 class="fw-medium text-muted text-responsive">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.</h5>
                     </div>
                 </div>
-                <div class="d-flex flex-column gap-2 destinasi-item">
+
+                <div class="d-flex flex-column gap-2 destinasi-item position-relative">
+                    <div class="position-absolute start-0 end-0 pt-1 mx-2 my-1 rounded-pill bg-dark">
+                        <h5 class="fw-medium text-white text-responsive text-center"><i class="fas fa-location-dot text-danger"></i> Lorem Ipsum</h5>
+                    </div>
                     <img src="https://www.kurin.com/wp-content/uploads/placeholder-square.jpg" alt="" class="object-fit-cover">
                     <div class="destination-caption text-center">
-                        <h5 class="fw-bold text-white text-responsive">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.</h5>
+                        <h5 class="fw-medium text-muted text-responsive">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.</h5>
                     </div>
                 </div>
-                <div class="d-flex flex-column gap-2 destinasi-item">
+
+                <div class="d-flex flex-column gap-2 destinasi-item position-relative">
+                    <div class="position-absolute start-0 end-0 pt-1 mx-2 my-1 rounded-pill bg-dark">
+                        <h5 class="fw-medium text-white text-responsive text-center"><i class="fas fa-location-dot text-danger"></i> Lorem Ipsum</h5>
+                    </div>
+                    <img src="https://scontent.fcgk42-1.fna.fbcdn.net/v/t39.30808-6/313222486_427865869510383_8810001381452319283_n.png?_nc_cat=110&ccb=1-7&_nc_sid=efb6e6&_nc_ohc=Ev-T43LhS8QAX-0pmE8&_nc_ht=scontent.fcgk42-1.fna&oh=00_AfDyIIS1x_ZDmNQGIBlUaZzu3HosfCpYNubr_nJBork8BQ&oe=65BFF59B" alt="" class="object-fit-cover">
+                    <div class="destination-caption text-center">
+                        <h5 class="fw-medium text-muted text-responsive">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.</h5>
+                    </div>
+                </div>
+
+                <div class="d-flex flex-column gap-2 destinasi-item position-relative">
+                    <div class="position-absolute start-0 end-0 pt-1 mx-2 my-1 rounded-pill bg-dark">
+                        <h5 class="fw-medium text-white text-responsive text-center"><i class="fas fa-location-dot text-danger"></i> Lorem Ipsum</h5>
+                    </div>
                     <img src="https://www.kurin.com/wp-content/uploads/placeholder-square.jpg" alt="" class="object-fit-cover">
                     <div class="destination-caption text-center">
-                        <h5 class="fw-bold text-white text-responsive">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.</h5>
+                        <h5 class="fw-medium text-muted text-responsive">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.</h5>
                     </div>
                 </div>
-                <div class="d-flex flex-column gap-2 destinasi-item">
+
+                <div class="d-flex flex-column gap-2 destinasi-item position-relative">
+                    <div class="position-absolute start-0 end-0 pt-1 mx-2 my-1 rounded-pill bg-dark">
+                        <h5 class="fw-medium text-white text-responsive text-center"><i class="fas fa-location-dot text-danger"></i> Lorem Ipsum</h5>
+                    </div>
                     <img src="https://www.kurin.com/wp-content/uploads/placeholder-square.jpg" alt="" class="object-fit-cover">
                     <div class="destination-caption text-center">
-                        <h5 class="fw-bold text-white text-responsive">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.</h5>
+                        <h5 class="fw-medium text-muted text-responsive">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.</h5>
                     </div>
                 </div>
-                <div class="d-flex flex-column gap-2 destinasi-item">
-                    <img src="https://www.kurin.com/wp-content/uploads/placeholder-square.jpg" alt="" class="object-fit-cover">
-                    <div class="destination-caption text-center">
-                        <h5 class="fw-bold text-white text-responsive">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.</h5>
-                    </div>
-                </div>
-                <div class="d-flex flex-column gap-2 destinasi-item">
-                    <img src="https://www.kurin.com/wp-content/uploads/placeholder-square.jpg" alt="" class="object-fit-cover">
-                    <div class="destination-caption text-center">
-                        <h5 class="fw-bold text-white text-responsive">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.</h5>
-                    </div>
-                </div>
+
             </div>
         </div>
     </div>
@@ -205,12 +223,27 @@
 </section>
 
 
-<section id="syarat-dan-ketentuan">
-    <!-- Content goes here -->
-</section>
-
-<section id="syarat-dan-ketentuan reveal" class=".reveal-section">
-    <img src="">
+<section id="syarat-dan-ketentuan" class="bg bg-size-cover bg-size-md-auto position-relative">
+    <img src="{{ asset('images/term-of-service-background.png') }}" alt="" class="img-fluid object-fit-cover position-absolute top-0 start-0 end-0 bottom-0 h-100 w-100">
+    <div class="content-container container-md position-absolute top-0 start-0 end-0 bottom-0 d-flex justify-content-center align-items-center text-white reveal">
+        <div class="d-flex flex-column gap-3 col-11 col-sm-8 bg-body-tertiary rounded shadow-sm reveal px-3 py-2 p-md-4">
+            <div>
+                <h3 class="fw-bold text-color text-center h3-responsive">Syarat dan Ketentuan</h3>
+                <div class="hr reveal text-responsive"></div>
+            </div>
+            <div>
+                <ul class="text-color fw-medium fa-ul">
+                    <li class="text-responsive"><span class="fa-li"><i class="fas fa-circle-check fa-xs"></i></span>Harga Sudah Termasuk Supir & BBM</li>
+                    <li class="text-responsive"><span class="fa-li"><i class="fas fa-circle-check fa-xs"></i></span>Harga Sewa Belum Termasuk Parkir, Tol dan Tiket Masuk Destinasi Wisata</li>
+                    <li class="text-responsive"><span class="fa-li"><i class="fas fa-circle-check fa-xs"></i></span>Akan Dikenakan Biaya Overtime 10% Perjamnya Dari Harga Sewa Mobil</li>
+                    <li class="text-responsive"><span class="fa-li"><i class="fas fa-circle-check fa-xs"></i></span>Harga Sewa Mobil Tidak Berlaku Pada Periode HIGH SEASON atau PEAK SEASON</li>
+                    <li class="text-responsive"><span class="fa-li"><i class="fas fa-circle-check fa-xs"></i></span>Segala Bentuk Perubahan Ketentuan & Harga Akan Mengacu Pada Pemberitahuan Dari Team Alttash Travel & Tour</li>
+                    <li class="text-responsive"><span class="fa-li"><i class="fas fa-circle-check fa-xs"></i></span>Harga Tersebut Tidak Untuk Perjalanan Keluar Kota</li>
+                    <li class="text-responsive"><span class="fa-li"><i class="fas fa-circle-check fa-xs"></i></span>Harga Tersebut Belum Termasuk Tips Supir</li>
+                </ul>
+            </div>
+        </div>
+    </div>
 </section>
 
 <script>
