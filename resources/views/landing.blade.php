@@ -204,6 +204,15 @@
     </div>
 </section>
 
+
+<section id="syarat-dan-ketentuan">
+    <!-- Content goes here -->
+</section>
+
+<section id="syarat-dan-ketentuan reveal" class=".reveal-section">
+    <img src="">
+</section>
+
 <script>
 
     jQuery(function(){

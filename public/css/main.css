@@ -107,6 +107,11 @@ section#mengapa-harus-kami{
     padding: 5rem 0 5rem;
 }
 
+section#syarat-dan-ketentuan{
+    padding: 5rem 0 5rem;
+    background-image: url('../images/term-of-service-background.png') no-repeat center center fixed;
+}
+
 /* carousels  */
 .owl-stage-outer{
     border-radius: 6px !important;
