@@ -3,7 +3,7 @@
     <div class="row g-4 justify-content-center">
         @foreach($car as $row)
             <div class="col-xl-3 col-lg-4 col-md-5 col-sm-6 col-12">
-                <div class="shadow-sm card border-0 reveal-car-delay">
+                <div class="shadow-sm card border-0 reveal">
                 
                 @if($row['car_images']->count() != 0)
                         @foreach($row['car_images'] as $images)
@@ -52,18 +52,3 @@
     </div>
     @endif
 </div>
-
-<script>
-    jQuery(function(){
-        $(".reveal-car-delay").each(function (index, element) {
-            ScrollReveal().reveal(element, {
-                duration: 300,
-                origin: 'bottom',
-                // reset: true,
-                delay: index * 200,
-                distance: '50px',
-                easing: 'ease-in',
-            });
-        });
-    })
-</script>

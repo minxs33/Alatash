@@ -134,7 +134,7 @@
         <div class="d-flex flex-column gy-3 justify-content-center">
             <h3 class="fw-bold text-color text-center h3-responsive reveal">Mengapa harus kami?</h3>
             <div class="hr reveal text-responsive mb-4 mb-lg-5"></div>
-            <div class="row gy-5 gy-md-3">
+            <div class="row gy-5">
                 <div class="col-md-3 col-6">
                     <div class="d-flex flex-column justify-content-center align-items-center reveal">
                         <img src="https://www.kurin.com/wp-content/uploads/placeholder-square.jpg" alt="" class="object-fit-cover rounded-circle mb-2 mengapa-img" style="width:100px;">
@@ -247,6 +247,10 @@
                     <span class="visually-hidden">Loading...</span>
                 </div>
             </div>`);
+
+            $('html, body').animate({
+                scrollTop: $('#sewa-mobil').offset().top
+            });
 
             var url = $(this).attr('href');
             // alert(url);  
