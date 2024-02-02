@@ -32,7 +32,7 @@
                     <li class="d-block d-md-block d-lg-none d-xl-none">
                         <div class="d-flex gap-2 justify-content-end">
                             <a class="link-anchor text-responsive" href="tel:081339439431" target="_blank"><i class="fas fa-phone"></i></a>
-                            <a class="link-anchor text-responsive" href="https://wa.me/?text=Permisi%20kak,%20saya%20butuh%20bantuan%20memesan%20mobil" target="_blank"><i class="fab fa-square-whatsapp fa-lg"></i></a>
+                            <a class="link-anchor text-responsive" href="https://wa.me/?text=Permisi%20Altash,%20saya%20butuh%20bantuan%20menyewa%20mobil" target="_blank"><i class="fab fa-square-whatsapp fa-lg"></i></a>
                         </div>
                     </li>
                 </ul>
@@ -60,7 +60,7 @@
                     <small class="text-color">Perlu bantuan?</small>
                     <div class="d-flex justify-content-center gap-2">
                         <a class="link-anchor" href="tel:081339439431"><i class="fas fa-phone"></i></a>
-                        <a class="link-anchor" href="https://wa.me/?text=Permisi%20Altash,%20saya%20butuh%20bantuan%menyewa%20mobil"><i class="fab fa-square-whatsapp fa-lg"></i></a>
+                        <a class="link-anchor" target="_blank" href="https://wa.me/?text=Permisi%20Altash,%20saya%20butuh%20bantuan%20menyewa%20mobil"><i class="fab fa-square-whatsapp fa-lg"></i></a>
                     </div>
                 </div>
                 @endif

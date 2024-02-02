@@ -27,7 +27,6 @@
 }
 
 html{
-    margin-top: 7.5rem;
     scroll-behavior: smooth;
 }
 
@@ -60,11 +59,10 @@ html{
 }
 
 body{
+    margin-top: 7.5rem;
     background-color: var(--body-background-color);
-    /* margin: 7.3rem 0 0; */
     font-family: 'Poppins', sans-serif;
     height:100%;
-    /* scroll-margin-top: 7.5rem 0; */
 }
 
 .logo-title {
@@ -109,7 +107,7 @@ section#destinasi-wisata{
 }
 
 section#mengapa-harus-kami{
-    padding: 5rem 0 6rem;
+    padding: 5rem 0 8rem;
 }
 
 section#syarat-dan-ketentuan{

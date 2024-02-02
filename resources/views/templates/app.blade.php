@@ -18,8 +18,6 @@
     <!-- <link rel="stylesheet" href="{{ asset('css/fontawesome/css/all.css') }}"> -->
     <!-- jQuery -->
     <script type="text/javascript" src="//code.jquery.com/jquery-3.6.0.js"></script>
-    <!-- Parallax JS -->
-    <!-- <script type="text/javascript" src="{{ asset('js/parallax.js') }}"></script> -->
     <!-- SimpleParallax JS -->
     <script src="https://cdn.jsdelivr.net/npm/simple-parallax-js@5.5.1/dist/simpleParallax.min.js"></script>
 

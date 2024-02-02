@@ -1,5 +1,12 @@
 
 <div id="load" style="min-height: 400px;">
+    <div class="d-none d-lg-block">
+    @if($car->hasPages())
+        <div class="px-3 pb-3">
+            {{ $car->links('pagination::bootstrap-5') }}
+        </div>
+    @endif
+    </div>  
     <div class="row g-4 justify-content-center">
         @foreach($car as $row)
             <div class="col-xl-3 col-lg-4 col-md-5 col-sm-6 col-10">
@@ -46,9 +53,11 @@
             </div>
         @endforeach
     </div>
+    <div class="d-block d-lg-none">
     @if($car->hasPages())
-    <div class="px-3 pt-3">
-        {{ $car->links('pagination::bootstrap-5') }}
-    </div>
+        <div class="px-3 pt-3">
+            {{ $car->links('pagination::bootstrap-5') }}
+        </div>
     @endif
+    </div> 
 </div>

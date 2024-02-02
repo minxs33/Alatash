@@ -271,6 +271,7 @@
 
         ScrollReveal().reveal(".reveal", {
             duration: 1000,
+            delay: 250,
             origin: 'bottom',
             distance: '50px',
             // reset: true,
