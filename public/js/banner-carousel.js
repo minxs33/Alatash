@@ -21,7 +21,7 @@ jQuery(() => {
     })
 
     $(".destinasi-carousel").owlCarousel({
-        margin:10,
+        margin:20,
         lazyLoad:true,
         stagePadding: false,
         responsive: {

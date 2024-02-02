@@ -268,8 +268,6 @@ section#syarat-dan-ketentuan{
     transition: 0.2s;
 }
 
-
-
 /* all car pagination */
 
 .pagination > li > .page-link {
@@ -299,6 +297,10 @@ section#syarat-dan-ketentuan{
 }
 
 /* syarat dan ketentuan */
+.overlay-syarat-dan-ketentuan{
+    background-color: hsla(var(--hue-color), 57%, 53%, 0.6);
+    z-index: 1;
+}
 .syarat-dan-ketentuan-card{
     z-index: 1;
     transition: 0.2s;
@@ -365,7 +367,7 @@ input::-webkit-inner-spin-button {
 
     .hr{
         border: 1px solid var(--primary-color);
-        width: 350px;
+        width: 400px;
         margin: 0 auto;
     }
 }

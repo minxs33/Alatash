@@ -1,7 +1,7 @@
 
     <ul class="navbar-nav sidebar sidebar-success accordion toggled" id="accordionSidebar">
 
-    <a class="sidebar-brand align-items-center justify-content-center mb-1" href="{{ url('/') }}"><img src="{{ asset('images/logo-merch-light.png') }}" alt="A Logo" style="width: 65px; height:auto;"></a>
+    <a class="sidebar-brand align-items-center justify-content-center mb-1" href="{{ url('/') }}"><img src="{{ asset('images/logo_alatash.png') }}" alt="A Logo" style="width: 65px; height:auto;"></a>
 
         @if(Auth::user()->role == 1 || Auth::user()->role == 2 )
         <li class="nav-item">

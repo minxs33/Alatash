@@ -15,16 +15,16 @@
                         <hr class="text-color my-1">
                     </li>
                     <li class="nav-item me-3">
-                        <a class="nav-link link-anchor text-responsive" href="#sewa-mobil">Sewa Mobil</a>
+                        <a class="nav-link link-anchor text-responsive text-nowrap" href="#sewa-mobil">Sewa Mobil</a>
                     </li>
                     <li class="nav-item me-3">
-                        <a class="nav-link link-anchor text-responsive" href="#destinasi-wisata">Destinasi Wisata</a>
+                        <a class="nav-link link-anchor text-responsive text-nowrap" href="#destinasi-wisata">Destinasi Wisata</a>
                     </li>
                     <li class="nav-item me-3">
-                        <a class="nav-link link-anchor text-responsive" href="#syarat-dan-ketentuan">Syarat dan Ketentuan</a>
+                        <a class="nav-link link-anchor text-responsive text-nowrap" href="#syarat-dan-ketentuan">Syarat dan Ketentuan</a>
                     </li>
                     <li class="nav-item me-3">
-                        <a class="nav-link link-anchor text-responsive" href="#kontak-kami">Kontak Kami</a>
+                        <a class="nav-link link-anchor text-responsive text-nowrap" href="#kontak-kami">Kontak Kami</a>
                     </li>
                     <li class="d-block d-md-block d-lg-none d-xl-none">
                         <hr class="text-color my-1">
@@ -32,7 +32,7 @@
                     <li class="d-block d-md-block d-lg-none d-xl-none">
                         <div class="d-flex gap-2 justify-content-end">
                             <a class="link-anchor text-responsive" href="tel:081339439431" target="_blank"><i class="fas fa-phone"></i></a>
-                            <a class="link-anchor text-responsive" href="https://wa.me/?text=Permisi%20Altash,%20saya%20butuh%20bantuan%20menyewa%20mobil" target="_blank"><i class="fab fa-square-whatsapp fa-lg"></i></a>
+                            <a class="link-anchor text-responsive" href="https://wa.me/?text=Permisi%20Alatash,%20saya%20butuh%20bantuan%20menyewa%20mobil" target="_blank"><i class="fab fa-square-whatsapp fa-lg"></i></a>
                         </div>
                     </li>
                 </ul>
@@ -60,7 +60,7 @@
                     <small class="text-color">Perlu bantuan?</small>
                     <div class="d-flex justify-content-center gap-2">
                         <a class="link-anchor" href="tel:081339439431"><i class="fas fa-phone"></i></a>
-                        <a class="link-anchor" target="_blank" href="https://wa.me/?text=Permisi%20Altash,%20saya%20butuh%20bantuan%20menyewa%20mobil"><i class="fab fa-square-whatsapp fa-lg"></i></a>
+                        <a class="link-anchor" target="_blank" href="https://wa.me/?text=Permisi%20Alatash,%20saya%20butuh%20bantuan%20menyewa%20mobil"><i class="fab fa-square-whatsapp fa-lg"></i></a>
                     </div>
                 </div>
                 @endif

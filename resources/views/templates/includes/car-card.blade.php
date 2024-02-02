@@ -45,7 +45,8 @@
                                 @php
                                     $namaMobil = str_replace(' ', '%20', $row['name']);
                                 @endphp
-                                <a href="https://wa.me/?text=Permisi%20Altash,%20saya%20ingin%20bertanya%20mengenai%20penyewaan%20mobil%20{{$namaMobil}}" target="_blank" class="btn btn-primary-color rounded-pill">Sewa sekarang</a>
+                                <!-- Hello Admin, bisakah saya mendapatkan informasi tentang daftar harga sewa -->
+                                <a href="https://wa.me/+6281339439431?text=Halo%20admin%20Alatash,%20bisakah%20saya%20mendapatkan%20informasi%20tentang%20daftar%20harga%20sewa%20mobil%20{{$namaMobil}}%20?" target="_blank" class="btn btn-primary-color rounded-pill">Sewa sekarang</a>
                             </div>
                         </div>
                     </div>
