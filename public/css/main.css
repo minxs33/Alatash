@@ -28,7 +28,6 @@
 
 html{
     margin-top: 7.5rem;
-    scroll-margin-top: 7.5rem;
     scroll-behavior: smooth;
 }
 
@@ -107,15 +106,15 @@ section#sewa-mobil{
 
 section#destinasi-wisata{
     padding: 5rem 0 5rem;
-    background-color: var(--primary-color-alt);
 }
 
 section#mengapa-harus-kami{
-    padding: 3rem 0 6rem;
+    padding: 5rem 0 6rem;
 }
 
 section#syarat-dan-ketentuan{
-    height: 450px;
+    padding: 5rem 0 5rem;
+    min-height: 450px;
 }
 
 /* carousels  */
@@ -219,7 +218,12 @@ section#syarat-dan-ketentuan{
 }
 
 
-/* destinasi wisata carousel */
+/* destinasi wisata */
+
+.overlay-destinasi-wisata{
+    background-color: hsla(var(--hue-color), 57%, 53%, 0.8);
+    z-index: -1;
+}
 
 .destinasi-carousel .owl-stage-outer{
     border-radius: 0 !important;
@@ -266,6 +270,8 @@ section#syarat-dan-ketentuan{
     transition: 0.2s;
 }
 
+
+
 /* all car pagination */
 
 .pagination > li > .page-link {
@@ -294,6 +300,24 @@ section#syarat-dan-ketentuan{
     transition: 0.2s;
 }
 
+/* syarat dan ketentuan */
+.syarat-dan-ketentuan-card{
+    z-index: 1;
+    transition: 0.2s;
+    background-color: var(--body-background-color);
+}
+
+.syarat-dan-ketentuan-card:hover{
+    transform: scale(102%);
+    transition: 0.2s;
+    box-shadow: 5px 5px 10px 5px var(--primary-color-alt);
+}
+
+.hr-syarat-dan-ketentuan{
+    border: 1px solid var(--primary-color);
+    width: 100%;
+    margin: 0 auto;
+}
 /* car view carousels */
 .splide__slide {
     opacity: 0.6;
@@ -325,7 +349,7 @@ input::-webkit-inner-spin-button {
 }
 @media screen and (max-width: 1200px){
     .text-responsive{
-        font-size: 0.9rem !important;
+        font-size: 0.98rem !important;
     }
     .h3-responsive{
         font-size: 1.5rem !important;
@@ -346,15 +370,11 @@ input::-webkit-inner-spin-button {
         width: 350px;
         margin: 0 auto;
     }
-
-    section#syarat-dan-ketentuan{
-        height: 450px;
-    }
 }
 
 @media screen and (max-width: 992px){
     .text-responsive{
-        font-size: 0.8rem !important;
+        font-size: 0.88rem !important;
     }
     .h3-responsive{
         font-size: 1.3rem !important;
@@ -367,7 +387,7 @@ input::-webkit-inner-spin-button {
     }
 
     section#syarat-dan-ketentuan{
-        height: 400px;
+        min-height: 500px;
     }
 
     .car-description *{
@@ -382,7 +402,7 @@ input::-webkit-inner-spin-button {
 
 @media screen and (max-width: 768px) {
     .text-responsive{
-        font-size: 0.7rem !important;
+        font-size: 0.78rem !important;
     }
     .h3-responsive{
         font-size: 1.1rem !important;
@@ -403,12 +423,11 @@ input::-webkit-inner-spin-button {
     }
 
     section#mengapa-harus-kami{
-        padding: 2rem 0 3rem !important;
+        padding: 3rem 0 3rem !important;
     }
 
     section#syarat-dan-ketentuan{
         padding: 3rem 0 3rem !important;
-        height: 350px;
     }
 
     .car-description *{
@@ -424,7 +443,7 @@ input::-webkit-inner-spin-button {
 
 @media screen and (max-width: 576px) {
     .text-responsive{
-        font-size: 0.6rem !important;
+        font-size: 0.68rem !important;
     }
     .h3-responsive{
         font-size: 1rem !important;
@@ -449,11 +468,12 @@ input::-webkit-inner-spin-button {
     }
 
     section#mengapa-harus-kami{
-        padding: 2rem 0 3rem !important;
+        padding: 3rem 0 3rem !important;
     }
 
     section#syarat-dan-ketentuan{
-        height: 300px;
+        padding: 3rem 0 3rem !important;
+        min-height: 400px;
     }
 
 

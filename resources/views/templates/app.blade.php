@@ -16,8 +16,13 @@
     <!-- Detail Product Carousels -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css" integrity="sha256-5uKiXEwbaQh9cgd2/5Vp6WmMnsUr3VZZw0a8rKnOKNU=" crossorigin="anonymous">
     <!-- <link rel="stylesheet" href="{{ asset('css/fontawesome/css/all.css') }}"> -->
-    
+    <!-- jQuery -->
     <script type="text/javascript" src="//code.jquery.com/jquery-3.6.0.js"></script>
+    <!-- Parallax JS -->
+    <!-- <script type="text/javascript" src="{{ asset('js/parallax.js') }}"></script> -->
+    <!-- SimpleParallax JS -->
+    <script src="https://cdn.jsdelivr.net/npm/simple-parallax-js@5.5.1/dist/simpleParallax.min.js"></script>
+
     <title>@yield("title")</title>
 </head>
 <body>
@@ -40,9 +45,6 @@
 
     <!-- ScrollReveal -->
     <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
-    <script>
-        // ScrollReveal({ reset: true });
-    </script>
 
 </body>
 </html>

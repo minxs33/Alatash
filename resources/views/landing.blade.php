@@ -76,7 +76,9 @@
     </div>  
 </section>
 
-<section id="destinasi-wisata" class="reveal-section">
+<section id="destinasi-wisata" class="section-reveal bg bg-size-cover bg-size-md-auto position-relative parallax-wrapper">
+    <div class="overlay-destinasi-wisata position-absolute top-0 start-0 end-0 bottom-0 h-100 w-100"></div>
+    <img src="{{ asset('images/wisata-background.jpg') }}" style="z-index:-100;" alt="" class="img-fluid object-fit-cover position-absolute top-0 start-0 end-0 bottom-0 h-100 w-100 parallax">
     <div class="container">
         <div class="d-flex flex-column gy-2">
             <h3 class="fw-bold text-muted text-center h3-responsive reveal">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</h3>
@@ -214,7 +216,6 @@
                         <img src="https://www.kurin.com/wp-content/uploads/placeholder-square.jpg" alt="" class="object-fit-cover rounded-circle mb-2 mengapa-img" style="width:100px;">
                         <h4 class="fw-bold text-color text-center h4-responsive">Lorem ipsum</h4>
                         <label class="fw-medium text-center text-responsive">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.</label>
-
                     </div>
                 </div>
             </div>
@@ -222,33 +223,52 @@
     </div>
 </section>
 
-
-<section id="syarat-dan-ketentuan" class="bg bg-size-cover bg-size-md-auto position-relative">
-    <img src="{{ asset('images/term-of-service-background.png') }}" alt="" class="img-fluid object-fit-cover position-absolute top-0 start-0 end-0 bottom-0 h-100 w-100">
-    <div class="content-container container-md position-absolute top-0 start-0 end-0 bottom-0 d-flex justify-content-center align-items-center text-white reveal">
-        <div class="d-flex flex-column gap-3 col-11 col-sm-8 bg-body-tertiary rounded shadow-sm reveal px-3 py-2 p-md-4">
-            <div>
-                <h3 class="fw-bold text-color text-center h3-responsive">Syarat dan Ketentuan</h3>
-                <div class="hr reveal text-responsive"></div>
+<section id="syarat-dan-ketentuan" class="section-reveal bg bg-size-cover bg-size-md-auto position-relative parallax-wrapper">
+    <img src="{{ asset('images/footer-background.png') }}" alt="" class="img-fluid object-fit-cover position-absolute top-0 start-0 end-0 bottom-0 h-100 w-100 parallax">
+    <div class="d-flex justify-content-center align-items-center">
+        <div class="syarat-dan-ketentuan-card d-flex flex-column gap-3 col-lg-6 col-sm-8 rounded shadow-sm reveal px-3 py-2 p-md-4 border-0">
+            <div class="d-flex justify-content-between gap-2 align-items-center reveal">
+                <div class="hr-syarat-dan-ketentuan"></div>
+                <h3 class="fw-bold text-color h3-responsive text-nowrap mb-0">Syarat & Ketentuan</h3>
+                <div class="hr-syarat-dan-ketentuan"></div>
             </div>
-            <div>
-                <ul class="text-color fw-medium fa-ul">
-                    <li class="text-responsive"><span class="fa-li"><i class="fas fa-circle-check fa-xs"></i></span>Harga Sudah Termasuk Supir & BBM</li>
-                    <li class="text-responsive"><span class="fa-li"><i class="fas fa-circle-check fa-xs"></i></span>Harga Sewa Belum Termasuk Parkir, Tol dan Tiket Masuk Destinasi Wisata</li>
-                    <li class="text-responsive"><span class="fa-li"><i class="fas fa-circle-check fa-xs"></i></span>Akan Dikenakan Biaya Overtime 10% Perjamnya Dari Harga Sewa Mobil</li>
-                    <li class="text-responsive"><span class="fa-li"><i class="fas fa-circle-check fa-xs"></i></span>Harga Sewa Mobil Tidak Berlaku Pada Periode HIGH SEASON atau PEAK SEASON</li>
-                    <li class="text-responsive"><span class="fa-li"><i class="fas fa-circle-check fa-xs"></i></span>Segala Bentuk Perubahan Ketentuan & Harga Akan Mengacu Pada Pemberitahuan Dari Team Alttash Travel & Tour</li>
-                    <li class="text-responsive"><span class="fa-li"><i class="fas fa-circle-check fa-xs"></i></span>Harga Tersebut Tidak Untuk Perjalanan Keluar Kota</li>
-                    <li class="text-responsive"><span class="fa-li"><i class="fas fa-circle-check fa-xs"></i></span>Harga Tersebut Belum Termasuk Tips Supir</li>
+            <div class="reveal">
+                <h4 class="fw-semibold text-muted h4-responsive">Termasuk</h4>
+                <ul class="fw-medium fa-ul">
+                    <li class="text-responsive"><span class="fa-li"><i class="fas fa-circle-check fa-xs text-color"></i></span><label class="text-muted">Harga Supir & BBM</label></li>
+                </ul>
+                <h4 class="fw-semibold text-muted h4-responsive">Tidak termasuk</h4>
+                <ul class="fw-medium fa-ul">
+                    <li class="text-responsive"><span class="fa-li"><i class="fas fa-circle-check fa-xs text-color"></i></span><label class="text-muted">Harga Belum Termasuk Tips Supir</label></li>
+                    <li class="text-responsive"><span class="fa-li"><i class="fas fa-circle-check fa-xs text-color"></i></span><label class="text-muted">Harga Tidak Untuk Perjalanan Keluar Kota</label></li>
+                    <li class="text-responsive"><span class="fa-li"><i class="fas fa-circle-check fa-xs text-color"></i></span><label class="text-muted">Harga Belum Termasuk Parkir, Tol dan Tiket Masuk Destinasi Wisata</label></li>
+                </ul>
+                <h4 class="fw-semibold text-muted h4-responsive">Ketentuan</h4>
+                <ul class="fw-medium fa-ul">
+                    <li class="text-responsive"><span class="fa-li"><i class="fas fa-circle-check fa-xs text-color"></i></span><label class="text-muted">Akan Dikenakan Biaya Overtime 10% Perjamnya Dari Harga Sewa Mobil</label></li>
+                    <li class="text-responsive"><span class="fa-li"><i class="fas fa-circle-check fa-xs text-color"></i></span><label class="text-muted">Harga Sewa Mobil Tidak Berlaku Pada Periode HIGH SEASON atau PEAK SEASON</label></li>
+                    <li class="text-responsive"><span class="fa-li"><i class="fas fa-circle-check fa-xs text-color"></i></span><label class="text-muted">Segala Bentuk Perubahan Ketentuan & Harga Akan Mengacu Pada Pemberitahuan Dari Team Alttash Travel & Tour</label></li>
                 </ul>
             </div>
         </div>
     </div>
 </section>
 
+<section id="footer">
+    <br><br><br><br><br><br><br><br><br><br><br>
+</section>
+
 <script>
 
+    new simpleParallax(document.getElementsByClassName('parallax'), {
+        scale: 1.5,
+        delay: .6,
+        customWrapper: '.parallax-wrapper',
+        orientation: 'up'
+    });
     jQuery(function(){
+
+
         ScrollReveal().reveal(".reveal", {
             duration: 1000,
             origin: 'bottom',
@@ -326,7 +346,8 @@
                     <div class="alert alert-danger"> Mobil gagal memuat, <a href="#here" onclick="location.reload()">tekan ini<a> untuk muat ulang </div>
                 `);  
             });
-            })
+        })
+
     });
 
     function getData(url) {
