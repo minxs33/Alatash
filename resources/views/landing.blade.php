@@ -55,11 +55,11 @@
 <section id="sewa-mobil" class="reveal-section">
     <div class="container-md">
         <div class="d-flex flex-column gy-2">
-            <h3 class="fw-bold text-color text-center h3-responsive reveal-delay">KENDARAAN PALING BARU! PERIKSA TARIF SEWA DAN KENDARAAN DI BALI INCLUDE DENGAN DRIVER.</h3>
-            <h5 class="fw-bold text-color-light text-center h5-responsive reveal-delay">Pastikan Liburan Anda Nyaman dengan Layanan Kami</h5>
+            <h3 class="fw-bold text-color text-center h3-responsive reveal">KENDARAAN PALING BARU! PERIKSA TARIF SEWA DAN KENDARAAN DI BALI INCLUDE DENGAN DRIVER.</h3>
+            <h5 class="fw-bold text-color-light text-center h5-responsive reveal">Pastikan Liburan Anda Nyaman dengan Layanan Kami</h5>
         </div>
     </div>
-    <div class="shadow-md border-top border-bottom my-3 border-2">
+    <div class="shadow-md border-top border-bottom my-3 border-2 reveal">
         <div class="container-md">
             <div class="d-flex flex-wrap justify-content-center py-2 gap-2">
                 <button class="btn btn-outline-primary-color-alt rounded-pill category text-responsive active" data-id="all">Semua</button>
@@ -84,63 +84,73 @@
             <h3 class="fw-bold text-muted text-center h3-responsive reveal">Destinasi Wisata Kece di Bali</h3>
             <h5 class="fw-bold text-color text-center h5-responsive reveal">Nikmati Liburanmu Dengan Pesona Keindahan Bali</h5>
             <div class="owl-carousel destinasi-carousel owl-theme my-3 reveal">
-                <div class="d-flex flex-column gap-2 destinasi-item position-relative">
+                <div class="d-flex flex-column destinasi-item position-relative">
                     <div class="position-absolute start-0 end-0 pt-1 mx-2 my-1 rounded-pill bg-dark">
                         <h5 class="fw-medium text-white text-responsive text-center"><i class="fas fa-location-dot text-danger"></i> Pura Uluwatu</h5>
                     </div>
-                    <img src="{{ asset('images/destinasi/pura-uluwatu.png')}}" alt="" class="object-fit-cover">
-                    <div class="destination-caption text-center">
-                        <h5 class="fw-medium text-color-alt text-responsive">Pura laut Bali di Bukit, terkenal dengan lokasi tebing indah dan pertunjukan tari Kecak saat matahari terbenam.</h5>
+                    <img src="{{ asset('images/destinasi/pura-uluwatu.png')}}" alt="" class="object-fit-cover rounded-top">
+                    <div class="destination-caption text-center bg-body-tertiary py-2 px-1 rounded-bottom">
+                        <h5 class="fw-medium text-dark text-responsive">Pura laut Bali di Bukit, terkenal dengan lokasi tebing indah dan pertunjukan tari Kecak saat matahari terbenam.</h5>
                     </div>
                 </div>
                 
-                <div class="d-flex flex-column gap-2 destinasi-item position-relative">
+                <div class="d-flex flex-column destinasi-item position-relative">
                     <div class="position-absolute start-0 end-0 pt-1 mx-2 my-1 rounded-pill bg-dark">
                         <h5 class="fw-medium text-white text-responsive text-center"><i class="fas fa-location-dot text-danger"></i> GWK</h5>
                     </div>
-                    <img src="{{ asset('images/destinasi/gwk.png')}}" alt="" class="object-fit-cover">
-                    <div class="destination-caption text-center">
-                        <h5 class="fw-medium text-color-alt text-responsive">GWK Bali menawarkan pengalaman wisata spektakuler dengan patung Wisnu, pertunjukan seni ini membuatnya destinasi yang sangat menarik.</h5>
+                    <img src="{{ asset('images/destinasi/gwk.png')}}" alt="" class="object-fit-cover rounded-top">
+                    <div class="destination-caption text-center bg-body-tertiary py-2 px-1 rounded-bottom">
+                        <h5 class="fw-medium text-dark text-responsive">GWK Bali menawarkan pengalaman wisata spektakuler dengan patung Wisnu, pertunjukan seni ini membuatnya destinasi yang sangat menarik.</h5>
                     </div>
                 </div>
 
-                <div class="d-flex flex-column gap-2 destinasi-item position-relative">
+                <div class="d-flex flex-column destinasi-item position-relative">
                     <div class="position-absolute start-0 end-0 pt-1 mx-2 my-1 rounded-pill bg-dark">
-                        <h5 class="fw-medium text-white text-responsive text-center"><i class="fas fa-location-dot text-danger"></i> Hutan Monyet</h5>
+                        <h5 class="fw-medium text-white text-responsive text-center"><i class="fas fa-location-dot text-danger"></i> Monkey Forest</h5>
                     </div>
-                    <img src="{{ asset('images/destinasi/monyet.png')}}" alt="" class="object-fit-cover">
-                    <div class="destination-caption text-center">
-                        <h5 class="fw-medium text-color-alt text-responsive">Monkey Forest Ubud terkenal dengan monyet, kuil kuno, dan suasana alam eksotisnya.</h5>
+                    <img src="{{ asset('images/destinasi/monyet.png')}}" alt="" class="object-fit-cover rounded-top">
+                    <div class="destination-caption text-center bg-body-tertiary py-2 px-1 rounded-bottom">
+                        <h5 class="fw-medium text-dark text-responsive">Monkey Forest Ubud terkenal dengan monyet, kuil kuno, dan suasana alam eksotisnya.</h5>
                     </div>
                 </div>
 
-                <div class="d-flex flex-column gap-2 destinasi-item position-relative">
+                <div class="d-flex flex-column destinasi-item position-relative">
                     <div class="position-absolute start-0 end-0 pt-1 mx-2 my-1 rounded-pill bg-dark">
-                        <h5 class="fw-medium text-white text-responsive text-center"><i class="fas fa-location-dot text-danger"></i> Terasering Tegalang</h5>
+                        <h5 class="fw-medium text-white text-responsive text-center"><i class="fas fa-location-dot text-danger"></i> Terasering Tegalalang</h5>
                     </div>
-                    <img src="{{ asset('images/destinasi/terasering.png')}}" alt="" class="object-fit-cover">
-                    <div class="destination-caption text-center">
-                        <h5 class="fw-medium text-color-alt text-responsive">Terasering Tegalalang di Bali adalah pemandangan sawah yang indah dengan bentuk teras berundak, menciptakan panorama alam yang memukau.</h5>
+                    <img src="{{ asset('images/destinasi/terasering.png')}}" alt="" class="object-fit-cover rounded-top">
+                    <div class="destination-caption text-center bg-body-tertiary py-2 px-1 rounded-bottom">
+                        <h5 class="fw-medium text-dark text-responsive">Terasering Tegalalang di Bali adalah pemandangan sawah yang indah dengan bentuk teras berundak, menciptakan panorama alam yang memukau.</h5>
                     </div>
                 </div>
 
-                <div class="d-flex flex-column gap-2 destinasi-item position-relative">
+                <div class="d-flex flex-column destinasi-item position-relative">
                     <div class="position-absolute start-0 end-0 pt-1 mx-2 my-1 rounded-pill bg-dark">
                         <h5 class="fw-medium text-white text-responsive text-center"><i class="fas fa-location-dot text-danger"></i> Tanah Lot</h5>
                     </div>
-                    <img src="{{ asset('images/destinasi/tanah-lot.png')}}" alt="" class="object-fit-cover">
-                    <div class="destination-caption text-center">
-                        <h5 class="fw-medium text-color-alt text-responsive">Tanah Lot, sebuah pura laut di Bali, menawarkan pemandangan spektakuler dengan kuil di atas batu karang dan matahari terbenam yang memukau.</h5>
+                    <img src="{{ asset('images/destinasi/tanah-lot.png')}}" alt="" class="object-fit-cover rounded-top">
+                    <div class="destination-caption text-center bg-body-tertiary py-2 px-1 rounded-bottom">
+                        <h5 class="fw-medium text-dark text-responsive">Tanah Lot, sebuah pura laut di Bali, menawarkan pemandangan spektakuler dengan kuil di atas batu karang dan matahari terbenam yang memukau.</h5>
                     </div>
                 </div>
 
-                <div class="d-flex flex-column gap-2 destinasi-item position-relative">
+                <div class="d-flex flex-column destinasi-item position-relative">
                     <div class="position-absolute start-0 end-0 pt-1 mx-2 my-1 rounded-pill bg-dark">
                         <h5 class="fw-medium text-white text-responsive text-center"><i class="fas fa-location-dot text-danger"></i> Pantai Pandawa</h5>
                     </div>
-                    <img src="{{ asset('images/destinasi/pantai-pandawa.png')}}" alt="" class="object-fit-cover">
-                    <div class="destination-caption text-center">
-                        <h5 class="fw-medium text-color-alt text-responsive">Pantai Pandawa di Bali menawarkan pasir putih bersih, air laut biru jernih, dan tebing-tebing kapur yang indah, menciptakan destinasi pantai yang menawan.</h5>
+                    <img src="{{ asset('images/destinasi/pantai-pandawa.png')}}" alt="" class="object-fit-cover rounded-top">
+                    <div class="destination-caption text-center bg-body-tertiary py-2 px-1 rounded-bottom">
+                        <h5 class="fw-medium text-dark text-responsive">Pantai Pandawa di Bali menawarkan pasir putih bersih, air laut biru jernih, dan tebing-tebing kapur yang indah, menciptakan destinasi pantai yang menawan.</h5>
+                    </div>
+                </div>
+
+                <div class="d-flex flex-column destinasi-item position-relative">
+                    <div class="position-absolute start-0 end-0 pt-1 mx-2 my-1 rounded-pill bg-dark">
+                        <h5 class="fw-medium text-white text-responsive text-center"><i class="fas fa-location-dot text-danger"></i> Desa Penglipuran</h5>
+                    </div>
+                    <img src="{{ asset('images/destinasi/penglipuran.png')}}" alt="" class="object-fit-cover rounded-top">
+                    <div class="destination-caption text-center bg-body-tertiary py-2 px-1 rounded-bottom">
+                        <h5 class="fw-medium text-dark text-responsive">Desa Panglipuran di Bali terkenal dengan kelestarian budaya dan arsitektur tradisionalnya. Ini tempat bagus untuk merasakan kehidupan lokal dan mengeksplorasi pesona desa Bali.</h5>
                     </div>
                 </div>
 
@@ -255,20 +265,110 @@
     </div>
 </section>
 
-<section id="footer">
-    <br><br><br><br><br><br><br><br><br><br><br>
+<section id="metode-pembayaran" class="reveal">
+    <div class="container">
+        <div class="d-flex flex-column gy-2">
+            <h3 class="fw-bold text-color text-center h3-responsive reveal">Metode Pembayaran</h3>
+            <h5 class="fw-bold text-color-light text-center h5-responsive reveal">Kami menyediakan pembayaran melalui rekening BCA atau BNI. </h5>
+            <h5 class="h5-responsive text-center reveal mb-4 mb-lg-5">
+                <mark>Diluar dari rekening ini, kami tidak bertanggung jawab!</mark>
+            </h5>
+
+            <div class="row g-3 g-lg-5">
+                <div class="col-12 col-lg-6">
+                    <div class="bg-size-cover bg-size-md-auto position-relative shadow-lg p-4 pembayaran-card">
+                        <img src="{{ asset('images/pembayaran/BCA.png') }}" alt="" class="object-fit-cover position-absolute top-0 start-0 end-0 bottom-0 h-100 w-100 z-n1">
+                        <img src="{{ asset('images/pembayaran/Logo-BCA.png') }}" alt="" class="img-fluid object-fit-cover position-absolute bottom-0 end-0" style="width:100px">
+                        <button class="btn btn-outline-primary btn-clipboard position-absolute top-0 end-0 me-2 mt-2" style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;" data-clipboard-text="2640442827"><i class="fa-solid fa-paste"></i> Copy</button>
+                        <div class="d-flex flex-column gy-3">
+                            <div>
+                                <h4 class="fw-semibold text-ascent text-center h4-responsive mb-0">No. Rekening</h4>
+                                <h5 class="fw-medium text-ascent text-center h5-responsive" id="bca">2640442827</h5>
+                            </div>
+                            <div>
+                                <h4 class="fw-semibold text-ascent text-center h4-responsive mb-0">Atas Nama</h4>
+                                <h5 class="fw-medium text-ascent text-center h5-responsive">Irfanda Budi Renaldy</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-6">
+                    <div class="bg-size-cover bg-size-md-auto position-relative shadow-lg p-4 pembayaran-card">
+                        <img src="{{ asset('images/pembayaran/BNI.png') }}" alt="" class="object-fit-cover position-absolute top-0 start-0 end-0 bottom-0 h-100 w-100 z-n1">
+                        <img src="{{ asset('images/pembayaran/Logo-BNI.png') }}" alt="" class="img-fluid object-fit-cover position-absolute bottom-0 end-0 m-2" style="width:70px">
+                        <button class="btn btn-outline-dark btn-clipboard position-absolute top-0 end-0 me-2 mt-2" style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;" data-clipboard-text="1544567280"><i class="fa-solid fa-paste"></i> Copy</button>
+                        <div class="d-flex flex-column gy-3">
+                            <div>
+                                <h4 class="fw-semibold text-light text-center h4-responsive mb-0">No. Rekening</h4>
+                                <h5 class="fw-medium text-light text-center h5-responsive" id="bca">1544567280</h5>
+                            </div>
+                            <div>
+                                <h4 class="fw-semibold text-white text-center h4-responsive mb-0">Atas Nama</h4>
+                                <h5 class="fw-medium text-light text-center h5-responsive">Irfanda Budi Renaldy</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="kontak-kami" class="reveal-section bg bg-size-cover bg-size-md-auto position-relative">
+    <img src="{{ asset('images/footer-background.png') }}" alt="" class="img-fluid object-fit-cover position-absolute top-0 start-0 end-0 bottom-0 h-100 w-100 z-n1">
+    <div class="overlay-kontak-kami position-absolute top-0 start-0 end-0 bottom-0 h-100 w-100 z-n1"></div>
+    <div class="container-md">
+        <div class="row g-3">
+            <div class="col-12 col-lg-6">
+                <div class="d-flex flex-column justify-content-center align-items-center gap-3">
+                    <img src="{{ asset('images/logo_alatash_3_warnaa-01-cropped.png') }}" alt="" class="img-fluid object-fit-cover bg-white p-1 rounded" style="max-width:200px;">
+                    <div class="d-flex flex-column gap-2">
+                        <label class="fw-medium text-light text-justify text-responsive">Alatash Travel & Tour  merupakan perusahaan jasa sewa mobil Bali yang berdiri sejak tahun 2018. Alatash Tour & Travel menyewakan berbagai kendaraan yang bisa Anda sewa dengan harga yang cukup terjangkau. Jasa sewa mobil murah di Alatash Travel & Tour menawarkan paket sewa mobil sesuai dengan kebutuhan Anda.</label>
+                        <!-- <label class="fw-medium text-light text-center text-responsive">+62 813 3943 9431</label> -->
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-lg-6">
+                <div class="d-flex flex-column gap-3">
+                    <div class="d-flex justify-content-center align-items-center">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3942.904675429952!2d115.16415297560216!3d-8.795025991257278!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd244c0a24981ef%3A0x9e0b6a3eca3e24be!2sJl.%20Perum%20Pasraman%20Unud%2C%20Jimbaran%2C%20Kec.%20Kuta%20Sel.%2C%20Kabupaten%20Badung%2C%20Bali%2080361!5e0!3m2!1sid!2sid!4v1706954236939!5m2!1sid!2sid" width="50%" height="50%" style="border:0;" allowfullscreen="true" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>        
+                    <label class="text-light text-responsive text-justify">Jl. Perum Pasraman Unid No.E5. Jimbaran, Kec. Kuta Sel., Kabupaten Badung, Bali 80361, Badung, Bali, Indonesia</label>
+                    <div class="sosmed d-flex flex-column gap-2">
+                        <h5 class="fw-medium text-light text-responsive">Hubungi Kami</h5>
+                        <div class="d-flex gap-2">
+                            <a class="text-start" href="tel:081339439431" target="_blank"><i class="text-light fas fa-square-phone fa-2xl"></i></a>
+                            <a class="text-start" href="https://wa.me/6281339439431?text=Permisi%20Alatash,%20saya%20butuh%20bantuan%20menyewa%20mobil" target="_blank"><i class="text-light fab fa-square-whatsapp fa-2xl"></i></a>
+                            <a class="text-start" href="mailto:alatashtravelandtour@gmail.com" target="_blank"><i class="text-light fas fa-square-envelope fa-2xl"></i></a>
+                            <a class="text-start" href="https://www.instagram.com/alatash_travel/" target="_blank"><i class="text-light fab fa-instagram fa-2xl"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </section>
 
 <script>
 
     new simpleParallax(document.getElementsByClassName('parallax'), {
         scale: 1.5,
-        delay: .6,
+        // delay: .6,
         customWrapper: '.parallax-wrapper',
         orientation: 'up'
     });
-    jQuery(function(){
 
+    new ClipboardJS('.btn-clipboard');
+
+    jQuery(function(){
+        $(document).on("click",".btn-clipboard",function(){
+            var button = $(this);
+            button.html("Copied");
+            setTimeout(function () {
+                button.html("<i class='fa-solid fa-paste'></i> Copy");
+                button.removeClass("active");
+            }, 3000);
+        });
 
         ScrollReveal().reveal(".reveal", {
             duration: 1000,
@@ -306,7 +406,7 @@
             $('#load .page-link').css('color', '#0A3622');
 
             $('#load').html(`
-            <div class="d-flex align-items-center justify-content-center mb-2" style="height:200px;">
+            <div class="d-flex align-items-center justify-content-center mb-2" style="min-height:700px;">
                 <div class="spinner-border text-info" role="status">
                     <span class="visually-hidden">Loading...</span>
                 </div>

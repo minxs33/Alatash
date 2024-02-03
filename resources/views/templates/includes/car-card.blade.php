@@ -1,6 +1,6 @@
 
 <div id="load" style="min-height: 400px;">
-    <div class="d-none d-lg-block">
+    <div class="d-none d-lg-block reveal">
     @if($car->hasPages())
         <div class="px-3 pb-3">
             {{ $car->links('pagination::bootstrap-5') }}
@@ -54,7 +54,7 @@
             </div>
         @endforeach
     </div>
-    <div class="d-block d-lg-none">
+    <div class="d-block d-lg-none reveal">
     @if($car->hasPages())
         <div class="px-3 pt-3">
             {{ $car->links('pagination::bootstrap-5') }}

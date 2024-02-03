@@ -115,6 +115,14 @@ section#syarat-dan-ketentuan{
     min-height: 450px;
 }
 
+section#metode-pembayaran{
+    padding: 5rem 0 8rem;
+}
+
+section#kontak-kami{
+    padding: 5rem 0 5rem;
+}
+
 /* carousels  */
 .owl-stage-outer{
     border-radius: 6px !important;
@@ -318,6 +326,33 @@ section#syarat-dan-ketentuan{
     width: 100%;
     margin: 0 auto;
 }
+
+/* Metode Pembayaran */
+.pembayaran-card{
+    transition: 0.2s;
+}
+
+.pembayaran-card:hover{
+    transform: scale(102%);
+    transition: 0.2s;
+    box-shadow: 5px 5px 10px 5px var(--primary-color-alt);
+}
+
+/* footer */
+
+.overlay-kontak-kami{
+    background-color: rgba(0, 0, 0, 0.608);
+}
+
+.sosmed a{
+    transition: 0.2s;
+}
+
+.sosmed a:hover{
+    transform: scale(105%) !important;
+    transition: 0.2s !important;
+}
+
 /* car view carousels */
 .splide__slide {
     opacity: 0.6;

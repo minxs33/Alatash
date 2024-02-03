@@ -20,6 +20,8 @@
     <script type="text/javascript" src="//code.jquery.com/jquery-3.6.0.js"></script>
     <!-- SimpleParallax JS -->
     <script src="https://cdn.jsdelivr.net/npm/simple-parallax-js@5.5.1/dist/simpleParallax.min.js"></script>
+    <!-- Clipboard JS -->
+    <script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js"></script>
 
     <title>@yield("title")</title>
 </head>
