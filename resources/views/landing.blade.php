@@ -276,7 +276,7 @@
 
             <div class="row g-3 g-lg-5">
                 <div class="col-12 col-lg-6">
-                    <div class="bg-size-cover bg-size-md-auto position-relative shadow-lg p-4 pembayaran-card">
+                    <div class="bg-size-cover bg-size-md-auto position-relative shadow-lg p-4 pembayaran-card reveal">
                         <img src="{{ asset('images/pembayaran/BCA.png') }}" alt="" class="object-fit-cover position-absolute top-0 start-0 end-0 bottom-0 h-100 w-100 z-n1">
                         <img src="{{ asset('images/pembayaran/Logo-BCA.png') }}" alt="" class="img-fluid object-fit-cover position-absolute bottom-0 end-0" style="width:100px">
                         <button class="btn btn-outline-primary btn-clipboard position-absolute top-0 end-0 me-2 mt-2" style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;" data-clipboard-text="2640442827"><i class="fa-solid fa-paste"></i> Copy</button>
@@ -293,7 +293,7 @@
                     </div>
                 </div>
                 <div class="col-12 col-lg-6">
-                    <div class="bg-size-cover bg-size-md-auto position-relative shadow-lg p-4 pembayaran-card">
+                    <div class="bg-size-cover bg-size-md-auto position-relative shadow-lg p-4 pembayaran-card reveal">
                         <img src="{{ asset('images/pembayaran/BNI.png') }}" alt="" class="object-fit-cover position-absolute top-0 start-0 end-0 bottom-0 h-100 w-100 z-n1">
                         <img src="{{ asset('images/pembayaran/Logo-BNI.png') }}" alt="" class="img-fluid object-fit-cover position-absolute bottom-0 end-0 m-2" style="width:70px">
                         <button class="btn btn-outline-dark btn-clipboard position-absolute top-0 end-0 me-2 mt-2" style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;" data-clipboard-text="1544567280"><i class="fa-solid fa-paste"></i> Copy</button>
@@ -318,7 +318,7 @@
     <img src="{{ asset('images/footer-background.png') }}" alt="" class="img-fluid object-fit-cover position-absolute top-0 start-0 end-0 bottom-0 h-100 w-100 z-n1">
     <div class="overlay-kontak-kami position-absolute top-0 start-0 end-0 bottom-0 h-100 w-100 z-n1"></div>
     <div class="container-md">
-        <div class="row g-3">
+        <div class="row g-3 gap-3 gap-md-0">
             <div class="col-12 col-lg-6">
                 <div class="d-flex flex-column justify-content-center align-items-center gap-3">
                     <img src="{{ asset('images/logo_alatash_3_warnaa-01-cropped.png') }}" alt="" class="img-fluid object-fit-cover bg-white p-1 rounded" style="max-width:200px;">
@@ -333,14 +333,14 @@
                     <div class="d-flex justify-content-center align-items-center">
                         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3942.904675429952!2d115.16415297560216!3d-8.795025991257278!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd244c0a24981ef%3A0x9e0b6a3eca3e24be!2sJl.%20Perum%20Pasraman%20Unud%2C%20Jimbaran%2C%20Kec.%20Kuta%20Sel.%2C%20Kabupaten%20Badung%2C%20Bali%2080361!5e0!3m2!1sid!2sid!4v1706954236939!5m2!1sid!2sid" width="50%" height="50%" style="border:0;" allowfullscreen="true" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                     </div>        
-                    <label class="text-light text-responsive text-justify">Jl. Perum Pasraman Unid No.E5. Jimbaran, Kec. Kuta Sel., Kabupaten Badung, Bali 80361, Badung, Bali, Indonesia</label>
-                    <div class="sosmed d-flex flex-column gap-2">
+                    <label class="text-light text-responsive text-justify">Jl. Perum Pasraman Unud No.E5. Jimbaran, Kec. Kuta Sel., Kabupaten Badung, Bali 80361, Badung, Bali, Indonesia</label>
+                    <div class="sosmed d-flex flex-column gap-0 gap-lg-2">
                         <h5 class="fw-medium text-light text-responsive">Hubungi Kami</h5>
                         <div class="d-flex gap-2">
-                            <a class="text-start" href="tel:081339439431" target="_blank"><i class="text-light fas fa-square-phone fa-2xl"></i></a>
-                            <a class="text-start" href="https://wa.me/6281339439431?text=Permisi%20Alatash,%20saya%20butuh%20bantuan%20menyewa%20mobil" target="_blank"><i class="text-light fab fa-square-whatsapp fa-2xl"></i></a>
-                            <a class="text-start" href="mailto:alatashtravelandtour@gmail.com" target="_blank"><i class="text-light fas fa-square-envelope fa-2xl"></i></a>
-                            <a class="text-start" href="https://www.instagram.com/alatash_travel/" target="_blank"><i class="text-light fab fa-instagram fa-2xl"></i></a>
+                            <a class="text-start" href="tel:081339439431" target="_blank"><i class="text-light h4-responsive fas fa-square-phone fa-2xl"></i></a>
+                            <a class="text-start" href="https://wa.me/6281339439431?text=Permisi%20Alatash,%20saya%20butuh%20bantuan%20menyewa%20mobil" target="_blank"><i class="text-light h4-responsive fab fa-square-whatsapp fa-2xl"></i></a>
+                            <a class="text-start" href="mailto:alatashtravelandtour@gmail.com" target="_blank"><i class="text-light h4-responsive fas fa-square-envelope fa-2xl"></i></a>
+                            <a class="text-start" href="https://www.instagram.com/alatash_travel/" target="_blank"><i class="text-light h4-responsive fab fa-instagram fa-2xl"></i></a>
                         </div>
                     </div>
                 </div>
