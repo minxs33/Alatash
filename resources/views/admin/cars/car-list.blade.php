@@ -19,7 +19,7 @@
         </div>
     @endif
     <div class="row align-items-center">
-        <div class="col-4 mb-4">
+        <div class="col-12 mb-4">
             <a class="btn btn-outline-success btn-sm" href="{{ url('/admin/cars/create') }}" class="text-white text-decoration-none"><i class="fas fa-plus"></i> Tambah Mobil</a>
         </div>
         <div class="col-12">
@@ -114,7 +114,7 @@
       </div>
       <div class="modal-body">
         <div class="alert alert-info p-2">
-            Gambar aktif pertama adalah gambar yang ditampilkan pada thumbnail produk
+            Gambar yang aktif paling atas adalah gambar yang akan ditampilkan
         </div>
         <div class="link-container">
             

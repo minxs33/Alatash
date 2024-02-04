@@ -26,7 +26,7 @@
             </div>
         @endif
     <div class="row">
-        <div class="col-3 mb-4">
+        <div class="col-12 mb-4">
             <a class="btn btn-outline-success" href="{{ url('/admin/carousels/create') }}" class="text-white text-decoration-none"><i class="fas fa-plus"></i> Tambah Carousel Baru</a>
         </div>
         

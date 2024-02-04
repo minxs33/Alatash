@@ -1,5 +1,5 @@
  <!-- Footer -->
- <section class="bg-info text-white mt-5">
+ <section class="primary-color text-white mt-5">
         <div class="container">
         <footer class="sticky-footer">
             <div class="container my-auto">
