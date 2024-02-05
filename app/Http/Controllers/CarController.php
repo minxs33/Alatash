@@ -18,7 +18,7 @@ class CarController extends Controller
      */
     public function index()
     {
-        $cars = Cars::join('categories', 'cars.category_id', '=', 'categories.id')->join('users', 'cars.created_by', '=', 'users.id')->where('status', '!=', 'waiting')->select(['cars.*', 'cars.id as car_id', 'categories.name as cat_name', 'cars.name as car_name', 'users.name as users_name'])->orderBy('car_id', 'ASC')->withCount('Car_images')->get();
+        $cars = Cars::join('categories', 'cars.category_id', '=', 'categories.id')->join('users', 'cars.created_by', '=', 'users.id')->where('status', '!=', 'waiting')->select(['cars.*', 'cars.id as car_id', 'categories.name as cat_name', 'cars.name as car_name', 'users.name as users_name'])->orderBy('car_id', 'DESC')->withCount('Car_images')->get();
 
         $cars_waiting = Cars::where('status', '=', 'waiting')->count();
 
