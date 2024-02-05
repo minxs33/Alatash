@@ -5,7 +5,7 @@
 @section('content')
 <div class="container shadow bg-white py-3 mb-4">
     <span>
-        <a class="text-success" href="{{url('admin/products')}}"><i class="fas fa-chevron-left"></i> Kembali</a>
+        <a class="text-color" href="{{url('admin/cars')}}"><i class="fas fa-chevron-left"></i> Kembali</a>
     </span>
 
     <div class="px-4">
@@ -43,10 +43,10 @@
                         </div>
                     </div>
                     
-                    <div class="col-lg-12">
+                    <div class="col-lg-6">
                         <div class="d-flex flex-wrap flex-column">
                                 <small class="fw-bold text-muted mb-0">Deskripsi</small>
-                                <small>{{$cars['description']}}</small>
+                                <small>{!!$cars['description']!!}</small>
                             </div>
                         </div>
                 </div>
