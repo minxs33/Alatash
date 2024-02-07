@@ -33,7 +33,6 @@ Route::post('logout', ['uses' => 'LoginController@logout']);
 
 Route::group(['prefix' => 'admin', 'middleware' => ['auth']], function () {
     Route::get('/dashboard', ['uses' => 'AdminController@index']);
-
     Route::middleware('role:1')->group(function () {
         Route::resources([
             'categories' => CategoriesController::class,

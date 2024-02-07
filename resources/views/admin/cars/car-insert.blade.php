@@ -80,7 +80,7 @@
         @if(Auth::user()->role == 1)
         <div class="mb-4">
             <label class="form-label mb-0" for="textAreaExample">Status Mobil</label><br>
-            <div class="badge badge-info mb-3" for="textAreaExample">Menentukan apakah mobil akan ditampilkan atau tidak</div>
+            <div class="badge badge-info mb-3 text-wrap" for="textAreaExample">Menentukan apakah mobil akan ditampilkan atau tidak</div>
             <div class="form-check form-switch">
                 <input class="form-check-input" type="checkbox" name="status" value="1" id="flexSwitchCheckChecked">
             </div>
@@ -89,7 +89,7 @@
 
         <div class="mb-4">
             <label class="form-label mb-0" for="textAreaExample">Foto Mobil</label><br>
-            <div class="badge badge-info mb-4">Nyalakan <i class="fas fa-toggle-on"></i> jika Anda ingin gambar ditampilkan pada produk. Anda dapat mengatur gambar produk di tabel produk di kolom gambar dengan <i class="fas fa-image small"></i> ikon sebagai indikator.</div>
+            <div class="badge badge-info mb-4 text-wrap">Nyalakan <i class="fas fa-toggle-on"></i> jika Anda ingin gambar ditampilkan pada produk. Anda dapat mengatur gambar produk di tabel produk di kolom gambar dengan <i class="fas fa-image small"></i> ikon sebagai indikator.</div>
             <select class="form-select photoCount" name="image_count">
                     <option selected value="1">1 Foto</option>
                     <option value="2">2 Foto</option>

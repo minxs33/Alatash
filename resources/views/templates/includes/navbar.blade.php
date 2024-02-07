@@ -29,12 +29,23 @@
                     <li class="d-block d-md-block d-lg-none d-xl-none">
                         <hr class="text-color my-1">
                     </li>
+                    @if(Auth::check())
+                    <li class="d-block d-md-block d-lg-none d-xl-none">
+                        <a class="nav-link link-anchor text-responsive" href="{{ url('admin/dashboard') }}">Dashboard</a>
+                    </li>
+                    <li class="d-block d-md-block d-lg-none d-xl-none">
+                        <form action="{{ url('logout') }}" method="post">
+                            @csrf
+                            <button class="nav-link link-anchor text-responsive" type="submit">Logout</button>
+                        </form>
+                    @else
                     <li class="d-block d-md-block d-lg-none d-xl-none">
                         <div class="d-flex gap-2 justify-content-end">
                             <a class="link-anchor text-responsive" href="tel:081339439431" target="_blank"><i class="fas fa-phone"></i></a>
                             <a class="link-anchor text-responsive" href="https://wa.me/+6281339439431?text=Permisi%20Alatash,%20saya%20butuh%20bantuan%20menyewa%20mobil" target="_blank"><i class="fab fa-square-whatsapp fa-lg"></i></a>
                         </div>
                     </li>
+                    @endif
                 </ul>
             </div>
         </div>
@@ -47,6 +58,9 @@
                         <img class="img rounded-circle object-fit-cover" style="width:25px; height:25px;" src="{{asset('storage/images/avatar')}}/{{Auth::user()->avatar}}">
                     </a>
                     <ul class="dropdown-menu">
+                        <li>
+                            <a class="dropdown-item" href="{{ url('admin/dashboard') }}">Dashboard</a>
+                        </li>
                         <li>
                             <form action="{{ url('logout') }}" method="post">
                                 @csrf
