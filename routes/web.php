@@ -24,12 +24,12 @@ Route::controller(HomeController::class)->group(function () {
 //     'register' => RegisterController::class,
 // ]);
 
-Route::get('/altash-admin', ["uses" => "LoginController@index"]);
+Route::get('/alatash-admin', ["uses" => "LoginController@index"]);
 
 Route::post('login/authenticate', ['uses' => 'LoginController@authenticate']);
 Route::post('logout', ['uses' => 'LoginController@logout']);
 
-Route::get('/cars/{id}', ['uses' => 'CarController@show']);
+// Route::get('/cars/{id}', ['uses' => 'CarController@show']);
 
 Route::group(['prefix' => 'admin', 'middleware' => ['auth']], function () {
     Route::get('/dashboard', ['uses' => 'AdminController@index']);
@@ -41,7 +41,7 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth']], function () {
             'users' => UserController::class,
         ]);
 
-        Route::get('car-confirmation', ['uses' => 'CarController@carConfirmation']);
+        // Route::get('car-confirmation', ['uses' => 'CarController@carConfirmation']);
 
         Route::group(['prefix' => '/ajaxReq'], function () {
             Route::post('/change-car-status', ['uses' => 'CarController@getStatus']);

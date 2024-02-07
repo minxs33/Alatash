@@ -76,48 +76,69 @@ class CarController extends Controller
         // } elseif (Auth::user()->role == 2) {
         //     $cars->status = 'waiting';
         // }
-        $cars->save();
 
-        $imageFields = [];
-
-        for ($i = 1; $i <= $request->image_count; ++$i) {
-            $imageFields[] = 'image_'.$i;
-            $imageStatus[] = 'image_status_'.$i;
-        }
-
-        // dd($request);
-        foreach ($imageFields as $i => $field) {
-            echo $field;
-            if ($request->file($field)) {
-                $validate_list = [
-                    $field => 'image|mimes:png,jpg,jpeg|max:2048',
-                ];
-
-                $image_status = $imageStatus[$i];
-
-                if ($this->validate($request, $validate_list)) {
-                    $uploadedFile = $request->file($field);
-
-                    $name = time().'-'.$uploadedFile->getClientOriginalName();
-                    $name = str_replace(' ', '-', $name);
-                    $name = str_replace('_', '-', $name);
-                    $name = preg_replace('/[^A-Za-z0-9\-]/', '', $name);
-                    $name = preg_replace('/-+/', '-', $name);
-
-                    Storage::putFileAs('public/images/car-images', $uploadedFile, $name);
-
-                    Car_images::insert([
-                        'cars_id' => $cars->id,
-                        'image_url' => $name,
-                        'is_active' => $request->$image_status == '1' ? 1 : 0,
-                    ]);
-                } else {
-                    return redirect()->back()->with(['error' => 'Validasi gambar gagal, gambar harus dalam format png, jpg atau jpeg dan berukuran 2 MB atau kurang']);
+        if ($request->image_count > 0) {
+            $imageData = [];
+        
+            for ($i = 1; $i <= $request->image_count; ++$i) {
+                $imageFields[] = 'image_' . $i;
+                $imageStatus[] = 'image_status_' . $i;
+            }
+        
+            $validationErrors = [];  // Initialize an array to store validation errors
+        
+            // Step 1: Validate Images
+            try {
+                foreach ($imageFields as $i => $field) {
+                    if ($request->file($field)) {
+                        $validate_list = [
+                            $field => 'image|mimes:png,jpg,jpeg|max:2048',
+                        ];
+        
+                        $image_status = $imageStatus[$i];
+        
+                        $this->validate($request, $validate_list);
+        
+                        $uploadedFile = $request->file($field);
+        
+                        $name = time() . '-' . $uploadedFile->getClientOriginalName();
+                        $name = str_replace(' ', '-', $name);
+                        $name = str_replace('_', '-', $name);
+                        $name = preg_replace('/[^A-Za-z0-9\-]/', '', $name);
+                        $name = preg_replace('/-+/', '-', $name);
+        
+                        Storage::putFileAs('public/images/car-images', $uploadedFile, $name);
+        
+                        $imageData[] = [
+                            'image_url' => $name,
+                            'is_active' => $request->$image_status == '1' ? 1 : 0,
+                        ];
+                    }
                 }
+            } catch (\Illuminate\Validation\ValidationException $e) {
+                $validationErrors = $e->validator->errors()->all();
+            }
+        
+            try {
+                
+                if (!empty($validationErrors)) {
+                    return redirect()->back()->with('validationErrors', $validationErrors);
+                }
+                $cars->save();
+                
+                foreach ($imageData as &$image) {
+                    $image['cars_id'] = $cars->id;
+                }
+        
+                Car_images::insert($imageData);
+            } catch (\Exception $e) {
+                return redirect()->back()->with('error', 'An error occurred while saving car and images.');
             }
         }
-
-        return redirect(url('admin/cars'));
+        
+        return redirect(url('admin/cars'))->with('success', 'Mobil telah berhasil ditambahkan');
+        
+        
     }
 
     /**

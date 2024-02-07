@@ -14,6 +14,16 @@
         <h3 class="h3 mb-0 text-base fw-bold">Tambah Mobil</h3>
     </div>
     <hr>
+    @if (Session::get('validationErrors'))
+        <div class="alert alert-danger alert-dismissible fade show mb-3" role="alert">
+            <ul class="p-0 m-0">
+                @foreach (Session::get('validationErrors') as $error)
+                    <li class="p-0 m-0">{{ $error }}</li>
+                @endforeach
+            </ul>
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+    @endif
     @if (Session::get('error'))
         <div class="alert alert-danger alert-dismissible fade show mb-3" role="alert">
             {{Session::get('error')}}
