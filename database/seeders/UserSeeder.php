@@ -16,7 +16,6 @@ class UserSeeder extends Seeder
      */
     public function run()
     {
-        $faker = FakerFactory::create();
 
         Users::create([
             'role' => 1,
@@ -26,21 +25,14 @@ class UserSeeder extends Seeder
             'email_verified_at' => now(),
             'password' => Hash::make('admin'),
         ]);
+
         Users::create([
-            'role' => 2,
+            'role' => 1,
             'avatar' => 'default.jpg',
-            'name' => 'staff',
-            'email' => 'staff@staff.com',
+            'name' => 'naufal alwan',
+            'email' => 'naufalalwan010102@gmail.com',
             'email_verified_at' => now(),
-            'password' => Hash::make('staff'),
-        ]);
-        Users::create([
-            'role' => 3,
-            'avatar' => 'default.jpg',
-            'name' => 'user',
-            'email' => 'user@user.com',
-            'email_verified_at' => now(),
-            'password' => Hash::make('user123'),
+            'password' => Hash::make('opangganteng12'),
         ]);
 
         // for ($i = 0; $i < 5; $i++) {
