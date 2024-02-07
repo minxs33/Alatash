@@ -1,6 +1,6 @@
 @extends('templates/admin-app')
 
-@section('title','Altash - Edit Kategori')
+@section('title','Alatash - Edit Kategori')
 
 @section('content')
 

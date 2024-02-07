@@ -1,6 +1,6 @@
 @extends('templates/admin-app')
 
-@section('title','Altash - Tambah Foto Mobil')
+@section('title','Alatash - Tambah Foto Mobil')
 
 @section('content')
 <div class="container shadow bg-white py-3 mb-4">

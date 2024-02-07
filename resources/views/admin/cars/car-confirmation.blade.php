@@ -1,6 +1,6 @@
 @extends('templates/admin-app')
 
-@section('title','Altash - Carousel ')
+@section('title','Alatash - Carousel ')
 
 @section('content')
 <div class="container-fluid card bg-white shadow-sm p-4 products d-flex flex-column gap-2">

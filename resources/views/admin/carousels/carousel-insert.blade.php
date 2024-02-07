@@ -1,6 +1,6 @@
 @extends('templates/admin-app')
 
-@section('title','Altash - Tambah Carousel')
+@section('title','Alatash - Tambah Carousel')
 
 @section('content')
 

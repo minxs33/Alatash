@@ -1,6 +1,6 @@
 @extends('templates/admin-app')
 
-@section('title','Altash - Dashboard')
+@section('title','Alatash - Dashboard')
 
 @section('content')
 <!-- Begin Page Content -->

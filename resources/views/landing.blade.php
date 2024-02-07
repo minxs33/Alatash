@@ -1,6 +1,6 @@
 @extends("templates.app")
 
-@section("title", "Alatash - Rent a Car in Bali")
+@section("title", "Alatash - Discover The World, Drive With Style")
 
 @section("content")
 
