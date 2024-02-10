@@ -16,6 +16,7 @@
     --input-color: hsl(var(--hue-color), 70%, 96%);
     --body-color: hsl(var(--hue-color), 60%, 99%);
     --body-background-color: hsl(var(--hue-color), 100%, 99%);
+    --body-background-color-alt: hsl(var(--hue-color), 100%, 97%);
 
     --container-color: #FFF;
 }
@@ -110,6 +111,10 @@ section#destinasi-wisata{
 }
 
 section#mengapa-harus-kami{
+    padding: 5rem 0 8rem;
+}
+
+section#klien-kami{
     padding: 5rem 0 8rem;
 }
 
@@ -307,6 +312,20 @@ section#kontak-kami{
     transition: 0.2s;
 }
 
+/* klien kami */
+
+.klien-img{
+    transition: 0.2s;
+    max-width: 120px;
+    filter: grayscale(100%);
+}
+
+.klien-img:hover{
+    transform: scale(110%);
+    transition: 0.2s;
+    filter: grayscale(0%);
+}
+
 /* syarat dan ketentuan */
 .overlay-syarat-dan-ketentuan{
     background-color: hsla(var(--hue-color), 57%, 53%, 0.6);
@@ -423,14 +442,19 @@ input::-webkit-inner-spin-button {
     .h5-responsive{
         font-size: 0.9rem !important;
     }
-
+    
     section#syarat-dan-ketentuan{
         min-height: 500px;
+    }
+
+    .klien-img{
+        max-width: 100px;
     }
 
     .car-description *{
         font-size: 0.8rem;
     }
+
     .hr{
         border: 1px solid var(--primary-color);
         width: 250px;
@@ -466,6 +490,14 @@ input::-webkit-inner-spin-button {
 
     section#syarat-dan-ketentuan{
         padding: 3rem 0 3rem !important;
+    }
+
+    section#klien-kami{
+        padding: 3rem 0 3rem !important;
+    }
+
+    .klien-img{
+        max-width: 80px;
     }
 
     .car-description *{
@@ -514,6 +546,9 @@ input::-webkit-inner-spin-button {
         min-height: 400px;
     }
 
+    .klien-img{
+        max-width: 60px;
+    }
 
     .car-description *{
         font-size: 0.8rem;

@@ -59,7 +59,7 @@
             <h5 class="fw-bold text-color-light text-center h5-responsive reveal">Pastikan Liburan Anda Nyaman dengan Layanan Kami</h5>
         </div>
     </div>
-    <div class="shadow-md border-top border-bottom my-3 border-2 reveal">
+    <div class="shadow-md border-top border-bottom my-3 border-2 reveal sticky-when-scroll">
         <div class="container-md">
             <div class="d-flex flex-wrap justify-content-center py-2 gap-2">
                 <button class="btn btn-outline-primary-color-alt rounded-pill category text-responsive active" data-id="all">Semua</button>
@@ -76,7 +76,7 @@
     </div>  
 </section>
 
-<section id="destinasi-wisata" class="section-reveal bg bg-size-cover bg-size-md-auto position-relative parallax-wrapper">
+<section id="destinasi-wisata" class="bg bg-size-cover bg-size-md-auto position-relative parallax-wrapper">
     <div class="overlay-destinasi-wisata position-absolute top-0 start-0 end-0 bottom-0 h-100 w-100"></div>
     <img src="{{ asset('images/wisata-background.jpg') }}" style="z-index:-100;" alt="" class="img-fluid object-fit-cover position-absolute top-0 start-0 end-0 bottom-0 h-100 w-100 parallax">
     <div class="container">
@@ -163,7 +163,6 @@
     <div class="container">
         <div class="d-flex flex-column gy-3 justify-content-center">
             <h3 class="fw-bold text-color text-center h3-responsive reveal mb-4 mb-lg-5">Mengapa harus Alatash Travel & Tour?</h3>
-            <!-- <div class="hr reveal text-responsive mb-4 mb-lg-5"></div> -->
             <div class="row gy-5">
                 <div class="col-md-3 col-6">
                     <div class="d-flex flex-column justify-content-center align-items-center reveal">
@@ -226,6 +225,47 @@
                         <img src="{{asset('images/icon/tour.png')}}" alt="" class="object-fit-cover rounded-circle mb-2 mengapa-img" style="width:100px;">
                         <h5 class="fw-bold text-color text-center h5-responsive">Program Tour</h5>
                         <label class="fw-medium text-center text-responsive">Driver profesional kami terampil dalam mengatur jadwal dan rencana perjalanan sesuai dengan keinginan tamu untuk memaksimalkan efisiensi selama perjalanan.</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="klien-kami" class="reveal-section bg-body-tertiary">
+    <div class="container">
+        <div class="d-flex flex-column gy-3 justify-content-center">
+            <h3 class="fw-bold text-color text-center h3-responsive reveal mb-4 mb-lg-5">Klien Kami</h3>
+            
+            <div class="row justify-content-center align-items-center gy-5">
+                <div class="col-4 p-2">
+                    <div class="d-flex flex-column justify-content-center align-items-center reveal">
+                        <img src="{{asset('images/klien/PP_konstruksi.png')}}" alt="" class="img-fluid object-fit-cover klien-img">
+                    </div>
+                </div>
+                <div class="col-4 p-2">
+                    <div class="d-flex flex-column justify-content-center align-items-center reveal">
+                        <img src="{{asset('images/klien/Logo-WIKA.png')}}" alt="" class="img-fluid object-fit-cover klien-img">
+                    </div>
+                </div>
+                <div class="col-4 p-2">
+                    <div class="d-flex flex-column justify-content-center align-items-center reveal">
+                        <img src="{{asset('images/klien/Bank_Mandiri.png')}}" alt="" class="img-fluid object-fit-cover klien-img">
+                    </div>
+                </div>
+                <div class="col-4 p-2">
+                    <div class="d-flex flex-column justify-content-center align-items-center reveal">
+                        <img src="{{asset('images/klien/logo-bumn.png')}}" alt="" class="img-fluid object-fit-cover klien-img">
+                    </div>
+                </div>
+                <div class="col-4 p-2">
+                    <div class="d-flex flex-column justify-content-center align-items-center reveal">
+                        <img src="{{asset('images/klien/logo-BNI.png')}}" alt="" class="img-fluid object-fit-cover klien-img">
+                    </div>
+                </div>
+                <div class="col-4 p-2">
+                    <div class="d-flex flex-column justify-content-center align-items-center reveal">
+                        <img src="{{asset('images/klien/Logo-PLN.png')}}" alt="" class="img-fluid object-fit-cover klien-img">
                     </div>
                 </div>
             </div>
@@ -372,7 +412,7 @@
 
         ScrollReveal().reveal(".reveal", {
             duration: 1000,
-            delay: 250,
+            delay: 500,
             origin: 'bottom',
             distance: '50px',
             // reset: true,
@@ -389,15 +429,13 @@
             });
         });
 
-        $(".reveal-section").each(function (index, element) {
-            ScrollReveal().reveal(element, {
-                duration: 500,
-                origin: 'left',
-                // reset: true,
-                delay: 350 + index * 200,
-                distance: '50px',
-                opacity: 0,
-            });
+        ScrollReveal().reveal(".reveal-section", {
+            duration: 500,
+            origin: 'left',
+            // reset: true,
+            delay: 500,
+            distance: '50px',
+            opacity: 0,
         });
 
         $(document).on('click', '.pagination a', function(e) {

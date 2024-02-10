@@ -40,7 +40,8 @@
                         </form>
                     @else
                     <li class="d-block d-md-block d-lg-none d-xl-none">
-                        <div class="d-flex gap-2 justify-content-end">
+                        <div class="d-flex gap-2 justify-content-center">
+                            <label class="text-color text-responsive">Perlu bantuan? hubungi kami</label>
                             <a class="link-anchor text-responsive" href="tel:081339439431" target="_blank"><i class="fas fa-phone"></i></a>
                             <a class="link-anchor text-responsive" href="https://wa.me/+6281339439431?text=Permisi%20Alatash,%20saya%20butuh%20bantuan%20menyewa%20mobil" target="_blank"><i class="fab fa-square-whatsapp fa-lg"></i></a>
                         </div>
