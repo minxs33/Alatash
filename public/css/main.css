@@ -291,9 +291,15 @@ section#kontak-kami{
     color: var(--primary-color-alt);
 }
 
+.pagination > li.disabled > .page-link {
+    background-color: rgb(212, 212, 212);
+    color: var(--primary-color);
+}
+
 .pagination > li.active > .page-link{
     background-color: var(--primary-color-alt);
     color: white;
+    border-color: var(--primary-color-alt);
 }
 
 /* mengapa harus kami */
