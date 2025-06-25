@@ -162,7 +162,7 @@
 <section id="mengapa-harus-kami">
     <div class="container">
         <div class="d-flex flex-column gy-3 justify-content-center">
-            <h3 class="fw-bold text-color text-center h3-responsive reveal mb-4 mb-lg-5">Mengapa harus Alatash Travel & Tour?</h3>
+            <h3 class="fw-bold text-color text-center h3-responsive reveal mb-4 mb-lg-5">Mengapa harus ALatash Travelindo?</h3>
             <div class="row gy-5">
                 <div class="col-md-3 col-6">
                     <div class="d-flex flex-column justify-content-center align-items-center reveal">
@@ -363,7 +363,7 @@
                 <div class="d-flex flex-column justify-content-center align-items-center gap-3">
                     <img src="{{ asset('images/logo_alatash_new.png') }}" alt="" class="img-fluid object-fit-cover bg-white p-1 rounded" style="max-width:200px;">
                     <div class="d-flex flex-column gap-2">
-                        <label class="fw-medium text-light text-justify text-responsive">Alatash Travel & Tour  merupakan perusahaan jasa sewa mobil Bali yang berdiri sejak tahun 2018. Alatash Tour & Travel menyewakan berbagai kendaraan yang bisa Anda sewa dengan harga yang cukup terjangkau. Jasa sewa mobil murah di Alatash Travel & Tour menawarkan paket sewa mobil sesuai dengan kebutuhan Anda.</label>
+                        <label class="fw-medium text-light text-justify text-responsive">ALatash Travelindo  merupakan perusahaan jasa sewa mobil Bali yang berdiri sejak tahun 2018. ALatash Travelindo menyewakan berbagai kendaraan yang bisa Anda sewa dengan harga yang cukup terjangkau. Jasa sewa mobil murah di ALatash Travelindo menawarkan paket sewa mobil sesuai dengan kebutuhan Anda.</label>
                         <!-- <label class="fw-medium text-light text-center text-responsive">+62 813 3943 9431</label> -->
                     </div>
                 </div>
