@@ -1,6 +1,6 @@
 @extends("templates.app")
 
-@section("title", "Alatash - Discover The World, Drive With Style")
+@section("title", "ALatash Travelindo - Discover The World, Drive With Style")
 
 @section("content")
 
@@ -62,9 +62,9 @@
     <div class="shadow-md border-top border-bottom my-3 border-2 reveal sticky-when-scroll">
         <div class="container-md">
             <div class="d-flex flex-wrap justify-content-center py-2 gap-2">
-                <button class="btn btn-outline-primary-color-alt rounded-pill category text-responsive active" data-id="all">Semua</button>
+                <button class="btn btn-outline-primary-color rounded-pill category text-responsive active" data-id="all">Semua</button>
                 @foreach($categories as $row)
-                    <button class="btn btn-outline-primary-color-alt rounded-pill category text-responsive" data-id="{{$row['id']}}">{{$row['name']}}</button>
+                    <button class="btn btn-outline-primary-color rounded-pill category text-responsive" data-id="{{$row['id']}}">{{$row['name']}}</button>
                 @endforeach
             </div>
         </div>
@@ -355,13 +355,13 @@
 </section>
 
 <section id="kontak-kami" class="reveal-section bg bg-size-cover bg-size-md-auto position-relative">
-    <img src="{{ asset('images/footer-background.png') }}" alt="" class="img-fluid object-fit-cover position-absolute top-0 start-0 end-0 bottom-0 h-100 w-100 z-n1">
+    <img src="{{ asset('images/footer-background-new.png') }}" alt="" class="img-fluid object-fit-cover position-absolute top-0 start-0 end-0 bottom-0 h-100 w-100 z-n1">
     <div class="overlay-kontak-kami position-absolute top-0 start-0 end-0 bottom-0 h-100 w-100 z-n1"></div>
     <div class="container-md">
         <div class="row g-3 gap-3 gap-md-0">
             <div class="col-12 col-lg-6">
                 <div class="d-flex flex-column justify-content-center align-items-center gap-3">
-                    <img src="{{ asset('images/logo_alatash_3_warnaa-01-cropped.png') }}" alt="" class="img-fluid object-fit-cover bg-white p-1 rounded" style="max-width:200px;">
+                    <img src="{{ asset('images/logo_alatash_new.png') }}" alt="" class="img-fluid object-fit-cover bg-white p-1 rounded" style="max-width:200px;">
                     <div class="d-flex flex-column gap-2">
                         <label class="fw-medium text-light text-justify text-responsive">Alatash Travel & Tour  merupakan perusahaan jasa sewa mobil Bali yang berdiri sejak tahun 2018. Alatash Tour & Travel menyewakan berbagai kendaraan yang bisa Anda sewa dengan harga yang cukup terjangkau. Jasa sewa mobil murah di Alatash Travel & Tour menawarkan paket sewa mobil sesuai dengan kebutuhan Anda.</label>
                         <!-- <label class="fw-medium text-light text-center text-responsive">+62 813 3943 9431</label> -->

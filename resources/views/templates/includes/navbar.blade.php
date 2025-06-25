@@ -4,7 +4,7 @@
   <div class="container">
     <div class="row col-12 my-1">
         <div class="col-lg-2 d-lg-flex d-flex justify-content-lg-center justify-content-between mt-2 mt-lg-0 align-items-center col-sm-12 justify-content-sm-between">
-            <a class="navbar-brand logo-title text-success-emphasis d-flex align-items-center gap-1" href="{{ url('/') }}"><img src="{{ asset('images/logo_alatash_3_warnaa-01-cropped.png') }}" alt="A Logo" style="max-width: 150px; height:auto;"></a>
+            <a class="navbar-brand logo-title text-success-emphasis d-flex align-items-center gap-1" href="{{ url('/') }}"><img src="{{ asset('images/logo_alatash_new.png') }}" alt="ALatash Logo" style="max-width: 100px; height:auto;"></a>
             <i class="fas fa-bars d-lg-none text-color" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             </i>
         </div>

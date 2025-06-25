@@ -41,12 +41,12 @@
                             <div class="text-start text-muted car-description">
                                 {!!$row['description']!!}
                             </div>
-                            <div class="d-flex flex-column">
+                            <div class="">
                                 @php
                                     $namaMobil = str_replace(' ', '%20', $row['name']);
                                 @endphp
                                 <!-- Hello Admin, bisakah saya mendapatkan informasi tentang daftar harga sewa -->
-                                <a href="https://wa.me/+6281339439431?text=Halo%20admin%20Alatash,%20bisakah%20saya%20mendapatkan%20informasi%20tentang%20daftar%20harga%20sewa%20mobil%20{{$namaMobil}}%20?" target="_blank" class="btn btn-primary-color rounded-pill">Sewa sekarang</a>
+                                <a href="https://wa.me/+6281339439431?text=Halo%20admin%20Alatash,%20bisakah%20saya%20mendapatkan%20informasi%20tentang%20daftar%20harga%20sewa%20mobil%20{{$namaMobil}}%20?" target="_blank" class="btn btn-primary-color rounded-pill py-2 px-4">Sewa sekarang</a>
                             </div>
                         </div>
                     </div>
@@ -54,10 +54,10 @@
             </div>
         @endforeach
     </div>
-    <div class="d-block d-lg-none reveal">
+    <div class="d-block d-lg-none reveal d-flex justify-content-center mt-3">
     @if($car->hasPages())
         <div class="px-3 pt-3">
-            {{ $car->links('pagination::bootstrap-5') }}
+            {{ $car->links('pagination::bootstrap-4') }}
         </div>
     @endif
     </div> 

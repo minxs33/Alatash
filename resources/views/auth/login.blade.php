@@ -7,7 +7,7 @@
     <title>Alatash Admin - Login</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="shortcut icon" href="{{ asset('images/logo_alatash.png') }}" type="image/x-icon">
+    <link rel="icon" href="{{ asset('images/favicon.ico') }}" type="image/x-icon">
     <link rel="stylesheet" href="{{ asset('css/main.css') }}">
 </head>
 <body>
@@ -17,7 +17,7 @@
             <div class="card p-4 d-flex d-column justify-content-center">
                 <a href="{{url('/')}}" class="text-color small"><i class="fas fa-chevron-left"></i></a>
                 <div class="d-flex justify-content-center my-3">
-                    <img src="{{ asset('images/logo_alatash_3_warnaa-01.png') }}" alt="" style="width:150px;">
+                    <img src="{{ asset('images/logo_alatash_new.png') }}" alt="" style="width:150px;">
                 </div>
                 @if (Session::get('success'))
                     <div class="alert alert-success alert-dismissible fade show mt-3" role="alert">
